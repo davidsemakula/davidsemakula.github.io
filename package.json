@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "davidsemakula",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal Website for David Semakula",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "David Semakula <dev@davidsemakula.com>",
   "dependencies": {
+    "@heroicons/react": "^2.0.11",
     "gatsby": "^4.23.0",
     "gatsby-plugin-image": "^2.23.0",
     "gatsby-plugin-manifest": "^4.23.0",
@@ -16,7 +17,12 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "autoprefixer": "^10.4.12",
+    "gatsby-plugin-postcss": "^5.23.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.8"
   },
   "keywords": [
     "gatsby"
@@ -33,9 +39,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/davidsemakula/davidsemakula"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/davidsemakula/davidsemakula/issues"
   }
 }
