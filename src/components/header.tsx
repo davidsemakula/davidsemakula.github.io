@@ -11,7 +11,7 @@ const Header = () => {
   const toggleTheme = () => {
     const newTheme = isLight ? THEME.DARK : THEME.LIGHT;
     setTheme(newTheme);
-    if(typeof localStorage !== 'undefined') {
+    if (typeof localStorage !== 'undefined') {
       localStorage.theme = newTheme;
     }
   };

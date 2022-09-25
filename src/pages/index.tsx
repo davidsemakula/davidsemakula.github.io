@@ -4,8 +4,8 @@ import {
   BriefcaseIcon,
   CpuChipIcon,
   EnvelopeIcon,
+  GlobeAltIcon,
   LanguageIcon,
-  LinkIcon,
   MapPinIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/outline';
@@ -59,7 +59,7 @@ const IndexPage = () => (
           <A href={`mailto:${BIO.EMAIL}`}>{BIO.EMAIL}</A>
         </p>
         <p>
-          <StyledIconMd icon={LinkIcon} />{' '}
+          <StyledIconMd icon={GlobeAltIcon} />{' '}
           <A href={`https://${BIO.WEBSITE}`}>{BIO.WEBSITE}</A>
         </p>
         <p>
@@ -167,6 +167,6 @@ const IndexPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo />;
+export const Head = () => <Seo title="Résumé" />;
 
 export default IndexPage;

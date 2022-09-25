@@ -5,10 +5,13 @@ import { THEME } from '../helpers/constants';
 import Header from './header';
 
 const Layout = ({ children }) => {
-  const isDarkColorScheme = typeof window !== 'undefined' && window.matchMedia(
-    '(prefers-color-scheme: dark)'
-  ).matches;
-  const cachedTheme = typeof localStorage !== 'undefined' && 'theme' in localStorage && localStorage.theme;
+  const isDarkColorScheme =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const cachedTheme =
+    typeof localStorage !== 'undefined' &&
+    'theme' in localStorage &&
+    localStorage.theme;
   const currentTheme =
     cachedTheme || (isDarkColorScheme ? THEME.DARK : THEME.LIGHT);
   const [theme, setTheme] = useState(currentTheme);
