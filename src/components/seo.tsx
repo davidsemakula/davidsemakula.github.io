@@ -25,23 +25,23 @@ function Seo({
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
+  const pageTitle =
+    title && defaultTitle
+      ? `${title} | ${defaultTitle}`
+      : title || defaultTitle;
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <>
-      <title>
-        {title && defaultTitle
-          ? `${title} | ${defaultTitle}`
-          : title || defaultTitle}
-      </title>
+      <title>{pageTitle}</title>
       <meta
         name="description"
         content={metaDescription}
       />
       <meta
         property="og:title"
-        content={title}
+        content={pageTitle}
       />
       <meta
         property="og:description"
@@ -61,7 +61,7 @@ function Seo({
       />
       <meta
         name="twitter:title"
-        content={title}
+        content={pageTitle}
       />
       <meta
         name="twitter:description"
