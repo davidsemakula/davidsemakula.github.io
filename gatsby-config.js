@@ -31,5 +31,15 @@ module.exports = {
       },
     },
     'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap',
+        serialize: ({ path, modifiedGmt }) => ({
+          url: path,
+          lastmod: modifiedGmt ? modifiedGmt : '2022-09-26',
+        }),
+      }
+    }
   ],
 };
