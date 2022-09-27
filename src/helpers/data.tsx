@@ -60,6 +60,7 @@ export const MY_SKILLS = [
   SKILLS.MONGODB,
   SKILLS.REDIS,
   SKILLS.RETHINKDB,
+  SKILLS.IPFS,
   // Tools
   SKILLS.ANSIBLE,
   // Platforms
@@ -95,7 +96,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
     details:
       'Create, manage and import decentralized payouts and easily batch multipe payouts into a single transaction that can either be paid directly from a wallet or submitted as withdrawal requests to Aragon or Gnosis Safe to let members vote and automatically execute the transactions.',
-    stack: [SKILLS.SOLIDITY, SKILLS.WEB3_JS, SKILLS.REACT_JS],
+    stack: [SKILLS.SOLIDITY, SKILLS.WEB3_JS, SKILLS.REACT_JS, SKILLS.IPFS],
     integrations: [PRODUCTS.ARAGON, PRODUCTS.GNOSIS_SAFE],
     awards: [
       [
@@ -105,6 +106,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
         // https://github.com/grindery-io/grindery-dao-hackathon
       ],
     ],
+    // More Links
+    // Youtube: https://www.youtube.com/watch?v=2N2TPrqMLic
+    // Hackathon:
+    // Github: https://github.com/grindery-io/grindery-dao-hackathon
+    // Gitcoin: https://gitcoin.co/hackathon/dao-global/projects/11739/grindery-meta
+    // Vimeo: https://vimeo.com/655205768
   },
   {
     name: 'Keyy',
@@ -276,6 +283,9 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       PRODUCTS.HUBSPOT_CMS,
     ],
     integrations: [PRODUCTS.GITHUB, PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
+    // More Links
+    // INBOUND 2019: InboundLabs Presentation | https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
+    // TODO: Find youtube video for above presentation
   },
 ];
 

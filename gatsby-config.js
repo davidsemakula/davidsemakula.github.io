@@ -40,6 +40,7 @@ module.exports = {
           lastmod: modifiedGmt ? modifiedGmt : '2022-09-26',
         }),
       }
-    }
+    },
+    'gatsby-plugin-robots-txt'
   ],
 };

@@ -54,6 +54,7 @@ export const SKILLS = {
   GOOGLE_CLOUD: 'Google Cloud',
   GRAPHQL: 'GraphQL',
   HTML: 'HTML',
+  IPFS: 'IPFS',
   JAVA: 'Java',
   JAVASCRIPT: 'JavaScript',
   KOTLIN: 'Kotlin',
