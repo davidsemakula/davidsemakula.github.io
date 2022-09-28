@@ -41,18 +41,19 @@ export const MY_SKILLS = [
   SKILLS.KOTLIN,
   SKILLS.SWIFT,
   SKILLS.JAVASCRIPT,
-  SKILLS.NODE_JS, // SKILLS.HTML, SKILLS.CSS,
+  [SKILLS.WEB_ASSEMBLY, web3Color],
+  SKILLS.NODE_JS,
   // Libraries & Frameworks
   SKILLS.REACT_JS,
+  [SKILLS.WEB3_JS, web3Color],
+  [SKILLS.ETHERS_JS, web3Color],
   SKILLS.EXPRESS_JS,
   SKILLS.DJANGO,
   SKILLS.FLUTTER,
   SKILLS.APACHE_CORDOVA,
   SKILLS.ELECTRON,
+  // Paradigms
   SKILLS.GRAPHQL,
-  [SKILLS.WEB_ASSEMBLY, web3Color],
-  [SKILLS.WEB3_JS, web3Color],
-  [SKILLS.ETHERS_JS, web3Color],
   SKILLS.REST,
   // Storage
   SKILLS.MYSQL,
@@ -60,12 +61,12 @@ export const MY_SKILLS = [
   SKILLS.MONGODB,
   SKILLS.REDIS,
   SKILLS.RETHINKDB,
-  SKILLS.IPFS,
+  [SKILLS.IPFS, web3Color],
   // Tools
   SKILLS.ANSIBLE,
-  // Platforms
   SKILLS.DOCKER,
   SKILLS.KUBERNETES,
+  // Platforms
   SKILLS.AWS,
   SKILLS.GOOGLE_CLOUD,
 ];
@@ -102,16 +103,19 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       [
         '2nd Place: DAO global hackathon | Finance & Operations',
         'https://hackforfreedom.org',
-        // https://blog.aragon.org/dao-global-hackathon-thank-you/
         // https://github.com/grindery-io/grindery-dao-hackathon
+        // https://blog.aragon.org/dao-global-hackathon-thank-you/
+        // https://gitcoin.co/hackathon/dao-global/projects/11739/grindery-meta
+        // Vimeo: https://vimeo.com/655205768
       ],
+      // 2nd Place: Harmony - Bridging TradFi to DeFi Projects | Terra
+      // https://github.com/grindery-io/grindery-connect
+      // https://twitter.com/harmonyprotocol/status/1447654702204678146
+      // https://gitcoin.co/hackathon/harmony-defi/projects/11108/grindery-connect
+      // https://docs.google.com/presentation/d/1ZGrbKSaAdtzvMzVh0EVFBfUvA4SqiAeYVXGhJN7Orbs/edit#slide=id.gf208bfeaf3_0_30
     ],
     // More Links
     // Youtube: https://www.youtube.com/watch?v=2N2TPrqMLic
-    // Hackathon:
-    // Github: https://github.com/grindery-io/grindery-dao-hackathon
-    // Gitcoin: https://gitcoin.co/hackathon/dao-global/projects/11739/grindery-meta
-    // Vimeo: https://vimeo.com/655205768
   },
   {
     name: 'Keyy',
