@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'David Semakula',
-    description: 'Software Engineer & System Architect',
+    description: 'Software Engineer & Systems Architect',
     author: '@davidsemakula',
     siteUrl: 'https://davidsemakula.com',
   },

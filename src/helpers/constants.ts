@@ -101,7 +101,7 @@ export const PRODUCTS = {
 export const ROLES = {
   CTO: 'Chief Technology Officer (C.T.O)',
   SOFTWARE_ENGINEER: 'Software Engineer',
-  SYSTEM_ARCHITECT: 'System Architect',
+  SYSTEM_ARCHITECT: 'Systems Architect',
   LEAD_DEVELOPER: 'Lead Developer',
   CONSULTANT: 'Consultant',
 };
