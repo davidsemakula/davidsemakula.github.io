@@ -16,3 +16,8 @@ export const ItemHeading = withElement(
   'h3',
   'text-xl font-medium text-zinc-700 dark:text-zinc-300'
 );
+
+export const ItemSubTitle = withElement(
+  'h4',
+  'text-base font-medium text-zinc-600 dark:text-zinc-400'
+);

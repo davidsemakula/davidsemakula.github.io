@@ -11,7 +11,7 @@ import { AwardIcon } from '../common/icons';
 import { StyledIconLg, StyledIconMd } from '../common/icons/containers';
 import { A } from '../common/links';
 import { LabeledTagList } from '../common/tags';
-import { ItemHeading } from '../common/typography';
+import { ItemHeading, ItemSubTitle } from '../common/typography';
 
 const Project = ({
   name,
@@ -44,9 +44,9 @@ const Project = ({
         {website ? <A href={website}>{name}</A> : name}
       </ItemHeading>
       {role ? (
-        <p>
+        <ItemSubTitle>
           <StyledIconMd icon={WrenchScrewdriverIcon} /> {role}
-        </p>
+        </ItemSubTitle>
       ) : null}
       {platforms ? (
         <p>

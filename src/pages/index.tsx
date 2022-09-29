@@ -123,7 +123,7 @@ const IndexPage = () => (
       </SideContent>
       <MainContent>
         <p className="mb-2">
-          I've made significant contributions to the following projects:
+          I have made significant contributions to the following projects:
         </p>
 
         {(MY_PROJECTS || []).map((item, idx) => (
@@ -167,6 +167,6 @@ const IndexPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo title="Résumé" />;
+export const Head = () => <Seo title="Profile" />;
 
 export default IndexPage;

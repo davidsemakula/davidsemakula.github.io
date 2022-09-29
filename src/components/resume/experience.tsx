@@ -9,7 +9,7 @@ import {
 import { ExperienceInput } from '../../helpers/types';
 import { StyledIconMd } from '../common/icons/containers';
 import { A } from '../common/links';
-import { ItemHeading } from '../common/typography';
+import { ItemHeading, ItemSubTitle } from '../common/typography';
 
 const Experience = ({
   company,
@@ -30,9 +30,9 @@ const Experience = ({
     <ItemHeading>
       <StyledIconMd icon={BuildingOfficeIcon} /> {company}
     </ItemHeading>
-    <p>
+    <ItemSubTitle>
       <StyledIconMd icon={WrenchScrewdriverIcon} /> {role}
-    </p>
+    </ItemSubTitle>
     {location ? (
       <p>
         <StyledIconMd icon={MapPinIcon} /> {location}

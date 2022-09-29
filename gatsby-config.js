@@ -37,10 +37,10 @@ module.exports = {
         output: '/sitemap',
         serialize: ({ path, modifiedGmt }) => ({
           url: path,
-          lastmod: modifiedGmt ? modifiedGmt : '2022-09-28',
+          lastmod: modifiedGmt ? modifiedGmt : '2022-09-29',
         }),
-      }
+      },
     },
-    'gatsby-plugin-robots-txt'
+    'gatsby-plugin-robots-txt',
   ],
 };

@@ -9,7 +9,7 @@ import { GlobeAltIcon } from '@heroicons/react/24/solid';
 import { EducationInput } from '../../helpers/types';
 import { StyledIconMd } from '../common/icons/containers';
 import { A } from '../common/links';
-import { ItemHeading } from '../common/typography';
+import { ItemHeading, ItemSubTitle } from '../common/typography';
 
 const Education = ({
   name,
@@ -27,9 +27,9 @@ const Education = ({
     <ItemHeading>
       <StyledIconMd icon={BuildingLibraryIcon} /> {name}
     </ItemHeading>
-    <p>
+    <ItemSubTitle>
       <StyledIconMd icon={TrophyIcon} /> {award}
-    </p>
+    </ItemSubTitle>
     {location ? (
       <p>
         <StyledIconMd icon={MapPinIcon} /> {location}

@@ -95,8 +95,17 @@ export const MY_PROJECTS: Array<ProjectInput> = [
         APP_TYPE.ETHEREUM,
       ],
     ],
-    details:
-      'Create, manage and import decentralized payouts and easily batch multipe payouts into a single transaction that can either be paid directly from a wallet or submitted as withdrawal requests to Aragon or Gnosis Safe to let members vote and automatically execute the transactions.',
+    details: (
+      <>
+        <p>Create, manage and import decentralized payouts.</p>
+        <p>
+          Easily batch multiple payouts into a single transaction that can
+          either be paid directly from a wallet or submitted as withdrawal
+          requests to Aragon or Gnosis Safe to let members vote and
+          automatically execute the transactions.
+        </p>
+      </>
+    ),
     stack: [SKILLS.SOLIDITY, SKILLS.WEB3_JS, SKILLS.REACT_JS, SKILLS.IPFS],
     integrations: [PRODUCTS.ARAGON, PRODUCTS.GNOSIS_SAFE],
     awards: [
