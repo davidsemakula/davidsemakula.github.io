@@ -334,8 +334,19 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
     location: `${LOCATION.KAMPALA} / ${LOCATION.NAIROBI}`,
     period: '2015 - 2016',
     website: 'https://www.trueafrican.com',
-    details:
-      'True African provides custom software solutions for financial services that addresses specific business needs, including payment gateways to all the leading banks in the region, collection platforms to the larger utility service providers and both individual and corporate mobile and online wallets.',
+    details: (
+      <>
+        <p>
+          True African provides custom software solutions for financial services
+          that addresses specific business needs.
+        </p>
+        <p>
+          Software solutions include payment gateways to leading banks in the
+          region, collection platforms to large utility service providers and
+          both individual and corporate mobile and online wallets.
+        </p>
+      </>
+    ),
   },
   {
     company: 'Freelance',

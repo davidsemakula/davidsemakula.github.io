@@ -19,7 +19,7 @@ export type ExperienceInput = {
   location?: string;
   period: string;
   website?: string;
-  details: string;
+  details: string | ReactNode;
 };
 
 export type EducationInput = {
@@ -28,5 +28,5 @@ export type EducationInput = {
   location?: string;
   period: string;
   website?: string;
-  details?: string;
+  details?: string | ReactNode;
 };
