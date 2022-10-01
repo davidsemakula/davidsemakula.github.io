@@ -43,18 +43,19 @@ export const SKILLS = {
   APACHE_CORDOVA: 'Apache Cordova',
   ANSIBLE: 'Ansible',
   AWS: 'AWS',
-  CSS: 'CSS',
+  CSS: 'CSS', // Cascading Style Sheets
+  DART: 'Dart',
   DJANGO: 'Django',
-  DJANGO_REST_FRAMEWORK: 'Django REST Framework',
   DOCKER: 'Docker',
   ELECTRON: 'Electron',
   ETHERS_JS: 'ethers.js',
   EXPRESS_JS: 'Express.js',
   FLUTTER: 'Flutter',
+  GO: 'Go',
   GOOGLE_CLOUD: 'Google Cloud',
   GRAPHQL: 'GraphQL',
-  HTML: 'HTML',
-  IPFS: 'IPFS',
+  HTML: 'HTML', // HyperText Markup Language
+  IPFS: 'IPFS', // InterPlanetary File System
   JAVA: 'Java',
   JAVASCRIPT: 'JavaScript',
   KOTLIN: 'Kotlin',
@@ -66,8 +67,9 @@ export const SKILLS = {
   PYTHON: 'Python',
   REDIS: 'Redis',
   REACT_JS: 'React.js',
-  REST: 'REST',
+  REST: 'REST', // Representational state transfer
   RETHINKDB: 'RethinkDB',
+  RPC: 'RPC', // Remote procedure call
   RUST: 'Rust',
   SOLIDITY: 'Solidity',
   SWIFT: 'Swift',

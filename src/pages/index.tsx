@@ -71,6 +71,7 @@ const IndexPage = () => (
             {BIO.GITHUB_USERNAME}
           </A>
         </p>
+        {/*
         <p>
           <StyledIconMd
             icon={TwitterIcon}
@@ -80,6 +81,7 @@ const IndexPage = () => (
             @{BIO.TWITTER_USERNAME}
           </A>
         </p>
+        */}
       </SideContent>
     </Container>
 
