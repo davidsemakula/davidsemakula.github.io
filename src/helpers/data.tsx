@@ -43,7 +43,9 @@ export const MY_SKILLS = [
   SKILLS.KOTLIN,
   SKILLS.DART,
   SKILLS.JAVASCRIPT,
+  SKILLS.TYPESCRIPT,
   [SKILLS.WEB_ASSEMBLY, web3Color],
+  [SKILLS.ASSEMBLYSCRIPT, web3Color],
   SKILLS.NODE_JS,
   // Libraries & Frameworks
   SKILLS.REACT_JS,
@@ -128,6 +130,38 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
     // More Links
     // Youtube: https://www.youtube.com/watch?v=2N2TPrqMLic
+  },
+  {
+    name: 'Grindery Nexus',
+    website: 'https://www.grindery.io',
+    icon: [GrinderyIcon, 'text-grindery dark:text-inherit'],
+    role: `${ROLES.STRATEGIC_ADVISOR}, former ${ROLES.TECHNICAL_LEAD}`,
+    platforms: [
+      ['https://nexus.grindery.org', 'Web', APP_TYPE.WEB],
+      ['', 'Ethereum', APP_TYPE.ETHEREUM],
+      ['', 'Algorand', APP_TYPE.ALGORAND],
+      ['', 'Near', APP_TYPE.NEAR],
+      ['', 'BNB Chain', APP_TYPE.BINANCE],
+      ['', 'Flow', APP_TYPE.FLOW],
+    ],
+    details:
+      'Grindery Nexus is the easiest way for people and organizations to connect Apps and dApps across chains and protocols.',
+    stack: [
+      SKILLS.SOLIDITY,
+      SKILLS.RUST,
+      SKILLS.WEB_ASSEMBLY,
+      SKILLS.TYPESCRIPT,
+      SKILLS.REACT_JS,
+      SKILLS.IPFS,
+    ],
+    integrations: [],
+    awards: [
+      [
+        'Binance Labs Incubation Program S4 | Infrastructure',
+        'https://www.binance.com/en/blog/ecosystem/%E2%80%8Bbinance-labs-launches-season-4-of-its-incubation-program-with-14-earlystage-startups-421499824684903808',
+        // https://www.binance.com/en/blog/ecosystem/season-4-of-binance-labs-incubation-program-how-to-build-invest-and-grow-startups-421499824684904005
+      ],
+    ],
   },
   {
     name: 'Keyy',
@@ -310,8 +344,17 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
     company: 'Freelance',
     role: BIO.OCCUPATION,
     location: `${BIO.LOCATION} (Remote)`,
-    period: 'Present',
+    period: 'April/2022 - Present',
     details: 'Consulting and full-stack software development.',
+  },
+  {
+    company: 'Grindery',
+    role: ROLES.STRATEGIC_ADVISOR,
+    location: 'Remote',
+    period: 'Sept/2022 - Present',
+    website: 'https://www.grindery.io',
+    details:
+      'Grindery builds low/no-code middleware for Web3, as well as tools to put DAOs to work. ',
   },
   {
     company: 'Grindery',

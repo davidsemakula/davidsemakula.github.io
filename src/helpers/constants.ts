@@ -15,9 +15,13 @@ export const APP_TYPE = {
   WINDOWS: 'windows',
 
   // Blockchain
+  ALGORAND: 'algorand',
+  BINANCE: 'binance',
   BITCOIN: 'bitcoin',
   ETHEREUM: 'ethereum',
+  FLOW: 'flow',
   HARMONY: 'harmony',
+  NEAR: 'near',
 
   // By Purpose
   ADMIN_CONSOLE: 'admin-console',
@@ -42,6 +46,7 @@ export const SKILLS = {
   // Core Skills
   APACHE_CORDOVA: 'Apache Cordova',
   ANSIBLE: 'Ansible',
+  ASSEMBLYSCRIPT: 'AssemblyScript',
   AWS: 'AWS',
   CSS: 'CSS', // Cascading Style Sheets
   DART: 'Dart',
@@ -72,6 +77,7 @@ export const SKILLS = {
   RPC: 'RPC', // Remote procedure call
   RUST: 'Rust',
   SOLIDITY: 'Solidity',
+  TYPESCRIPT: 'TypeScript',
   SWIFT: 'Swift',
   WEB3_JS: 'web3.js',
   WEB_ASSEMBLY: 'WebAssembly',
@@ -106,6 +112,8 @@ export const ROLES = {
   SYSTEM_ARCHITECT: 'Systems Architect',
   LEAD_DEVELOPER: 'Lead Developer',
   CONSULTANT: 'Consultant',
+  STRATEGIC_ADVISOR: 'Strategic Advisor',
+  TECHNICAL_LEAD: 'Technical Lead',
 };
 
 export const TAG_COLORS = {

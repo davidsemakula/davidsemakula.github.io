@@ -6,7 +6,11 @@ import {
 } from '@heroicons/react/24/outline';
 import { TAG_COLORS } from '../../helpers/constants';
 import { ProjectInput } from '../../helpers/types';
-import { destructureListableValue, getAppTypeIcon } from '../../helpers/utils';
+import {
+  destructureListableValue,
+  getAppTypeIcon,
+  isNonEmptyArray,
+} from '../../helpers/utils';
 import { AwardIcon } from '../common/icons';
 import { StyledIconLg, StyledIconMd } from '../common/icons/containers';
 import { A } from '../common/links';
@@ -58,7 +62,7 @@ const Project = ({
                 key={`project-link-${idx}`}
               >
                 <StyledIconMd icon={getAppTypeIcon(type)} />{' '}
-                <A href={url}>{name || url}</A>
+                {url ? <A href={url}>{name || url}</A> : name}
               </span>
             );
           })}
@@ -84,14 +88,14 @@ const Project = ({
         );
       })}
       {details ? <p className="mt-2">{details}</p> : null}
-      {stack ? (
+      {isNonEmptyArray(stack) ? (
         <LabeledTagList
           label="Built with:"
           tags={stack}
           color={TAG_COLORS.INDIGO}
         />
       ) : null}
-      {integrations ? (
+      {isNonEmptyArray(integrations) ? (
         <LabeledTagList
           label="Integrates with:"
           tags={integrations}

@@ -28,7 +28,7 @@ function Seo({
   const defaultTitle = site.siteMetadata?.title;
   const pageTitle =
     title && defaultTitle
-      ? `${title} | ${defaultTitle}`
+      ? `${defaultTitle} | ${title}`
       : title || defaultTitle;
   const metaDescription = description || site.siteMetadata.description;
 
