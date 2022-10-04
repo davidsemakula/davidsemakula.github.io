@@ -2,10 +2,10 @@ import * as React from 'react';
 import {
   BuildingLibraryIcon,
   ClockIcon,
+  LinkIcon,
   MapPinIcon,
   TrophyIcon,
 } from '@heroicons/react/24/outline';
-import { GlobeAltIcon } from '@heroicons/react/24/solid';
 import { EducationInput } from '../../helpers/types';
 import { StyledIconMd } from '../common/icons/containers';
 import { A } from '../common/links';
@@ -40,7 +40,7 @@ const Education = ({
     </p>
     {website ? (
       <p>
-        <StyledIconMd icon={GlobeAltIcon} /> <A href={website}>{website}</A>
+        <StyledIconMd icon={LinkIcon} /> <A href={website}>{website}</A>
       </p>
     ) : null}
     {details ? <p className="mt-2">{details}</p> : null}
