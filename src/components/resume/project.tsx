@@ -1,13 +1,21 @@
 import * as React from 'react';
+import { ReactElement } from 'react';
 import {
   BuildingOfficeIcon,
   LightBulbIcon,
   WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline';
 import { TAG_COLORS } from '../../helpers/constants';
-import { ProjectInput } from '../../helpers/types';
 import {
-  destructureListableValue,
+  GeneralAwardInput,
+  GeneralPlatformInput,
+  ProjectInput,
+} from '../../helpers/types';
+import {
+  cleanAwardObject,
+  cleanCompanyObject,
+  cleanIconObject,
+  cleanPlatformObject,
   getAppTypeIcon,
   isNonEmptyArray,
 } from '../../helpers/utils';
@@ -28,17 +36,21 @@ const Project = ({
   awards,
   stack,
   integrations,
-  ...otherProps
-}: ProjectInput) => {
-  const [iconElement, iconClassName] = destructureListableValue(icon);
-  const [companyName, companyUrl, companyLogo] =
-    destructureListableValue(company);
-  const [companyLogoElement, companyLogoClassName] =
-    destructureListableValue(companyLogo);
+  ...rest
+}: ProjectInput): ReactElement => {
+  const { icon: iconElement, className: iconClassName } =
+    cleanIconObject(icon) || {};
+  const {
+    name: companyName,
+    website: companyWebsite,
+    icon: companyIcon,
+  } = cleanCompanyObject(company) || {};
+  const { icon: companyIconElement, className: companyIconClassName } =
+    cleanIconObject(companyIcon) || {};
   return (
     <div
       className="mb-6 last:mb-0"
-      {...otherProps}
+      {...rest}
     >
       <ItemHeading>
         <StyledIconLg
@@ -53,41 +65,46 @@ const Project = ({
         </ItemSubTitle>
       ) : null}
       {platforms ? (
-        <p>
-          {(platforms || []).map((item, idx) => {
-            const [url, name, type] = destructureListableValue(item);
+        <div>
+          {(platforms || []).map((item: GeneralPlatformInput, idx: number) => {
+            const { type, url, name } = cleanPlatformObject(item);
+            const platformName = name || type;
             return (
               <span
                 className="inline-block mr-2"
                 key={`project-link-${idx}`}
               >
                 <StyledIconMd icon={getAppTypeIcon(type)} />{' '}
-                {url ? <A href={url}>{name || url}</A> : name}
+                {url ? <A href={url}>{platformName || url}</A> : platformName}
               </span>
             );
           })}
-        </p>
+        </div>
       ) : null}
       {companyName ? (
-        <p>
+        <div>
           Built for:{' '}
           <StyledIconMd
-            icon={companyLogoElement || BuildingOfficeIcon}
-            className={companyLogoClassName}
+            icon={companyIconElement || BuildingOfficeIcon}
+            className={companyIconClassName}
           />{' '}
-          {companyUrl ? <A href={companyUrl}>{companyName}</A> : companyName}
-        </p>
+          {companyWebsite ? (
+            <A href={companyWebsite}>{companyName}</A>
+          ) : (
+            companyName
+          )}
+        </div>
       ) : null}
-      {(awards || []).map((item, idx) => {
-        const [name, url] = destructureListableValue(item);
+      {(awards || []).map((item: GeneralAwardInput, idx: number) => {
+        const { name, url } = cleanAwardObject(item);
         return (
-          <p>
+          <div key={`award-link-${idx}`}>
             <StyledIconMd icon={AwardIcon} />{' '}
             {url ? <A href={url}>{name}</A> : name}
-          </p>
+          </div>
         );
       })}
-      {details ? <p className="mt-2">{details}</p> : null}
+      {details ? <div className="mt-2">{details}</div> : null}
       {isNonEmptyArray(stack) ? (
         <LabeledTagList
           label="Built with:"

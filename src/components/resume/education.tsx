@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ReactElement } from 'react';
 import {
   BuildingLibraryIcon,
   ClockIcon,
@@ -18,11 +19,11 @@ const Education = ({
   period,
   website,
   details,
-  ...otherProps
-}: EducationInput) => (
+  ...rest
+}: EducationInput): ReactElement => (
   <div
     className="mb-6 last:mb-0"
-    {...otherProps}
+    {...rest}
   >
     <ItemHeading>
       <StyledIconMd icon={BuildingLibraryIcon} /> {name}
@@ -31,19 +32,19 @@ const Education = ({
       <StyledIconMd icon={TrophyIcon} /> {award}
     </ItemSubTitle>
     {location ? (
-      <p>
+      <div>
         <StyledIconMd icon={MapPinIcon} /> {location}
-      </p>
+      </div>
     ) : null}
-    <p>
+    <div>
       <StyledIconMd icon={ClockIcon} /> {period}
-    </p>
+    </div>
     {website ? (
-      <p>
+      <div>
         <StyledIconMd icon={LinkIcon} /> <A href={website}>{website}</A>
-      </p>
+      </div>
     ) : null}
-    {details ? <p className="mt-2">{details}</p> : null}
+    {details ? <div className="mt-2">{details}</div> : null}
   </div>
 );
 

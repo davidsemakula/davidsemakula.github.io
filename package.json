@@ -14,12 +14,12 @@
     "gatsby-plugin-sitemap": "^5.23.1",
     "gatsby-source-filesystem": "^4.23.0",
     "gatsby-transformer-sharp": "^4.23.0",
-    "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@types/react": "^18.0.21",
     "autoprefixer": "^10.4.12",
     "gatsby-plugin-postcss": "^5.23.0",
     "postcss": "^8.4.16",

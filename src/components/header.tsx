@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { useContext } from 'react';
+import { ReactElement, useContext } from 'react';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import AppContext from '../context/app';
 import { THEME } from '../helpers/constants';
 
-const Header = () => {
+const Header = (): ReactElement => {
   const { theme, setTheme } = useContext(AppContext);
   const isLight = theme !== THEME.DARK;
 

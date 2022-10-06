@@ -1,16 +1,17 @@
 import * as React from 'react';
-import { ReactNode } from 'react';
+import { HTMLAttributes, ReactElement } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+
+interface SeoAttributes<T> extends HTMLAttributes<T> {
+  title?: string;
+  description?: string;
+}
 
 function Seo({
   title = '',
   description = '',
   children,
-}: {
-  title?: string;
-  description?: string;
-  children?: ReactNode;
-}) {
+}: SeoAttributes<{}>): ReactElement {
   const { site } = useStaticQuery(
     graphql`
       query {

@@ -6,6 +6,7 @@ import {
   KeyyIcon,
   TungaIcon,
 } from '../components/common/icons';
+import { A } from '../components/common/links';
 import {
   APP_TYPE,
   LANGUAGES,
@@ -15,13 +16,122 @@ import {
   SKILLS,
   TAG_COLORS,
 } from './constants';
-import { EducationInput, ExperienceInput, ProjectInput } from './types';
+import {
+  EducationInput,
+  ExperienceInput,
+  GeneralCompanyInput,
+  GeneralTagInput,
+  ProjectInput,
+  asCompanyRecord,
+} from './types';
+import { cleanCompanyObject, overrideIconClassName } from './utils';
+
+export const COMPANIES = asCompanyRecord({
+  ALCHEMER: {
+    name: 'Alchemer (formerly SurveyGizmo)',
+    website: 'https://www.alchemer.com',
+  },
+  BUTTERFLYWORKS: {
+    name: 'ButterflyWorks',
+    website: 'https://www.butterflyworks.org',
+  },
+  GRINDERY: {
+    name: 'Grindery',
+    website: 'https://www.grindery.io',
+    icon: {
+      icon: GrinderyIcon,
+      className: 'text-grindery dark:text-inherit',
+    },
+  },
+  HUBSPOT: {
+    name: 'HubSpot',
+    website: 'https://www.hubspot.com',
+    icon: {
+      icon: HubspotIcon,
+      className: 'text-hubspot dark:text-inherit',
+    },
+  },
+  INBOUNDLABS: {
+    name: 'InboundLabs',
+    website: 'https://w.inboundlabs.co',
+    icon: {
+      icon: InboundLabsIcon,
+      className: 'text-inboundlabs dark:text-inherit',
+    },
+  },
+  KEYY: {
+    name: 'Keyy',
+    website: 'https://www.keyy.org',
+    icon: KeyyIcon,
+  },
+  PERMOBIL: {
+    name: 'Permobil',
+    website: 'https://www.permobil.com',
+  },
+  PRESSBOARD: {
+    name: 'Pressboard',
+    website: 'https://www.pressboardmedia.com',
+  },
+  TMG: {
+    name: 'Telegraaf Media Groep (TMG)',
+    website: 'https://www.telegraaf.nl',
+  },
+  TRUE_AFRICAN: {
+    name: 'True African',
+    website: 'https://www.trueafrican.com',
+    location: `${LOCATION.KAMPALA} / ${LOCATION.NAIROBI}`,
+  },
+  TUNGA: {
+    name: 'Tunga',
+    website: 'https://tunga.io',
+    location: `${LOCATION.AMSTERDAM} / ${LOCATION.KAMPALA} / ${LOCATION.LAGOS}`,
+    icon: {
+      icon: TungaIcon,
+      className: 'text-tunga dark:text-inherit',
+    },
+  },
+});
+
+export const HIGHLIGHTED_COMPANIES: Array<GeneralCompanyInput> = [
+  COMPANIES.HUBSPOT,
+  COMPANIES.PERMOBIL,
+  COMPANIES.PRESSBOARD,
+  COMPANIES.ALCHEMER,
+  COMPANIES.GRINDERY,
+  COMPANIES.INBOUNDLABS,
+  COMPANIES.TUNGA,
+  COMPANIES.BUTTERFLYWORKS,
+  COMPANIES.TMG,
+].filter(Boolean);
 
 export const BIO = {
   NAME: 'David Semakula',
   OCCUPATION: `${ROLES.SOFTWARE_ENGINEER} & ${ROLES.SYSTEM_ARCHITECT}`,
-  BYLINE:
-    "I enjoy solving complex problems with technology and I'm always up for a challenge.",
+  BYLINE: (
+    <>
+      <p className="mb-1">
+        I enjoy solving complex problems with technology and I'm always up for a
+        challenge.
+      </p>
+      <p>
+        I’ve worked as a technical lead on projects for{' '}
+        {HIGHLIGHTED_COMPANIES.map(
+          (company: GeneralCompanyInput, idx: number) => {
+            const { name, website } = cleanCompanyObject(company);
+            return (
+              <>
+                {website ? <A href={website}>{name}</A> : name}
+                {idx < HIGHLIGHTED_COMPANIES.length - 1 ? (
+                  <span>, </span>
+                ) : null}
+              </>
+            );
+          }
+        )}{' '}
+        and many more companies.
+      </p>
+    </>
+  ),
   LOCATION: LOCATION.KAMPALA,
   EMAIL: 'work@davidsemakula.com',
   WEBSITE: 'davidsemakula.com',
@@ -29,14 +139,23 @@ export const BIO = {
   TWITTER_USERNAME: 'davidsemakula',
 };
 
-export const MY_LANGUAGES = [LANGUAGES.ENGLISH, LANGUAGES.LUGANDA];
+export const MY_LANGUAGES: Array<LANGUAGES> = [
+  LANGUAGES.ENGLISH,
+  LANGUAGES.LUGANDA,
+];
 
 const web3Color = TAG_COLORS.PURPLE;
-export const MY_SKILLS = [
+export const MY_SKILLS: Array<GeneralTagInput> = [
   // Languages
   SKILLS.PYTHON,
-  [SKILLS.SOLIDITY, web3Color],
-  [SKILLS.RUST, web3Color],
+  {
+    name: SKILLS.SOLIDITY,
+    color: web3Color,
+  },
+  {
+    name: SKILLS.RUST,
+    color: web3Color,
+  },
   SKILLS.JAVA,
   SKILLS.GO,
   SKILLS.SWIFT,
@@ -44,13 +163,25 @@ export const MY_SKILLS = [
   SKILLS.DART,
   SKILLS.JAVASCRIPT,
   SKILLS.TYPESCRIPT,
-  [SKILLS.WEB_ASSEMBLY, web3Color],
-  [SKILLS.ASSEMBLYSCRIPT, web3Color],
+  {
+    name: SKILLS.WEB_ASSEMBLY,
+    color: web3Color,
+  },
+  {
+    name: SKILLS.ASSEMBLYSCRIPT,
+    color: web3Color,
+  },
   SKILLS.NODE_JS,
   // Libraries & Frameworks
   SKILLS.REACT_JS,
-  [SKILLS.WEB3_JS, web3Color],
-  [SKILLS.ETHERS_JS, web3Color],
+  {
+    name: SKILLS.WEB3_JS,
+    color: web3Color,
+  },
+  {
+    name: SKILLS.ETHERS_JS,
+    color: web3Color,
+  },
   SKILLS.EXPRESS_JS,
   SKILLS.DJANGO,
   SKILLS.FLUTTER,
@@ -62,7 +193,10 @@ export const MY_SKILLS = [
   SKILLS.MONGODB,
   SKILLS.REDIS,
   SKILLS.RETHINKDB,
-  [SKILLS.IPFS, web3Color],
+  {
+    name: SKILLS.IPFS,
+    color: web3Color,
+  },
   // Paradigms
   SKILLS.GRAPHQL,
   SKILLS.REST,
@@ -81,24 +215,22 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: 'Grindery Pay',
     website:
       'https://chrome.google.com/webstore/detail/grindery-pay/ofnbfgahidjckegapdpkhigjljepcdme',
-    icon: [GrinderyIcon, 'text-grindery dark:text-inherit'],
+    icon: COMPANIES.GRINDERY.icon,
     role: ROLES.LEAD_DEVELOPER,
     platforms: [
-      [
-        'https://chrome.google.com/webstore/detail/grindery-pay/ofnbfgahidjckegapdpkhigjljepcdme',
-        'Chrome Extension',
-        APP_TYPE.CHROME,
-      ],
-      [
-        'https://explorer.harmony.one/address/0xa9046B015C040897f2Ac1762C81B57ba1b78Fa8F',
-        'Harmony',
-        APP_TYPE.HARMONY,
-      ],
-      [
-        'https://rinkeby.etherscan.io/address/0xa9046B015C040897f2Ac1762C81B57ba1b78Fa8F',
-        'Ethereum (Rinkeby)',
-        APP_TYPE.ETHEREUM,
-      ],
+      {
+        type: APP_TYPE.CHROME,
+        url: 'https://chrome.google.com/webstore/detail/grindery-pay/ofnbfgahidjckegapdpkhigjljepcdme',
+      },
+      {
+        type: APP_TYPE.HARMONY,
+        url: 'https://explorer.harmony.one/address/0xa9046B015C040897f2Ac1762C81B57ba1b78Fa8F',
+      },
+      {
+        type: APP_TYPE.ETHEREUM,
+        url: 'https://rinkeby.etherscan.io/address/0xa9046B015C040897f2Ac1762C81B57ba1b78Fa8F',
+        name: 'Ethereum (Rinkeby)',
+      },
     ],
     details: (
       <>
@@ -114,14 +246,14 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     stack: [SKILLS.SOLIDITY, SKILLS.WEB3_JS, SKILLS.REACT_JS, SKILLS.IPFS],
     integrations: [PRODUCTS.ARAGON, PRODUCTS.GNOSIS_SAFE],
     awards: [
-      [
-        '2nd Place: DAO global hackathon | Finance & Operations',
-        'https://hackforfreedom.org',
+      {
+        name: '2nd Place: DAO global hackathon | Finance & Operations',
+        url: 'https://hackforfreedom.org',
         // https://github.com/grindery-io/grindery-dao-hackathon
         // https://blog.aragon.org/dao-global-hackathon-thank-you/
         // https://gitcoin.co/hackathon/dao-global/projects/11739/grindery-meta
         // Vimeo: https://vimeo.com/655205768
-      ],
+      },
       // 2nd Place: Harmony - Bridging TradFi to DeFi Projects | Terra
       // https://github.com/grindery-io/grindery-connect
       // https://twitter.com/harmonyprotocol/status/1447654702204678146
@@ -134,15 +266,18 @@ export const MY_PROJECTS: Array<ProjectInput> = [
   {
     name: 'Grindery Nexus',
     website: 'https://www.grindery.io',
-    icon: [GrinderyIcon, 'text-grindery dark:text-inherit'],
+    icon: COMPANIES.GRINDERY.icon,
     role: `${ROLES.STRATEGIC_ADVISOR}, former ${ROLES.TECHNICAL_LEAD}`,
     platforms: [
-      ['https://nexus.grindery.org', 'Web', APP_TYPE.WEB],
-      ['', 'Ethereum', APP_TYPE.ETHEREUM],
-      ['', 'Algorand', APP_TYPE.ALGORAND],
-      ['', 'Near', APP_TYPE.NEAR],
-      ['', 'BNB Chain', APP_TYPE.BINANCE],
-      ['', 'Flow', APP_TYPE.FLOW],
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://nexus.grindery.org',
+      },
+      APP_TYPE.ETHEREUM,
+      APP_TYPE.ALGORAND,
+      APP_TYPE.NEAR,
+      APP_TYPE.BINANCE,
+      APP_TYPE.FLOW,
     ],
     details:
       'Grindery Nexus is the easiest way for people and organizations to connect Apps and dApps across chains and protocols.',
@@ -156,32 +291,36 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
     integrations: [],
     awards: [
-      [
-        'Binance Labs Incubation Program S4 | Infrastructure',
-        'https://www.binance.com/en/blog/ecosystem/%E2%80%8Bbinance-labs-launches-season-4-of-its-incubation-program-with-14-earlystage-startups-421499824684903808',
+      {
+        name: 'Binance Labs Incubation Program S4 | Infrastructure',
+        url: 'https://www.binance.com/en/blog/ecosystem/%E2%80%8Bbinance-labs-launches-season-4-of-its-incubation-program-with-14-earlystage-startups-421499824684903808',
         // https://www.binance.com/en/blog/ecosystem/season-4-of-binance-labs-incubation-program-how-to-build-invest-and-grow-startups-421499824684904005
-      ],
+      },
     ],
   },
   {
-    name: 'Keyy',
+    name: COMPANIES.KEYY.name,
     website: 'https://learn.keyy.org/explore',
-    icon: KeyyIcon,
+    icon: COMPANIES.KEYY.icon,
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: ['Keyy', 'https://www.keyy.org', KeyyIcon],
+    company: COMPANIES.KEYY,
     platforms: [
-      ['https://learn.keyy.org/explore', 'Web', APP_TYPE.WEB],
-      ['https://apps.apple.com/us/app/keyy/id1553782589', 'iOS', APP_TYPE.IOS],
-      [
-        'https://play.google.com/store/apps/details?id=org.keyy.learn',
-        'Android',
-        APP_TYPE.ANDROID,
-      ],
-      [
-        'https://apps.apple.com/us/app/keyy/id1553782589',
-        'macOS',
-        APP_TYPE.MACOS,
-      ],
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://learn.keyy.org/explore',
+      },
+      {
+        type: APP_TYPE.IOS,
+        url: 'https://apps.apple.com/us/app/keyy/id1553782589',
+      },
+      {
+        type: APP_TYPE.ANDROID,
+        url: 'https://play.google.com/store/apps/details?id=org.keyy.learn',
+      },
+      {
+        type: APP_TYPE.MACOS,
+        url: 'https://apps.apple.com/us/app/keyy/id1553782589',
+      },
     ],
     details: (
       <>
@@ -220,16 +359,17 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
-    name: 'HubSpot Inspire',
+    name: `${COMPANIES.HUBSPOT.name} Inspire`,
     website: 'https://designers.hubspot.com/inspire',
-    icon: [HubspotIcon, 'text-hubspot dark:text-inherit'],
+    icon: COMPANIES.HUBSPOT.icon,
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: [
-      'HubSpot',
-      'https://www.hubspot.com',
-      [HubspotIcon, 'text-hubspot dark:text-inherit'],
+    company: COMPANIES.HUBSPOT,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://designers.hubspot.com/inspire',
+      },
     ],
-    platforms: [['https://designers.hubspot.com/inspire', 'Web', APP_TYPE.WEB]],
     details:
       'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
     stack: [
@@ -242,16 +382,17 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
   },
   {
-    name: 'Tunga',
-    website: 'https://tunga.io',
-    icon: [TungaIcon, 'text-tunga dark:text-inherit'],
+    name: COMPANIES.TUNGA.name,
+    website: COMPANIES.TUNGA.website,
+    icon: COMPANIES.TUNGA.icon,
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: [
-      'Tunga',
-      'https://tunga.io',
-      [TungaIcon, 'text-tunga dark:text-inherit'],
+    company: COMPANIES.TUNGA,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: COMPANIES.TUNGA.website,
+      },
     ],
-    platforms: [['https://tunga.io', 'Web', APP_TYPE.WEB]],
     details:
       'Tunga is an online staff augmentation platform that connects companies worldwide to experienced African software engineers.',
     stack: [
@@ -276,25 +417,27 @@ export const MY_PROJECTS: Array<ProjectInput> = [
   {
     name: 'Booya',
     website: 'https://booya.io',
-    icon: [InboundLabsIcon, 'text-booya dark:text-inherit'],
+    icon: overrideIconClassName(
+      COMPANIES.INBOUNDLABS.icon,
+      'text-booya dark:text-inherit'
+    ),
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: [
-      'InboundLabs',
-      'https://w.inboundlabs.co',
-      [InboundLabsIcon, 'text-inboundlabs dark:text-inherit'],
-    ],
+    company: COMPANIES.INBOUNDLABS,
     platforms: [
-      ['https://go.booya.io', 'Admin Console', APP_TYPE.ADMIN_CONSOLE],
-      [
-        'https://www.npmjs.com/package/@inboundlabs/booya-ui',
-        'JavaScript UI Library',
-        APP_TYPE.LIBRARY,
-      ],
-      [
-        'https://ecosystem.hubspot.com/marketplace/apps/marketing/cms/booya-225187',
-        'HubSpot App',
-        APP_TYPE.INTEGRATION,
-      ],
+      {
+        type: APP_TYPE.ADMIN_CONSOLE,
+        url: 'https://go.booya.io',
+      },
+      {
+        type: APP_TYPE.LIBRARY,
+        url: 'https://www.npmjs.com/package/@inboundlabs/booya-ui',
+        name: 'JavaScript UI Library',
+      },
+      {
+        type: APP_TYPE.INTEGRATION,
+        url: 'https://ecosystem.hubspot.com/marketplace/apps/marketing/cms/booya-225187',
+        name: 'HubSpot App',
+      },
       // https://www.npmjs.com/package/@inboundlabs/booya-api-client
       // https://inboundlabsi.github.io/booya-docs/
     ],
@@ -311,17 +454,16 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     integrations: [PRODUCTS.HUBSPOT, PRODUCTS.MAILGUN, PRODUCTS.STRIPE],
   },
   {
-    name: 'HubSpot Code Gallery',
+    name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
     website: 'https://designers.hubspot.com/code-gallery',
-    icon: [HubspotIcon, 'text-hubspot dark:text-inherit'],
+    icon: COMPANIES.HUBSPOT.icon,
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: [
-      'HubSpot',
-      'https://www.hubspot.com',
-      [HubspotIcon, 'text-hubspot dark:text-inherit'],
-    ],
+    company: COMPANIES.HUBSPOT,
     platforms: [
-      ['https://designers.hubspot.com/code-gallery', 'Web', APP_TYPE.WEB],
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://designers.hubspot.com/code-gallery',
+      },
     ],
     details:
       'A showcase of the open-source assets and projects our developer community is working on.',
@@ -341,45 +483,43 @@ export const MY_PROJECTS: Array<ProjectInput> = [
 
 export const MY_EXPERIENCE: Array<ExperienceInput> = [
   {
-    company: 'Freelance',
+    company: {
+      name: 'Freelance',
+      location: LOCATION.KAMPALA,
+    },
     role: BIO.OCCUPATION,
-    location: `${BIO.LOCATION} (Remote)`,
     period: 'April/2022 - Present',
+    remote: true,
     details: 'Consulting and full-stack software development.',
   },
   {
-    company: 'Grindery',
+    company: COMPANIES.GRINDERY,
     role: ROLES.STRATEGIC_ADVISOR,
-    location: 'Remote',
     period: 'Sept/2022 - Present',
-    website: 'https://www.grindery.io',
+    remote: true,
     details:
       'Grindery builds low/no-code middleware for Web3, as well as tools to put DAOs to work. ',
   },
   {
-    company: 'Grindery',
+    company: COMPANIES.GRINDERY,
     role: `Co-founder & ${ROLES.CTO}`,
-    location: 'Remote',
     period: '2019 - April/2022',
-    website: 'https://www.grindery.io',
+    remote: true,
     details:
       'Grindery builds low/no-code middleware for Web3, as well as tools to put DAOs to work. ',
   },
   {
-    company: 'Tunga',
+    company: COMPANIES.TUNGA,
     role: ROLES.CTO,
-    location: `${LOCATION.AMSTERDAM} / ${LOCATION.KAMPALA} / ${LOCATION.LAGOS} (Remote)`,
     period: '2016 - 2019',
-    website: 'https://tunga.io',
+    remote: true,
     details:
       'Tunga is a staff augmentation firm that works with African developers, allowing companies worldwide to add experienced software engineers to their teams within days via an online platform.',
   },
   {
-    company: 'True African',
+    company: COMPANIES.TRUE_AFRICAN,
     role: `Senior ${ROLES.SOFTWARE_ENGINEER}`,
-    location: `${LOCATION.KAMPALA} / ${LOCATION.NAIROBI}`,
     period: '2015 - 2016',
-    website: 'https://www.trueafrican.com',
     details: (
       <>
         <p>
@@ -395,9 +535,11 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
     ),
   },
   {
-    company: 'Freelance',
+    company: {
+      name: 'Freelance',
+      location: LOCATION.KAMPALA,
+    },
     role: ROLES.SOFTWARE_ENGINEER,
-    location: LOCATION.KAMPALA,
     period: '2011 - 2015',
     details: 'Consulting and full-stack software development.',
   },

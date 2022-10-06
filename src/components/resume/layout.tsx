@@ -1,9 +1,13 @@
-import { ReactElement } from 'react';
+import { ComponentType, HTMLAttributes } from 'react';
 import withElement from '../common/withElement';
 
-type HeaderElement = ReactElement<{ header?: boolean }> | any;
+interface HeaderAttributes<T> extends HTMLAttributes<T> {
+  header?: boolean;
+}
 
-export const Container: HeaderElement = withElement(
+type HeaderComponentType = ComponentType<HeaderAttributes<{}>>;
+
+export const Container: HeaderComponentType = withElement(
   'div',
   props =>
     `grid gap-x-4 gap-y-6 grid-cols-1 mb-8 last:mb-0 ${
@@ -11,7 +15,7 @@ export const Container: HeaderElement = withElement(
     }`
 );
 
-export const MainContent: HeaderElement = withElement(
+export const MainContent: HeaderComponentType = withElement(
   'div',
   props =>
     `col-span-1 ${
@@ -19,7 +23,7 @@ export const MainContent: HeaderElement = withElement(
     }`
 );
 
-export const SideContent: HeaderElement = withElement(
+export const SideContent: HeaderComponentType = withElement(
   'div',
   props => `col-span-1 ${props.header ? '-mt-5 lg:mt-0' : ''}`
 );

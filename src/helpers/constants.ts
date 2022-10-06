@@ -1,128 +1,127 @@
-export const APP_TYPE = {
-  API: 'API',
-  ANDROID: 'Android',
-  CHROME: 'Chrome',
-  EXTENSION: 'Extension',
-  INTEGRATION: 'Integration',
-  IOS: 'iOS',
-  LIBRARY: 'Library',
-  LINUX: 'Linux',
-  MACOS: 'macOS',
-  SDK: 'SDK',
-  SERVICE: 'Service',
-  WEB: 'web',
-  WEBSITE: 'website',
-  WINDOWS: 'windows',
+export enum APP_TYPE {
+  API = 'API',
+  ANDROID = 'Android',
+  CHROME = 'Chrome Extension',
+  EXTENSION = 'Extension',
+  INTEGRATION = 'Integration',
+  IOS = 'iOS',
+  LIBRARY = 'Library',
+  LINUX = 'Linux',
+  MACOS = 'macOS',
+  SDK = 'SDK',
+  SERVICE = 'Service',
+  WEB = 'Web',
+  WEBSITE = 'Website',
+  WINDOWS = 'Windows',
 
   // Blockchain
-  ALGORAND: 'algorand',
-  BINANCE: 'binance',
-  BITCOIN: 'bitcoin',
-  ETHEREUM: 'ethereum',
-  FLOW: 'flow',
-  HARMONY: 'harmony',
-  NEAR: 'near',
+  ALGORAND = 'Algorand',
+  BINANCE = 'Binance',
+  BITCOIN = 'Bitcoin',
+  ETHEREUM = 'Ethereum',
+  FLOW = 'Flow',
+  HARMONY = 'Harmony',
+  NEAR = 'Near',
 
   // By Purpose
-  ADMIN_CONSOLE: 'admin-console',
-};
+  ADMIN_CONSOLE = 'Admin Console',
+}
 
-export const LANGUAGES = {
-  ENGLISH: 'English',
-  LUGANDA: 'Luganda',
-};
+export enum LANGUAGES {
+  ENGLISH = 'English',
+  LUGANDA = 'Luganda',
+}
 
-export const LOCATION = {
+export enum LOCATION {
   // Home
-  KAMPALA: 'Kampala, Uganda',
+  KAMPALA = 'Kampala, Uganda',
 
   // Work
-  AMSTERDAM: 'Amsterdam, The Netherlands',
-  LAGOS: 'Lagos, Nigeria',
-  NAIROBI: 'Nairobi, Kenya',
-};
+  AMSTERDAM = 'Amsterdam, The Netherlands',
+  LAGOS = 'Lagos, Nigeria',
+  NAIROBI = 'Nairobi, Kenya',
+}
 
-export const SKILLS = {
-  // Core Skills
-  APACHE_CORDOVA: 'Apache Cordova',
-  ANSIBLE: 'Ansible',
-  ASSEMBLYSCRIPT: 'AssemblyScript',
-  AWS: 'AWS',
-  CSS: 'CSS', // Cascading Style Sheets
-  DART: 'Dart',
-  DJANGO: 'Django',
-  DOCKER: 'Docker',
-  ELECTRON: 'Electron',
-  ETHERS_JS: 'ethers.js',
-  EXPRESS_JS: 'Express.js',
-  FLUTTER: 'Flutter',
-  GO: 'Go',
-  GOOGLE_CLOUD: 'Google Cloud',
-  GRAPHQL: 'GraphQL',
-  HTML: 'HTML', // HyperText Markup Language
-  IPFS: 'IPFS', // InterPlanetary File System
-  JAVA: 'Java',
-  JAVASCRIPT: 'JavaScript',
-  KOTLIN: 'Kotlin',
-  KUBERNETES: 'Kubernetes',
-  MONGODB: 'MongoDB',
-  MYSQL: 'MySQL',
-  NODE_JS: 'Node.js',
-  POSTGRESQL: 'PostgreSQL',
-  PYTHON: 'Python',
-  REDIS: 'Redis',
-  REACT_JS: 'React.js',
-  REST: 'REST', // Representational state transfer
-  RETHINKDB: 'RethinkDB',
-  RPC: 'RPC', // Remote procedure call
-  RUST: 'Rust',
-  SOLIDITY: 'Solidity',
-  TYPESCRIPT: 'TypeScript',
-  SWIFT: 'Swift',
-  WEB3_JS: 'web3.js',
-  WEB_ASSEMBLY: 'WebAssembly',
-  WEBPACK: 'Webpack',
-};
-
-export const PRODUCTS = {
-  ALGOLIA: 'Algolia',
-  AMPLITUDE: 'Amplitude',
-  GITHUB: 'Github',
-  EXACT: 'Exact',
-  HUBSPOT: 'HubSpot',
-  HUBSPOT_CMS: 'HubSpot CMS',
-  HUBSPOT_CRM: 'HubSpot CRM',
-  MAILGUN: 'Mailgun',
-  MANDRILL: 'Mandrill',
-  METABASE: 'Metabase',
-  PAYONEER: 'Payoneer',
-  SENDGRID: 'SendGrid',
-  SLACK: 'Slack',
-  STRIPE: 'Stripe',
-  ZOOM: 'Zoom',
+export enum PRODUCTS {
+  ALGOLIA = 'Algolia',
+  AMPLITUDE = 'Amplitude',
+  GITHUB = 'Github',
+  EXACT = 'Exact',
+  HUBSPOT = 'HubSpot',
+  HUBSPOT_CMS = 'HubSpot CMS',
+  HUBSPOT_CRM = 'HubSpot CRM',
+  MAILGUN = 'Mailgun',
+  MANDRILL = 'Mandrill',
+  METABASE = 'Metabase',
+  PAYONEER = 'Payoneer',
+  SENDGRID = 'SendGrid',
+  SLACK = 'Slack',
+  STRIPE = 'Stripe',
+  ZOOM = 'Zoom',
 
   // Blockchain
-  ARAGON: 'Aragon',
-  GNOSIS_SAFE: 'Gnosis Safe',
-};
+  ARAGON = 'Aragon',
+  GNOSIS_SAFE = 'Gnosis Safe',
+}
 
-export const ROLES = {
-  CTO: 'Chief Technology Officer (C.T.O)',
-  SOFTWARE_ENGINEER: 'Software Engineer',
-  SYSTEM_ARCHITECT: 'Systems Architect',
-  LEAD_DEVELOPER: 'Lead Developer',
-  CONSULTANT: 'Consultant',
-  STRATEGIC_ADVISOR: 'Strategic Advisor',
-  TECHNICAL_LEAD: 'Technical Lead',
-};
+export enum ROLES {
+  CTO = 'Chief Technology Officer (C.T.O)',
+  SOFTWARE_ENGINEER = 'Software Engineer',
+  SYSTEM_ARCHITECT = 'Systems Architect',
+  LEAD_DEVELOPER = 'Lead Developer',
+  CONSULTANT = 'Consultant',
+  STRATEGIC_ADVISOR = 'Strategic Advisor',
+  TECHNICAL_LEAD = 'Technical Lead',
+}
 
-export const TAG_COLORS = {
-  BLUE: 'bg-blue-500 dark:bg-blue-900',
-  INDIGO: 'bg-indigo-500 dark:bg-indigo-900',
-  PURPLE: 'bg-purple-500 dark:bg-purple-900',
-};
+export enum SKILLS {
+  APACHE_CORDOVA = 'Apache Cordova',
+  ANSIBLE = 'Ansible',
+  ASSEMBLYSCRIPT = 'AssemblyScript',
+  AWS = 'AWS',
+  CSS = 'CSS', // Cascading Style Sheets
+  DART = 'Dart',
+  DJANGO = 'Django',
+  DOCKER = 'Docker',
+  ELECTRON = 'Electron',
+  ETHERS_JS = 'ethers.js',
+  EXPRESS_JS = 'Express.js',
+  FLUTTER = 'Flutter',
+  GO = 'Go',
+  GOOGLE_CLOUD = 'Google Cloud',
+  GRAPHQL = 'GraphQL',
+  HTML = 'HTML', // HyperText Markup Language
+  IPFS = 'IPFS', // InterPlanetary File System
+  JAVA = 'Java',
+  JAVASCRIPT = 'JavaScript',
+  KOTLIN = 'Kotlin',
+  KUBERNETES = 'Kubernetes',
+  MONGODB = 'MongoDB',
+  MYSQL = 'MySQL',
+  NODE_JS = 'Node.js',
+  POSTGRESQL = 'PostgreSQL',
+  PYTHON = 'Python',
+  REDIS = 'Redis',
+  REACT_JS = 'React.js',
+  REST = 'REST', // Representational state transfer
+  RETHINKDB = 'RethinkDB',
+  RPC = 'RPC', // Remote procedure call
+  RUST = 'Rust',
+  SOLIDITY = 'Solidity',
+  TYPESCRIPT = 'TypeScript',
+  SWIFT = 'Swift',
+  WEB3_JS = 'web3.js',
+  WEB_ASSEMBLY = 'WebAssembly',
+  WEBPACK = 'Webpack',
+}
 
-export const THEME = {
-  LIGHT: 'light',
-  DARK: 'dark',
-};
+export enum TAG_COLORS {
+  BLUE = 'bg-blue-500 dark:bg-blue-900',
+  INDIGO = 'bg-indigo-500 dark:bg-indigo-900',
+  PURPLE = 'bg-purple-500 dark:bg-purple-900',
+}
+
+export enum THEME {
+  LIGHT = 'light',
+  DARK = 'dark',
+}

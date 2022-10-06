@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { HTMLAttributes, ReactElement, useState } from 'react';
 import AppContext from '../context/app';
 import { THEME } from '../helpers/constants';
 import Header from './header';
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
   const isDarkColorScheme =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       {/* Theme container */}
       <div className={theme === THEME.DARK ? 'dark' : ''}>
         {/* Background */}
-        <div className={'min-h-screen bg-zinc-50 dark:bg-black'}>
+        <div className="min-h-screen bg-zinc-50 dark:bg-black">
           {/* Container */}
           <div className="container max-w-6xl mx-auto p-4 text-base text-zinc-600 dark:text-zinc-400">
             <Header />

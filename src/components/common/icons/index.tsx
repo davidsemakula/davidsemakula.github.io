@@ -204,7 +204,7 @@ export const GrinderyIcon = withSvgWrapper(
   </g>,
   '0 0 35 45',
   {
-    'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+    xmlnsXlink: 'http://www.w3.org/1999/xlink',
   }
 );
 
@@ -321,7 +321,7 @@ export const KeyyIcon = withSvgWrapper(
   </>,
   '0 0 44 44',
   {
-    'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+    xmlnsXlink: 'http://www.w3.org/1999/xlink',
   }
 );
 

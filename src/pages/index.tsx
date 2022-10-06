@@ -48,21 +48,21 @@ const IndexPage = () => (
       <MainContent header={true}>
         <Title>{BIO.NAME}</Title>
         <SubTitle>{BIO.OCCUPATION}</SubTitle>
-        <p>{BIO.BYLINE}</p>
+        <div>{BIO.BYLINE}</div>
       </MainContent>
       <SideContent header={true}>
-        <p>
+        <div>
           <StyledIconMd icon={MapPinIcon} /> {BIO.LOCATION}
-        </p>
-        <p>
+        </div>
+        <div>
           <StyledIconMd icon={EnvelopeIcon} />{' '}
           <A href={`mailto:${BIO.EMAIL}`}>{BIO.EMAIL}</A>
-        </p>
-        <p>
+        </div>
+        <div>
           <StyledIconMd icon={GlobeAltIcon} />{' '}
           <A href={`https://${BIO.WEBSITE}`}>{BIO.WEBSITE}</A>
-        </p>
-        <p>
+        </div>
+        <div>
           <StyledIconMd
             icon={GithubIcon}
             className="text-github dark:text-inherit"
@@ -70,9 +70,9 @@ const IndexPage = () => (
           <A href={`https://github.com/${BIO.GITHUB_USERNAME}`}>
             {BIO.GITHUB_USERNAME}
           </A>
-        </p>
+        </div>
         {/*
-        <p>
+        <div>
           <StyledIconMd
             icon={TwitterIcon}
             className="text-twitter dark:text-inherit"
@@ -80,7 +80,7 @@ const IndexPage = () => (
           <A href={`https://twitter.com/${BIO.TWITTER_USERNAME}`}>
             @{BIO.TWITTER_USERNAME}
           </A>
-        </p>
+        </div>
         */}
       </SideContent>
     </Container>
@@ -93,11 +93,11 @@ const IndexPage = () => (
         </SectionHeading>
       </SideContent>
       <MainContent>
-        <p className="mb-2">I build full stack software with:</p>
+        <div className="mb-2">I build full stack software with:</div>
 
-        <p>
+        <div>
           <TagList tags={MY_SKILLS} />
-        </p>
+        </div>
       </MainContent>
 
       {/* Languages */}
@@ -107,14 +107,14 @@ const IndexPage = () => (
         </SectionHeading>
       </SideContent>
       <MainContent>
-        <p className="mb-2">I speak:</p>
+        <div className="mb-2">I speak:</div>
 
-        <p>
+        <div>
           <TagList
             tags={MY_LANGUAGES}
             color={TAG_COLORS.BLUE}
           />
-        </p>
+        </div>
       </MainContent>
 
       {/* Projects */}
@@ -124,9 +124,9 @@ const IndexPage = () => (
         </SectionHeading>
       </SideContent>
       <MainContent>
-        <p className="mb-2">
+        <div className="mb-2">
           I have made significant contributions to the following projects:
-        </p>
+        </div>
 
         {(MY_PROJECTS || []).map((item, idx) => (
           <Project

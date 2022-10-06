@@ -18,8 +18,74 @@ import {
   WindowsIcon,
 } from '../components/common/icons';
 import { APP_TYPE } from './constants';
+import {
+  DetailedAwardInput,
+  DetailedCompanyInput,
+  DetailedIconInput,
+  DetailedPlatformInput,
+  DetailedTagInput,
+  GeneralAwardInput,
+  GeneralCompanyInput,
+  GeneralIconInput,
+  GeneralPlatformInput,
+  GeneralTagInput,
+  SimpleIconInput,
+} from './types';
 
-export const getAppTypeIcon = (type: string): any => {
+export const cleanAwardObject = (
+  value: GeneralAwardInput | any
+): DetailedAwardInput => {
+  if (typeof value === 'string') {
+    return {
+      name: value,
+    };
+  }
+  return value;
+};
+
+export const cleanCompanyObject = (
+  value: GeneralCompanyInput
+): DetailedCompanyInput => {
+  if (typeof value === 'string') {
+    return {
+      name: value,
+    };
+  }
+  return value;
+};
+
+export const cleanIconObject = (
+  value: GeneralIconInput | any
+): DetailedIconInput => {
+  if (value && !value.icon) {
+    return {
+      icon: value,
+    };
+  }
+  return value;
+};
+
+export const cleanPlatformObject = (
+  value: GeneralPlatformInput
+): DetailedPlatformInput => {
+  if (typeof value === 'string') {
+    return {
+      type: value,
+    };
+  }
+  return value;
+};
+
+export const cleanTagObject = (value: GeneralTagInput): DetailedTagInput => {
+  if (typeof value === 'string') {
+    return {
+      name: value,
+    };
+  }
+  return value;
+};
+
+export const getAppTypeIcon = (type: APP_TYPE): SimpleIconInput => {
   switch (type) {
     case APP_TYPE.ALGORAND: {
       return AlgorandIcon;
@@ -71,8 +137,21 @@ export const getAppTypeIcon = (type: string): any => {
   }
 };
 
-export const destructureListableValue = (value: any): Array<any> =>
-  Array.isArray(value) ? value : [value];
-
-export const isNonEmptyArray = value =>
+export const isNonEmptyArray = (value: any): number =>
   value && Array.isArray(value) && value.length;
+
+export const overrideIconClassName = (
+  value: GeneralIconInput | any,
+  className: string
+): DetailedIconInput => {
+  if (value.icon) {
+    return {
+      ...value,
+      className,
+    };
+  }
+  return {
+    icon: value,
+    className,
+  };
+};

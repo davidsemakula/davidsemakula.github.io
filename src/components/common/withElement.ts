@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
   ComponentClass,
   FunctionComponent,
+  HTMLAttributes,
   ReactElement,
   ReactNode,
 } from 'react';
@@ -10,13 +11,10 @@ const withElement = (
   elem: string | FunctionComponent<any> | ComponentClass<any, any>,
   defaultClassName?: string | Function,
   defaultProps?: { children?: ReactNode } | any
-): ((
-  props: { children?: ReactNode; className?: string } | any
-) => ReactElement) => {
-  const { children: defaultChildren, ...otherDefaultProps } =
-    defaultProps || {};
+): FunctionComponent<HTMLAttributes<{}>> => {
+  const { children: defaultChildren, ...restDefault } = defaultProps || {};
   return (props): ReactElement => {
-    const { children, className, ...otherProps } = props;
+    const { children, className, ...rest } = props || {};
     const parseClassName = name => {
       if (typeof name === 'function') {
         return name(props);
@@ -29,8 +27,8 @@ const withElement = (
         className: [parseClassName(defaultClassName), className]
           .filter(Boolean)
           .join(' '),
-        ...(otherDefaultProps || {}),
-        ...(otherProps || {}),
+        ...(restDefault || {}),
+        ...(rest || {}),
       },
       children || defaultChildren
     );

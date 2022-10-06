@@ -8,6 +8,5 @@
     "^react$", "<THIRD_PARTY_MODULES>", "^[./]"
   ],
   "importOrderSeparation": false,
-  "importOrderSortSpecifiers": true,
-  "editorconfig": true
+  "importOrderSortSpecifiers": true
 }
