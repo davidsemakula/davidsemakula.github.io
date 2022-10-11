@@ -133,7 +133,7 @@ export const BIO = {
     </>
   ),
   LOCATION: LOCATION.KAMPALA,
-  EMAIL: 'work@davidsemakula.com',
+  EMAIL: 'hello@davidsemakula.com',
   WEBSITE: 'davidsemakula.com',
   GITHUB_USERNAME: 'davidsemakula',
   TWITTER_USERNAME: 'davidsemakula',
@@ -247,14 +247,14 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     integrations: [PRODUCTS.ARAGON, PRODUCTS.GNOSIS_SAFE],
     awards: [
       {
-        name: '2nd Place: DAO global hackathon | Finance & Operations',
+        name: '2nd Place: DAO global hackathon 2021 | Finance & Operations',
         url: 'https://hackforfreedom.org',
         // https://github.com/grindery-io/grindery-dao-hackathon
         // https://blog.aragon.org/dao-global-hackathon-thank-you/
         // https://gitcoin.co/hackathon/dao-global/projects/11739/grindery-meta
         // Vimeo: https://vimeo.com/655205768
       },
-      // 2nd Place: Harmony - Bridging TradFi to DeFi Projects | Terra
+      // 2nd Place: Harmony - Bridging TradFi to DeFi Projects 2021 | Terra
       // https://github.com/grindery-io/grindery-connect
       // https://twitter.com/harmonyprotocol/status/1447654702204678146
       // https://gitcoin.co/hackathon/harmony-defi/projects/11108/grindery-connect
@@ -476,8 +476,9 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
     integrations: [PRODUCTS.GITHUB, PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
     // More Links
-    // INBOUND 2019: InboundLabs Presentation | https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
-    // TODO: Find youtube video for above presentation
+    // INBOUND 2019: InboundLabs Presentation
+    // https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
+    // https://www.youtube.com/watch?v=VpArzDy5ny4&t=2590s
   },
 ];
 
