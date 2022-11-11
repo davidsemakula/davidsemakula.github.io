@@ -67,7 +67,10 @@ const IndexPage = () => (
             icon={GithubIcon}
             className="text-github dark:text-inherit"
           />{' '}
-          <A href={`https://github.com/${BIO.GITHUB_USERNAME}`}>
+          <A
+            href={`https://github.com/${BIO.GITHUB_USERNAME}`}
+            rel="me nofollow"
+          >
             {BIO.GITHUB_USERNAME}
           </A>
         </div>
@@ -77,7 +80,10 @@ const IndexPage = () => (
             icon={TwitterIcon}
             className="text-twitter dark:text-inherit"
           />{' '}
-          <A href={`https://twitter.com/${BIO.TWITTER_USERNAME}`}>
+          <A
+            href={`https://twitter.com/${BIO.TWITTER_USERNAME}`}
+            rel="me nofollow"
+          >
             @{BIO.TWITTER_USERNAME}
           </A>
         </div>
