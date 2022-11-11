@@ -69,7 +69,7 @@ const IndexPage = () => (
           />{' '}
           <A
             href={`https://github.com/${BIO.GITHUB_USERNAME}`}
-            rel="me nofollow"
+            rel="me noreferrer nofollow"
           >
             {BIO.GITHUB_USERNAME}
           </A>
@@ -82,7 +82,7 @@ const IndexPage = () => (
           />{' '}
           <A
             href={`https://twitter.com/${BIO.TWITTER_USERNAME}`}
-            rel="me nofollow"
+            rel="me noreferrer nofollow"
           >
             @{BIO.TWITTER_USERNAME}
           </A>
