@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ReactElement } from 'react';
 import {
-  BuildingOfficeIcon,
   ClockIcon,
   LinkIcon,
   MapPinIcon,
@@ -30,9 +29,7 @@ const Experience = ({
       <div className="text-zinc-500 dark:text-zinc-500">
         <StyledIconMd icon={ClockIcon} /> {period}
       </div>
-      <ItemHeading>
-        <StyledIconMd icon={BuildingOfficeIcon} /> {name}
-      </ItemHeading>
+      <ItemHeading>{name}</ItemHeading>
       <ItemSubTitle>
         <StyledIconMd icon={WrenchScrewdriverIcon} /> {role}
       </ItemSubTitle>

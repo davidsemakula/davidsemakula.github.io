@@ -1,10 +1,6 @@
 import * as React from 'react';
 import { ReactElement } from 'react';
-import {
-  BuildingOfficeIcon,
-  LightBulbIcon,
-  WrenchScrewdriverIcon,
-} from '@heroicons/react/24/outline';
+import { WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 import { TAG_COLORS } from '../../helpers/constants';
 import {
   GeneralAwardInput,
@@ -14,13 +10,12 @@ import {
 import {
   cleanAwardObject,
   cleanCompanyObject,
-  cleanIconObject,
   cleanPlatformObject,
   getAppTypeIcon,
   isNonEmptyArray,
 } from '../../helpers/utils';
 import { AwardIcon } from '../common/icons';
-import { StyledIconLg, StyledIconMd } from '../common/icons/containers';
+import { StyledIconMd } from '../common/icons/containers';
 import { A } from '../common/links';
 import { LabeledTagList } from '../common/tags';
 import { ItemHeading, ItemSubTitle } from '../common/typography';
@@ -38,27 +33,14 @@ const Project = ({
   integrations,
   ...rest
 }: ProjectInput): ReactElement => {
-  const { icon: iconElement, className: iconClassName } =
-    cleanIconObject(icon) || {};
-  const {
-    name: companyName,
-    website: companyWebsite,
-    icon: companyIcon,
-  } = cleanCompanyObject(company) || {};
-  const { icon: companyIconElement, className: companyIconClassName } =
-    cleanIconObject(companyIcon) || {};
+  const { name: companyName, website: companyWebsite } =
+    cleanCompanyObject(company) || {};
   return (
     <div
       className="mb-6 last:mb-0"
       {...rest}
     >
-      <ItemHeading>
-        <StyledIconLg
-          icon={iconElement || LightBulbIcon}
-          className={iconClassName}
-        />{' '}
-        {website ? <A href={website}>{name}</A> : name}
-      </ItemHeading>
+      <ItemHeading>{website ? <A href={website}>{name}</A> : name}</ItemHeading>
       {role ? (
         <ItemSubTitle>
           <StyledIconMd icon={WrenchScrewdriverIcon} /> {role}
@@ -84,10 +66,6 @@ const Project = ({
       {companyName ? (
         <div>
           Built for:{' '}
-          <StyledIconMd
-            icon={companyIconElement || BuildingOfficeIcon}
-            className={companyIconClassName}
-          />{' '}
           {companyWebsite ? (
             <A href={companyWebsite}>{companyName}</A>
           ) : (
@@ -116,7 +94,7 @@ const Project = ({
         <LabeledTagList
           label="Integrates with:"
           tags={integrations}
-          color={TAG_COLORS.BLUE}
+          color={TAG_COLORS.VIOLET}
         />
       ) : null}
     </div>

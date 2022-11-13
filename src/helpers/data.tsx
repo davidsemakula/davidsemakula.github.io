@@ -143,7 +143,7 @@ export const MY_LANGUAGES: Array<LANGUAGES> = [
   LANGUAGES.LUGANDA,
 ];
 
-const web3Color = TAG_COLORS.PURPLE;
+const web3Color = TAG_COLORS.VIOLET;
 export const MY_SKILLS: Array<GeneralTagInput> = [
   // Languages
   SKILLS.PYTHON,
@@ -302,7 +302,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     website: 'https://learn.keyy.org/explore',
     icon: COMPANIES.KEYY.icon,
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: COMPANIES.KEYY,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -310,7 +309,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       },
       {
         type: APP_TYPE.IOS,
-        url: 'https://apps.apple.com/us/app/keyy/id1553782589',
+        url: 'https://apps.apple.com/us/app/keyy/id1553782589?platform=iphone',
       },
       {
         type: APP_TYPE.ANDROID,
@@ -318,7 +317,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       },
       {
         type: APP_TYPE.MACOS,
-        url: 'https://apps.apple.com/us/app/keyy/id1553782589',
+        url: 'https://apps.apple.com/us/app/keyy/id1553782589?platform=mac',
       },
     ],
     details: (
@@ -362,7 +361,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     website: 'https://designers.hubspot.com/inspire',
     icon: COMPANIES.HUBSPOT.icon,
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: COMPANIES.HUBSPOT,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -385,7 +383,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     website: COMPANIES.TUNGA.website,
     icon: COMPANIES.TUNGA.icon,
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: COMPANIES.TUNGA,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -457,7 +454,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     website: 'https://designers.hubspot.com/code-gallery',
     icon: COMPANIES.HUBSPOT.icon,
     role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: COMPANIES.HUBSPOT,
     platforms: [
       {
         type: APP_TYPE.WEB,

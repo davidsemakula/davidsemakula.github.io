@@ -4,7 +4,7 @@ import { GatsbyLinkProps } from 'gatsby-link';
 import withElement from './withElement';
 
 const linkClasses =
-  'text-purple-600 hover:text-purple-700 hover:underline dark:text-purple-600 dark:hover:text-purple-500';
+  'text-indigo-600 hover:text-indigo-700 hover:underline dark:text-indigo-400 dark:hover:text-indigo-500';
 
 export const A: ComponentType<LinkHTMLAttributes<{}>> = withElement(
   'a',

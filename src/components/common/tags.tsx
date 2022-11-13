@@ -20,7 +20,7 @@ const Tag = ({ children, color }: TagAttributes<{}>): ReactElement => (
   <span className="inline-block relative mx-1.5 my-2">
     <span
       className={`block absolute -inset-1 -skew-y-3 ${
-        color || TAG_COLORS.PURPLE
+        color || TAG_COLORS.VIOLET
       }`}
       aria-hidden="true"
     />

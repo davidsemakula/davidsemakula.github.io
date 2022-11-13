@@ -1,5 +1,5 @@
 import { ComponentType, ReactNode } from 'react';
-import { APP_TYPE, PRODUCTS, SKILLS } from './constants';
+import { APP_TYPE, LANGUAGES, PRODUCTS, SKILLS } from './constants';
 
 export type SimpleAwardInput = string;
 export type DetailedAwardInput = {
@@ -61,7 +61,7 @@ export type DetailedPlatformInput = {
 };
 export type GeneralPlatformInput = SimplePlatformInput | DetailedPlatformInput;
 
-export type SimpleTagInput = SKILLS | PRODUCTS;
+export type SimpleTagInput = SKILLS | PRODUCTS | LANGUAGES;
 export type DetailedTagInput = {
   name: SimpleTagInput;
   color?: string;

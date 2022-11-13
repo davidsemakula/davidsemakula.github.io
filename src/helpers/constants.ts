@@ -116,9 +116,8 @@ export enum SKILLS {
 }
 
 export enum TAG_COLORS {
-  BLUE = 'bg-blue-500 dark:bg-blue-900',
-  INDIGO = 'bg-indigo-500 dark:bg-indigo-900',
-  PURPLE = 'bg-purple-500 dark:bg-purple-900',
+  INDIGO = 'bg-indigo-500 dark:bg-indigo-800',
+  VIOLET = 'bg-violet-500 dark:bg-violet-800',
 }
 
 export enum THEME {

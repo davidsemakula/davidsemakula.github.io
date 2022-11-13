@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ReactElement } from 'react';
 import {
-  BuildingLibraryIcon,
   ClockIcon,
   LinkIcon,
   MapPinIcon,
@@ -25,9 +24,7 @@ const Education = ({
     className="mb-6 last:mb-0"
     {...rest}
   >
-    <ItemHeading>
-      <StyledIconMd icon={BuildingLibraryIcon} /> {name}
-    </ItemHeading>
+    <ItemHeading>{name}</ItemHeading>
     <ItemSubTitle>
       <StyledIconMd icon={TrophyIcon} /> {award}
     </ItemSubTitle>

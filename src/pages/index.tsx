@@ -9,7 +9,7 @@ import {
   MapPinIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/outline';
-import { GithubIcon, TwitterIcon } from '../components/common/icons';
+import { GithubIcon } from '../components/common/icons';
 import {
   StyledIconLg,
   StyledIconMd,
@@ -74,20 +74,6 @@ const IndexPage = () => (
             {BIO.GITHUB_USERNAME}
           </A>
         </div>
-        {/*
-        <div>
-          <StyledIconMd
-            icon={TwitterIcon}
-            className="text-twitter dark:text-inherit"
-          />{' '}
-          <A
-            href={`https://twitter.com/${BIO.TWITTER_USERNAME}`}
-            rel="me noreferrer nofollow"
-          >
-            @{BIO.TWITTER_USERNAME}
-          </A>
-        </div>
-        */}
       </SideContent>
     </Container>
 
@@ -118,7 +104,7 @@ const IndexPage = () => (
         <div>
           <TagList
             tags={MY_LANGUAGES}
-            color={TAG_COLORS.BLUE}
+            color={TAG_COLORS.VIOLET}
           />
         </div>
       </MainContent>

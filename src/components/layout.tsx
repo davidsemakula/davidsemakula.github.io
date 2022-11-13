@@ -25,7 +25,7 @@ const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
       {/* Theme container */}
       <div className={theme === THEME.DARK ? 'dark' : ''}>
         {/* Background */}
-        <div className="min-h-screen bg-zinc-50 dark:bg-black">
+        <div className="min-h-screen bg-zinc-100 dark:bg-black">
           {/* Container */}
           <div className="container max-w-6xl mx-auto p-4 text-base text-zinc-600 dark:text-zinc-400">
             <Header />
