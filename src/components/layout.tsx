@@ -20,6 +20,9 @@ const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
     setTheme,
   };
 
+  const thisYear = new Date().getFullYear();
+  const copyrightYear = thisYear > 2022?[2022, '-', thisYear].join(' '):thisYear;
+
   return (
     <AppContext.Provider value={themeContext}>
       {/* Theme container */}
@@ -33,7 +36,7 @@ const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
               {children}
             </main>
             <footer className="text-center">
-              © {new Date().getFullYear()} David Semakula. All rights reserved.
+              © {copyrightYear} David Semakula. All rights reserved.
             </footer>
           </div>
         </div>

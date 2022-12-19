@@ -498,7 +498,7 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
   },
   {
     company: COMPANIES.GRINDERY,
-    role: `Co-founder & ${ROLES.CTO}`,
+    role: `${ROLES.CO_FOUNDER} & ${ROLES.CTO}`,
     period: '2019 - April/2022',
     remote: true,
     details:
