@@ -21,7 +21,8 @@ const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
   };
 
   const thisYear = new Date().getFullYear();
-  const copyrightYear = thisYear > 2022?[2022, '-', thisYear].join(' '):thisYear;
+  const copyrightYear =
+    thisYear > 2022 ? [2022, '-', thisYear].join(' ') : thisYear;
 
   return (
     <AppContext.Provider value={themeContext}>

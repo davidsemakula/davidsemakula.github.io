@@ -25,6 +25,9 @@ export enum APP_TYPE {
 
   // By Purpose
   ADMIN_CONSOLE = 'Admin Console',
+
+  // App specific
+  GNOSIS_SAFE_APP = 'Gnosis Safe App',
 }
 
 export enum LANGUAGES {
@@ -61,18 +64,20 @@ export enum PRODUCTS {
 
   // Blockchain
   ARAGON = 'Aragon',
-  GNOSIS_SAFE = 'Gnosis Safe',
+  GNOSIS_SAFE = '(Gnosis) Safe',
+  HYPERLANE = 'Hyperlane',
 }
 
 export enum ROLES {
-  FOUNDER = 'Founder',
   CO_FOUNDER = 'Co-founder',
-  CTO = 'Chief Technology Officer (C.T.O)',
-  SOFTWARE_ENGINEER = 'Software Engineer',
-  SYSTEM_ARCHITECT = 'Systems Architect',
-  LEAD_DEVELOPER = 'Lead Developer',
   CONSULTANT = 'Consultant',
+  CREATOR = 'Creator',
+  CTO = 'Chief Technology Officer (C.T.O)',
+  FOUNDER = 'Founder',
+  LEAD_DEVELOPER = 'Lead Developer',
+  SOFTWARE_ENGINEER = 'Software Engineer',
   STRATEGIC_ADVISOR = 'Strategic Advisor',
+  SYSTEM_ARCHITECT = 'Systems Architect',
   TECHNICAL_LEAD = 'Technical Lead',
 }
 

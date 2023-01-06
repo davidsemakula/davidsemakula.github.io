@@ -119,7 +119,16 @@ export const BIO = {
             const { name, website } = cleanCompanyObject(company);
             return (
               <>
-                {website ? <A href={website}>{name}</A> : name}
+                {website ? (
+                  <A
+                    href={website}
+                    target="_blank"
+                  >
+                    {name}
+                  </A>
+                ) : (
+                  name
+                )}
                 {idx < HIGHLIGHTED_COMPANIES.length - 1 ? (
                   <span>, </span>
                 ) : null}
@@ -211,11 +220,82 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
+    name: 'Safe Hyperlane Router',
+    website: 'https://github.com/davidsemakula/safe-hyperlane-router',
+    role: ROLES.CREATOR,
+    platforms: [
+      {
+        type: APP_TYPE.GNOSIS_SAFE_APP,
+        url: 'https://github.com/davidsemakula/safe-hyperlane-router',
+        name: '(Gnosis) Safe App',
+      },
+    ],
+    details: (
+      <>
+        <p>
+          A{' '}
+          <A
+            href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
+            target="_blank"
+          >
+            Safe App
+          </A>{' '}
+          for managing assets and interacting with dApps on multiple chains from
+          one{' '}
+          <A
+            href="https://app.safe.global/"
+            target="_blank"
+          >
+            Safe
+          </A>{' '}
+          account using{' '}
+          <A
+            href="https://docs.hyperlane.xyz/hyperlane-docs/developers/send"
+            target="_blank"
+          >
+            Hyperlane Interchain Accounts
+          </A>
+          .
+        </p>
+
+        <p>
+          An{' '}
+          <A
+            href="https://docs.hyperlane.xyz/hyperlane-docs/developers/send"
+            target="_blank"
+          >
+            Hyperlane Interchain Account
+          </A>{' '}
+          is a{' '}
+          <A
+            href="https://eips.ethereum.org/EIPS/eip-1014"
+            target="_blank"
+          >
+            EIP-1014/CREATE2
+          </A>{' '}
+          account whose address can be computed before any contract deployment
+          and remains the same on all chains.
+        </p>
+      </>
+    ),
+    stack: [SKILLS.TYPESCRIPT, SKILLS.ETHERS_JS, SKILLS.REACT_JS],
+    integrations: [PRODUCTS.GNOSIS_SAFE, PRODUCTS.HYPERLANE],
+    awards: [
+      {
+        name: 'Top Prize: Moonbeam Illuminate/22 Hackathon | Hyperlane',
+        url: 'https://twitter.com/MoonbeamNetwork/status/1610738659656962048',
+        // https://github.com/davidsemakula/safe-hyperlane-router
+        // https://gitcoin.co/hackathon/illuminate/projects/17478/hyperlane-safe-app
+        // Vidyard: https://share.vidyard.com/watch/RfCsNrC8r24hKGm7HTBBZY?
+      },
+    ],
+  },
+  {
     name: 'Grindery Pay',
     website:
       'https://chrome.google.com/webstore/detail/grindery-pay/ofnbfgahidjckegapdpkhigjljepcdme',
     icon: COMPANIES.GRINDERY.icon,
-    role: ROLES.LEAD_DEVELOPER,
+    role: `former ${ROLES.LEAD_DEVELOPER}`,
     platforms: [
       {
         type: APP_TYPE.CHROME,
@@ -266,7 +346,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: 'Grindery Nexus',
     website: 'https://www.grindery.io',
     icon: COMPANIES.GRINDERY.icon,
-    role: `${ROLES.STRATEGIC_ADVISOR}, former ${ROLES.TECHNICAL_LEAD}`,
+    role: `former ${ROLES.TECHNICAL_LEAD}, former ${ROLES.STRATEGIC_ADVISOR}`,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -301,7 +381,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: COMPANIES.KEYY.name,
     website: 'https://learn.keyy.org/explore',
     icon: COMPANIES.KEYY.icon,
-    role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -360,7 +440,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: `${COMPANIES.HUBSPOT.name} Inspire`,
     website: 'https://designers.hubspot.com/inspire',
     icon: COMPANIES.HUBSPOT.icon,
-    role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -382,7 +462,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: COMPANIES.TUNGA.name,
     website: COMPANIES.TUNGA.website,
     icon: COMPANIES.TUNGA.icon,
-    role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -417,7 +497,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       COMPANIES.INBOUNDLABS.icon,
       'text-booya dark:text-inherit'
     ),
-    role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
     company: COMPANIES.INBOUNDLABS,
     platforms: [
       {
@@ -453,7 +533,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
     website: 'https://designers.hubspot.com/code-gallery',
     icon: COMPANIES.HUBSPOT.icon,
-    role: `${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -483,18 +563,16 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
       name: 'Freelance',
       location: LOCATION.KAMPALA,
     },
-    role: BIO.OCCUPATION,
+    role: [
+      ROLES.SOFTWARE_ENGINEER,
+      ROLES.SYSTEM_ARCHITECT,
+      ROLES.CONSULTANT,
+      ROLES.STRATEGIC_ADVISOR,
+    ].join('/ '),
     period: 'April/2022 - Present',
     remote: true,
-    details: 'Consulting and full-stack software development.',
-  },
-  {
-    company: COMPANIES.GRINDERY,
-    role: ROLES.STRATEGIC_ADVISOR,
-    period: 'Sept/2022 - Present',
-    remote: true,
     details:
-      'Grindery builds low/no-code middleware for Web3, as well as tools to put DAOs to work. ',
+      'Consulting, strategic advice and full-stack software development.',
   },
   {
     company: COMPANIES.GRINDERY,

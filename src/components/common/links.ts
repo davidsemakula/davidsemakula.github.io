@@ -1,4 +1,4 @@
-import { ComponentType, LinkHTMLAttributes } from 'react';
+import { AnchorHTMLAttributes, ComponentType } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { GatsbyLinkProps } from 'gatsby-link';
 import withElement from './withElement';
@@ -6,7 +6,7 @@ import withElement from './withElement';
 const linkClasses =
   'text-indigo-600 hover:text-indigo-700 hover:underline dark:text-indigo-400 dark:hover:text-indigo-500';
 
-export const A: ComponentType<LinkHTMLAttributes<{}>> = withElement(
+export const A: ComponentType<AnchorHTMLAttributes<{}>> = withElement(
   'a',
   linkClasses,
   {

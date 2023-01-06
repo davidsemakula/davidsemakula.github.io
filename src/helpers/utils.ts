@@ -12,6 +12,7 @@ import {
   ChromeIcon,
   EthereumIcon,
   FlowIcon,
+  GnosisSafeIcon,
   HarmonyIcon,
   LinuxIcon,
   NearIcon,
@@ -110,6 +111,9 @@ export const getAppTypeIcon = (type: APP_TYPE): SimpleIconInput => {
     }
     case APP_TYPE.FLOW: {
       return FlowIcon;
+    }
+    case APP_TYPE.GNOSIS_SAFE_APP: {
+      return GnosisSafeIcon;
     }
     case APP_TYPE.HARMONY: {
       return HarmonyIcon;
