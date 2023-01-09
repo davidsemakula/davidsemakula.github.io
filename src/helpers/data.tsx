@@ -276,6 +276,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           account whose address can be computed before any contract deployment
           and remains the same on all chains.
         </p>
+
+        <p>
+          This app works as an intermediary between a Safe account on the origin
+          chain and Safe Apps providing an interface to an app or asset on the
+          remote chain.
+        </p>
       </>
     ),
     stack: [SKILLS.TYPESCRIPT, SKILLS.ETHERS_JS, SKILLS.REACT_JS],
