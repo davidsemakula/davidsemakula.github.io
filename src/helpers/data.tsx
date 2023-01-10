@@ -275,9 +275,15 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           >
             Hyperlane Interchain Account
           </A>
-          ) as the currently connected account to Safe apps while also providing
-          an RPC provider for read calls to the remote chain; it then translates
-          remote chain transactions from these Safe apps into cross-chain
+          ) as the currently connected chain and account to Safe apps while also providing a{' '}
+          <A
+            href="https://github.com/safe-global/safe-apps-sdk"
+            target="_blank"
+          >
+            Safe Apps SDK
+          </A>{' '}
+          interface (including an RPC provider for read calls to the remote
+          chain); it then translates remote chain transactions from Safe apps into cross-chain
           transactions routed through the{' '}
           <A
             href="https://docs.hyperlane.xyz/hyperlane-docs/developers/send"
@@ -285,8 +291,8 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           >
             Hyperlane Interchain Account Router
           </A>{' '}
-          on the origin chain and submits them to the Safe account for approval and
-          execution.
+          on the origin chain and submits them to the Safe account for approval
+          and execution.
         </p>
 
         <p>
