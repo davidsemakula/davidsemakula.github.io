@@ -257,55 +257,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           </A>
           .
         </p>
-
-        <p>
-          This app works as an intermediary between a Safe account on the origin
-          chain and Safe Apps providing an interface to an app or asset on the
-          remote chain. It advertises the remote chain and an{' '}
-          <A
-            href="https://eips.ethereum.org/EIPS/eip-1014"
-            target="_blank"
-          >
-            EIP-1014/CREATE2
-          </A>{' '}
-          account (a{' '}
-          <A
-            href="https://docs.hyperlane.xyz/hyperlane-docs/developers/send"
-            target="_blank"
-          >
-            Hyperlane Interchain Account
-          </A>
-          ) as the currently connected chain and account to Safe apps while also providing a{' '}
-          <A
-            href="https://github.com/safe-global/safe-apps-sdk"
-            target="_blank"
-          >
-            Safe Apps SDK
-          </A>{' '}
-          interface (including an RPC provider for read calls to the remote
-          chain); it then translates remote chain transactions from Safe apps into cross-chain
-          transactions routed through the{' '}
-          <A
-            href="https://docs.hyperlane.xyz/hyperlane-docs/developers/send"
-            target="_blank"
-          >
-            Hyperlane Interchain Account Router
-          </A>{' '}
-          on the origin chain and submits them to the Safe account for approval
-          and execution.
-        </p>
-
-        <p>
-          <strong>NOTE:</strong> An{' '}
-          <A
-            href="https://eips.ethereum.org/EIPS/eip-1014"
-            target="_blank"
-          >
-            EIP-1014/CREATE2
-          </A>{' '}
-          account address can be deterministically computed before contract
-          deployment and remains the same on all chains.
-        </p>
       </>
     ),
     stack: [SKILLS.TYPESCRIPT, SKILLS.ETHERS_JS, SKILLS.REACT_JS],
