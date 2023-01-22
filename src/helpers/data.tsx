@@ -220,7 +220,7 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
-    name: 'Safe Hyperlane Router',
+    name: 'Mukutu (formerly Safe Hyperlane Router)',
     website: 'https://github.com/davidsemakula/safe-hyperlane-router',
     role: ROLES.CREATOR,
     platforms: [
