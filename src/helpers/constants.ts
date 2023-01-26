@@ -81,6 +81,13 @@ export enum ROLES {
   TECHNICAL_LEAD = 'Technical Lead',
 }
 
+export enum SEVERITY {
+  LOW = 'Low',
+  MEDIUM = 'Medium',
+  HIGH = 'High',
+  CRITICAL = 'Critical',
+}
+
 export enum SKILLS {
   APACHE_CORDOVA = 'Apache Cordova',
   ANSIBLE = 'Ansible',

@@ -1,5 +1,5 @@
 import { ComponentType, ReactNode } from 'react';
-import { APP_TYPE, LANGUAGES, PRODUCTS, SKILLS } from './constants';
+import { APP_TYPE, LANGUAGES, PRODUCTS, SEVERITY, SKILLS } from './constants';
 
 export type SimpleAwardInput = string;
 export type DetailedAwardInput = {
@@ -79,4 +79,14 @@ export type ProjectInput = {
   awards?: Array<GeneralAwardInput>;
   stack?: Array<GeneralTagInput>;
   integrations?: Array<GeneralTagInput>;
+};
+
+export type BountyInput = {
+  name: string;
+  website?: string;
+  location?: string;
+  date?: string;
+  severity?: SEVERITY;
+  details?: string | ReactNode;
+  stack?: Array<GeneralTagInput>;
 };

@@ -13,10 +13,12 @@ import {
   LOCATION,
   PRODUCTS,
   ROLES,
+  SEVERITY,
   SKILLS,
   TAG_COLORS,
 } from './constants';
 import {
+  BountyInput,
   EducationInput,
   ExperienceInput,
   GeneralCompanyInput,
@@ -535,6 +537,65 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     // INBOUND 2019: InboundLabs Presentation
     // https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
     // https://www.youtube.com/watch?v=VpArzDy5ny4&t=2590s
+  },
+];
+
+export const MY_BOUNTIES: Array<BountyInput> = [
+  {
+    name: 'Hyperlane',
+    website: 'https://www.hyperlane.xyz/',
+    location: 'New York, USA',
+    date: '19/Jan/2023',
+    severity: SEVERITY.MEDIUM,
+    details: (
+      <>
+        <p className="mb-1.5">
+          <A href="https://www.hyperlane.xyz/">Hyperlane</A> is a modular
+          cross-chain communication protocol deployed on{' '}
+          <A href="https://docs.hyperlane.xyz/docs/developers-faq-and-troubleshooting/domains">
+            Ethereum, Arbitrum, Avalanche, BSC, Celo, Optimism, Polygon and
+            Moonbeam
+          </A>
+          .
+        </p>
+        <p className="mb-1.5">
+          I discovered and reported a flaw in Hyperlane's{' '}
+          <A href="https://docs.hyperlane.xyz/docs/developers/send">
+            Interchain Account
+          </A>{' '}
+          <A href="https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/v1.0.0/solidity/contracts/OwnableMulticall.sol#L38-L59">
+            implementation
+          </A>{' '}
+          that would lead to any native token (e.g ETH on Ethereum) sent to an
+          interchain account being trapped/frozen forever, as the account's
+          owner would have no way of withdrawing the native token.
+        </p>
+        <p className="mb-1.5">
+          This flaw was caused by the assumption that interchain accounts
+          couldn't receive native tokens (e.g ETH on Ethereum) because neither a{' '}
+          <A href="https://docs.soliditylang.org/en/v0.8.17/contracts.html#receive-ether-function">
+            receive ether
+          </A>{' '}
+          nor a{' '}
+          <A href="https://docs.soliditylang.org/en/v0.8.17/contracts.html#fallback-function">
+            payable fallback
+          </A>{' '}
+          function was implemented. However, the interchain accounts could still
+          receive native tokens in some cases, most notably before the
+          interchain account smart contract was deployed but the address was
+          already{' '}
+          <A href="https://docs.hyperlane.xyz/docs/developers/send#precomputing-addresses">
+            precomputed
+          </A>{' '}
+          which is a normal usage pattern for interchain accounts.
+        </p>
+        <p>
+          I additionally supported the Hyperlane team by reviewing their fix for
+          the issue.
+        </p>
+      </>
+    ),
+    stack: [SKILLS.SOLIDITY, SKILLS.RUST, SKILLS.TYPESCRIPT],
   },
 ];
 

@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
   AcademicCapIcon,
   BriefcaseIcon,
+  BugAntIcon,
   CpuChipIcon,
   EnvelopeIcon,
   GlobeAltIcon,
@@ -22,6 +23,7 @@ import {
   Title,
 } from '../components/common/typography';
 import Layout from '../components/layout';
+import Bounty from '../components/resume/bounty';
 import Education from '../components/resume/education';
 import Experience from '../components/resume/experience';
 import {
@@ -34,6 +36,7 @@ import Seo from '../components/seo';
 import { TAG_COLORS } from '../helpers/constants';
 import {
   BIO,
+  MY_BOUNTIES,
   MY_EDUCATION,
   MY_EXPERIENCE,
   MY_LANGUAGES,
@@ -124,6 +127,26 @@ const IndexPage = () => (
           <Project
             {...item}
             key={`project-${idx}`}
+          />
+        ))}
+      </MainContent>
+
+      {/* Bug Bounties */}
+      <SideContent>
+        <SectionHeading>
+          <StyledIconLg icon={BugAntIcon} /> Bug Bounties
+        </SectionHeading>
+      </SideContent>
+      <MainContent>
+        <div className="mb-2">
+          I've discovered and ethically reported flaws and/or vulnerabilities in
+          the following projects through their respective bug bounty programs:
+        </div>
+
+        {(MY_BOUNTIES || []).map((item, idx) => (
+          <Bounty
+            {...item}
+            key={`bounty-${idx}`}
           />
         ))}
       </MainContent>
