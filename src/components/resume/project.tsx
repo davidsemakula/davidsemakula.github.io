@@ -1,15 +1,20 @@
 import * as React from 'react';
 import { ReactElement } from 'react';
-import { WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+import {
+  LifebuoyIcon,
+  WrenchScrewdriverIcon,
+} from '@heroicons/react/24/outline';
 import { TAG_COLORS } from '../../helpers/constants';
 import {
   GeneralAwardInput,
+  GeneralPartnerInput,
   GeneralPlatformInput,
   ProjectInput,
 } from '../../helpers/types';
 import {
   cleanAwardObject,
   cleanCompanyObject,
+  cleanPartnerObject,
   cleanPlatformObject,
   getAppTypeIcon,
   isNonEmptyArray,
@@ -29,6 +34,7 @@ const Project = ({
   platforms,
   details,
   awards,
+  partners,
   stack,
   integrations,
   ...rest
@@ -78,6 +84,15 @@ const Project = ({
         return (
           <div key={`award-link-${idx}`}>
             <StyledIconMd icon={AwardIcon} />{' '}
+            {url ? <A href={url}>{name}</A> : name}
+          </div>
+        );
+      })}
+      {(partners || []).map((item: GeneralPartnerInput, idx: number) => {
+        const { name, url } = cleanPartnerObject(item);
+        return (
+          <div key={`partner-link-${idx}`}>
+            <StyledIconMd icon={LifebuoyIcon} />{' '}
             {url ? <A href={url}>{name}</A> : name}
           </div>
         );

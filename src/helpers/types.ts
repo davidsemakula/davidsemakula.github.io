@@ -53,6 +53,13 @@ export type ExperienceInput = {
   details: string | ReactNode;
 };
 
+export type SimplePartnerInput = string;
+export type DetailedPartnerInput = {
+  name: SimplePartnerInput;
+  url?: string;
+};
+export type GeneralPartnerInput = SimplePartnerInput | DetailedPartnerInput;
+
 export type SimplePlatformInput = APP_TYPE;
 export type DetailedPlatformInput = {
   type: SimplePlatformInput;
@@ -77,6 +84,7 @@ export type ProjectInput = {
   platforms?: Array<GeneralPlatformInput>;
   details?: string | ReactNode;
   awards?: Array<GeneralAwardInput>;
+  partners?: Array<GeneralPartnerInput>;
   stack?: Array<GeneralTagInput>;
   integrations?: Array<GeneralTagInput>;
 };

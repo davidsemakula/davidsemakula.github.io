@@ -23,11 +23,13 @@ import {
   DetailedAwardInput,
   DetailedCompanyInput,
   DetailedIconInput,
+  DetailedPartnerInput,
   DetailedPlatformInput,
   DetailedTagInput,
   GeneralAwardInput,
   GeneralCompanyInput,
   GeneralIconInput,
+  GeneralPartnerInput,
   GeneralPlatformInput,
   GeneralTagInput,
   SimpleIconInput,
@@ -66,6 +68,16 @@ export const cleanIconObject = (
   return value;
 };
 
+export const cleanPartnerObject = (
+  value: GeneralPartnerInput | any
+): DetailedPartnerInput => {
+  if (typeof value === 'string') {
+    return {
+      name: value,
+    };
+  }
+  return value;
+};
 export const cleanPlatformObject = (
   value: GeneralPlatformInput
 ): DetailedPlatformInput => {
