@@ -339,8 +339,24 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       APP_TYPE.BINANCE,
       APP_TYPE.FLOW,
     ],
-    details:
-      'Grindery Nexus is the easiest way for people and organizations to connect Apps and dapps across chains and protocols.',
+    details: (
+      <>
+        <p>
+          A framework that allows developers to create reusable services to
+          connect smart contracts with other protocols, including web2 apps.
+        </p>
+        <p>
+          A low/no-code interface that allows end-users to declare workflows
+          with simple logic, making automation available to anyone without
+          programming skills.
+        </p>
+        <p>
+          A marketplace with incentives for decentralized nodes to execute the
+          user-defined workflows as well as for developers to create more
+          services.
+        </p>
+      </>
+    ),
     stack: [
       SKILLS.SOLIDITY,
       SKILLS.RUST,
@@ -363,6 +379,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     website: 'https://learn.keyy.org/explore',
     icon: COMPANIES.KEYY.icon,
     role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    company: COMPANIES.KEYY,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -422,6 +439,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     website: 'https://designers.hubspot.com/inspire',
     icon: COMPANIES.HUBSPOT.icon,
     role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    company: COMPANIES.HUBSPOT,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -515,6 +533,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     website: 'https://designers.hubspot.com/code-gallery',
     icon: COMPANIES.HUBSPOT.icon,
     role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    company: COMPANIES.HUBSPOT,
     platforms: [
       {
         type: APP_TYPE.WEB,
