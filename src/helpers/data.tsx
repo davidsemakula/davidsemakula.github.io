@@ -240,7 +240,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           >
             Safe App
           </A>{' '}
-          for managing assets and interacting with dApps on multiple chains from
+          for managing assets and interacting with dapps on multiple chains from
           one{' '}
           <A
             href="https://app.safe.global/"
@@ -340,7 +340,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       APP_TYPE.FLOW,
     ],
     details:
-      'Grindery Nexus is the easiest way for people and organizations to connect Apps and dApps across chains and protocols.',
+      'Grindery Nexus is the easiest way for people and organizations to connect Apps and dapps across chains and protocols.',
     stack: [
       SKILLS.SOLIDITY,
       SKILLS.RUST,
