@@ -265,7 +265,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       {
         name: 'Top Prize: Moonbeam Illuminate/22 Hackathon | Best use of Hyperlane',
         url: 'https://twitter.com/MoonbeamNetwork/status/1610738659656962048',
-        // https://github.com/davidsemakula/safe-hyperlane-router
+        // https://safe.mukutu.tech
         // https://gitcoin.co/hackathon/illuminate/projects/17478/hyperlane-safe-app
         // Vidyard: https://share.vidyard.com/watch/RfCsNrC8r24hKGm7HTBBZY?
       },
