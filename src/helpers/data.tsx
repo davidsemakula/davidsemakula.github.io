@@ -221,12 +221,12 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
     name: 'Mukutu Safe (formerly Safe Hyperlane Router)',
-    website: 'https://github.com/davidsemakula/safe-hyperlane-router',
+    website: 'https://github.com/mukutu-tech/mukutu-safe',
     role: ROLES.CREATOR,
     platforms: [
       {
         type: APP_TYPE.GNOSIS_SAFE_APP,
-        url: 'https://github.com/davidsemakula/safe-hyperlane-router',
+        url: 'https://github.com/mukutu-tech/mukutu-safe',
         name: '(Gnosis) Safe App',
       },
     ],
