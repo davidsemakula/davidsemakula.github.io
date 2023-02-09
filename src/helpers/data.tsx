@@ -567,8 +567,9 @@ export const MY_BOUNTIES: Array<BountyInput> = [
             implementation
           </A>{' '}
           that would lead to any native token (e.g ETH on Ethereum) sent to an
-          interchain account being trapped/frozen forever, as the account's
-          owner would have no way of withdrawing the native token.
+          interchain account being trapped/frozen because the interchain
+          account's controller would have no way of withdrawing the native
+          token.
         </p>
         <p className="mb-1.5">
           This flaw was caused by the assumption that interchain accounts
@@ -580,10 +581,9 @@ export const MY_BOUNTIES: Array<BountyInput> = [
           <A href="https://docs.soliditylang.org/en/v0.8.17/contracts.html#fallback-function">
             payable fallback
           </A>{' '}
-          function was implemented. However, the interchain accounts could still
-          receive native tokens in some cases, most notably before the
-          interchain account smart contract was deployed but the address was
-          already{' '}
+          function was implemented. However, this assumption wasn't true in some
+          cases, most notably before the interchain account smart contract was
+          deployed but the address was already{' '}
           <A href="https://docs.hyperlane.xyz/docs/developers/send#precomputing-addresses">
             precomputed
           </A>{' '}
