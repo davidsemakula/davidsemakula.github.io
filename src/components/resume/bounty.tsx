@@ -8,7 +8,7 @@ import {
 import { TAG_COLORS } from '../../helpers/constants';
 import { BountyInput } from '../../helpers/types';
 import { isNonEmptyArray } from '../../helpers/utils';
-import { StyledIconMd } from '../common/icons/containers';
+import { StyledIcon } from '../common/icons/containers';
 import { A } from '../common/links';
 import { LabeledTagList } from '../common/tags';
 import { ItemHeading } from '../common/typography';
@@ -31,18 +31,30 @@ const Bounty = ({
       <ItemHeading>{website ? <A href={website}>{name}</A> : name}</ItemHeading>
       {location ? (
         <div>
-          <StyledIconMd icon={MapPinIcon} /> {location || ''}
+          <StyledIcon
+            icon={MapPinIcon}
+            size="medium"
+          />{' '}
+          {location || ''}
           {location ? ' ' : ''}
         </div>
       ) : null}
       {date ? (
         <div>
-          <StyledIconMd icon={ClockIcon} /> {date}
+          <StyledIcon
+            icon={ClockIcon}
+            size="medium"
+          />{' '}
+          {date}
         </div>
       ) : null}
       {severity ? (
         <div>
-          <StyledIconMd icon={BellAlertIcon} /> Severity: {severity}
+          <StyledIcon
+            icon={BellAlertIcon}
+            size="medium"
+          />{' '}
+          Severity: {severity}
         </div>
       ) : null}
       {details ? <div className="mt-2">{details}</div> : null}

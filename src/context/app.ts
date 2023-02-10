@@ -1,9 +1,14 @@
 import { createContext } from 'react';
 import { THEME } from '../helpers/constants';
 
-const AppContext = createContext({
+export type AppContextType = {
+  theme: THEME;
+  setTheme: (theme: string) => void;
+};
+
+const AppContext = createContext<AppContextType>({
   theme: THEME.LIGHT,
-  setTheme: (theme: string): void => {},
+  setTheme: () => {},
 });
 
 export default AppContext;

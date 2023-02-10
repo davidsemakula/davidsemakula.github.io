@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ExperienceInput } from '../../helpers/types';
 import { cleanCompanyObject } from '../../helpers/utils';
-import { StyledIconMd } from '../common/icons/containers';
+import { StyledIcon } from '../common/icons/containers';
 import { A } from '../common/links';
 import { ItemHeading, ItemSubTitle } from '../common/typography';
 
@@ -27,22 +27,38 @@ const Experience = ({
       {...rest}
     >
       <div className="text-zinc-500 dark:text-zinc-500">
-        <StyledIconMd icon={ClockIcon} /> {period}
+        <StyledIcon
+          icon={ClockIcon}
+          size="medium"
+        />{' '}
+        {period}
       </div>
       <ItemHeading>{name}</ItemHeading>
       <ItemSubTitle>
-        <StyledIconMd icon={WrenchScrewdriverIcon} /> {role}
+        <StyledIcon
+          icon={WrenchScrewdriverIcon}
+          size="medium"
+        />{' '}
+        {role}
       </ItemSubTitle>
       {location || remote ? (
         <div>
-          <StyledIconMd icon={MapPinIcon} /> {location || ''}
+          <StyledIcon
+            icon={MapPinIcon}
+            size="medium"
+          />{' '}
+          {location || ''}
           {location ? ' ' : ''}
           {remote ? (location ? '(Remote)' : 'Remote') : null}
         </div>
       ) : null}
       {website ? (
         <div>
-          <StyledIconMd icon={LinkIcon} /> <A href={website}>{website}</A>
+          <StyledIcon
+            icon={LinkIcon}
+            size="medium"
+          />{' '}
+          <A href={website}>{website}</A>
         </div>
       ) : null}
       <div className="mt-2">{details}</div>

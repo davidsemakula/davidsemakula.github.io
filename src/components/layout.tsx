@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { HTMLAttributes, ReactElement, useState } from 'react';
-import AppContext from '../context/app';
+import AppContext, { AppContextType } from '../context/app';
 import { THEME } from '../helpers/constants';
 import Header from './header';
 
@@ -14,7 +14,7 @@ const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
     localStorage.theme;
   const currentTheme =
     cachedTheme || (isDarkColorScheme ? THEME.DARK : THEME.LIGHT);
-  const [theme, setTheme] = useState(currentTheme);
+  const [theme, setTheme] = useState<THEME>(currentTheme);
   const themeContext = {
     theme,
     setTheme,
@@ -25,7 +25,7 @@ const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
     thisYear > 2022 ? [2022, '-', thisYear].join(' ') : thisYear;
 
   return (
-    <AppContext.Provider value={themeContext}>
+    <AppContext.Provider value={themeContext as AppContextType}>
       {/* Theme container */}
       <div className={theme === THEME.DARK ? 'dark' : ''}>
         {/* Background */}

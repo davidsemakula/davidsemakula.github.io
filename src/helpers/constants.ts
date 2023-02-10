@@ -101,9 +101,11 @@ export enum SKILLS {
   ETHERS_JS = 'ethers.js',
   EXPRESS_JS = 'Express.js',
   FLUTTER = 'Flutter',
+  FOUNDRY = 'Foundry',
   GO = 'Go',
   GOOGLE_CLOUD = 'Google Cloud',
   GRAPHQL = 'GraphQL',
+  HARDHAT = 'Hardhat',
   HTML = 'HTML', // HyperText Markup Language
   IPFS = 'IPFS', // InterPlanetary File System
   JAVA = 'Java',
@@ -113,6 +115,7 @@ export enum SKILLS {
   MONGODB = 'MongoDB',
   MYSQL = 'MySQL',
   NODE_JS = 'Node.js',
+  POLKADOT_JS = 'Polkadot{.js}',
   POSTGRESQL = 'PostgreSQL',
   PYTHON = 'Python',
   REDIS = 'Redis',

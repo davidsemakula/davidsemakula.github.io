@@ -192,10 +192,12 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
     name: SKILLS.ETHERS_JS,
     color: web3Color,
   },
-  SKILLS.EXPRESS_JS,
+  {
+    name: SKILLS.POLKADOT_JS,
+    color: web3Color,
+  },
   SKILLS.DJANGO,
   SKILLS.FLUTTER,
-  SKILLS.APACHE_CORDOVA,
   SKILLS.ELECTRON,
   // Storage
   SKILLS.MYSQL,
@@ -215,9 +217,14 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
   SKILLS.ANSIBLE,
   SKILLS.DOCKER,
   SKILLS.KUBERNETES,
-  // Platforms
-  SKILLS.AWS,
-  SKILLS.GOOGLE_CLOUD,
+  {
+    name: SKILLS.FOUNDRY,
+    color: web3Color,
+  },
+  {
+    name: SKILLS.HARDHAT,
+    color: web3Color,
+  },
 ];
 
 export const MY_PROJECTS: Array<ProjectInput> = [
@@ -270,6 +277,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
         // https://safe.mukutu.tech
         // https://gitcoin.co/hackathon/illuminate/projects/17478/hyperlane-safe-app
         // Vidyard: https://share.vidyard.com/watch/RfCsNrC8r24hKGm7HTBBZY?
+        // Gitcoin blogpost: https://go.gitcoin.co/blog/celebrating-the-best-in-cross-chain-from-moonbeams-illuminate-hack/22
       },
     ],
   },
@@ -305,7 +313,13 @@ export const MY_PROJECTS: Array<ProjectInput> = [
         </p>
       </>
     ),
-    stack: [SKILLS.SOLIDITY, SKILLS.WEB3_JS, SKILLS.REACT_JS, SKILLS.IPFS],
+    stack: [
+      SKILLS.SOLIDITY,
+      SKILLS.WEB3_JS,
+      SKILLS.REACT_JS,
+      SKILLS.HARDHAT,
+      SKILLS.IPFS,
+    ],
     integrations: [PRODUCTS.ARAGON, PRODUCTS.GNOSIS_SAFE],
     awards: [
       {
@@ -437,29 +451,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
-    name: `${COMPANIES.HUBSPOT.name} Inspire`,
-    website: 'https://designers.hubspot.com/inspire',
-    icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: COMPANIES.HUBSPOT,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://designers.hubspot.com/inspire',
-      },
-    ],
-    details:
-      'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
-    stack: [
-      SKILLS.NODE_JS,
-      SKILLS.EXPRESS_JS,
-      SKILLS.REDIS,
-      PRODUCTS.ALGOLIA,
-      PRODUCTS.HUBSPOT_CMS,
-    ],
-    integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
-  },
-  {
     name: COMPANIES.TUNGA.name,
     website: COMPANIES.TUNGA.website,
     icon: COMPANIES.TUNGA.icon,
@@ -490,6 +481,56 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       PRODUCTS.MANDRILL,
       PRODUCTS.METABASE,
     ],
+  },
+  {
+    name: `${COMPANIES.HUBSPOT.name} Inspire`,
+    website: 'https://designers.hubspot.com/inspire',
+    icon: COMPANIES.HUBSPOT.icon,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    company: COMPANIES.HUBSPOT,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://designers.hubspot.com/inspire',
+      },
+    ],
+    details:
+      'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
+    stack: [
+      SKILLS.NODE_JS,
+      SKILLS.EXPRESS_JS,
+      SKILLS.REDIS,
+      PRODUCTS.ALGOLIA,
+      PRODUCTS.HUBSPOT_CMS,
+    ],
+    integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
+  },
+  {
+    name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
+    website: 'https://designers.hubspot.com/code-gallery',
+    icon: COMPANIES.HUBSPOT.icon,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    company: COMPANIES.HUBSPOT,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://designers.hubspot.com/code-gallery',
+      },
+    ],
+    details:
+      'A showcase of the open-source assets and projects the HubSpot developer community is working on.',
+    stack: [
+      SKILLS.NODE_JS,
+      SKILLS.EXPRESS_JS,
+      SKILLS.MONGODB,
+      SKILLS.REDIS,
+      PRODUCTS.HUBSPOT_CMS,
+    ],
+    integrations: [PRODUCTS.GITHUB, PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
+    // More Links
+    // INBOUND 2019: InboundLabs Presentation
+    // https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
+    // https://www.youtube.com/watch?v=VpArzDy5ny4&t=2590s
   },
   {
     name: 'Booya',
@@ -529,33 +570,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       SKILLS.GRAPHQL,
     ],
     integrations: [PRODUCTS.HUBSPOT, PRODUCTS.MAILGUN, PRODUCTS.STRIPE],
-  },
-  {
-    name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
-    website: 'https://designers.hubspot.com/code-gallery',
-    icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: COMPANIES.HUBSPOT,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://designers.hubspot.com/code-gallery',
-      },
-    ],
-    details:
-      'A showcase of the open-source assets and projects our developer community is working on.',
-    stack: [
-      SKILLS.NODE_JS,
-      SKILLS.EXPRESS_JS,
-      SKILLS.MONGODB,
-      SKILLS.REDIS,
-      PRODUCTS.HUBSPOT_CMS,
-    ],
-    integrations: [PRODUCTS.GITHUB, PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
-    // More Links
-    // INBOUND 2019: InboundLabs Presentation
-    // https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
-    // https://www.youtube.com/watch?v=VpArzDy5ny4&t=2590s
   },
 ];
 

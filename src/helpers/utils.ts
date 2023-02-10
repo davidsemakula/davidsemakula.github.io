@@ -86,7 +86,7 @@ export const cleanPlatformObject = (
       type: value,
     };
   }
-  return value;
+  return value as DetailedPlatformInput;
 };
 
 export const cleanTagObject = (value: GeneralTagInput): DetailedTagInput => {
@@ -95,7 +95,7 @@ export const cleanTagObject = (value: GeneralTagInput): DetailedTagInput => {
       name: value,
     };
   }
-  return value;
+  return value as DetailedTagInput;
 };
 
 export const getAppTypeIcon = (type: APP_TYPE): SimpleIconInput => {

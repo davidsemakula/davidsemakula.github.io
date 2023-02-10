@@ -7,7 +7,7 @@ import {
   TrophyIcon,
 } from '@heroicons/react/24/outline';
 import { EducationInput } from '../../helpers/types';
-import { StyledIconMd } from '../common/icons/containers';
+import { StyledIcon } from '../common/icons/containers';
 import { A } from '../common/links';
 import { ItemHeading, ItemSubTitle } from '../common/typography';
 
@@ -26,19 +26,35 @@ const Education = ({
   >
     <ItemHeading>{name}</ItemHeading>
     <ItemSubTitle>
-      <StyledIconMd icon={TrophyIcon} /> {award}
+      <StyledIcon
+        icon={TrophyIcon}
+        size="medium"
+      />{' '}
+      {award}
     </ItemSubTitle>
     {location ? (
       <div>
-        <StyledIconMd icon={MapPinIcon} /> {location}
+        <StyledIcon
+          icon={MapPinIcon}
+          size="medium"
+        />{' '}
+        {location}
       </div>
     ) : null}
     <div>
-      <StyledIconMd icon={ClockIcon} /> {period}
+      <StyledIcon
+        icon={ClockIcon}
+        size="medium"
+      />{' '}
+      {period}
     </div>
     {website ? (
       <div>
-        <StyledIconMd icon={LinkIcon} /> <A href={website}>{website}</A>
+        <StyledIcon
+          icon={LinkIcon}
+          size="medium"
+        />{' '}
+        <A href={website}>{website}</A>
       </div>
     ) : null}
     {details ? <div className="mt-2">{details}</div> : null}

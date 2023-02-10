@@ -22,7 +22,7 @@ const withElement = (
       return name;
     };
     return React.createElement(
-      elem,
+      elem as 'input',
       {
         className: [parseClassName(defaultClassName), className]
           .filter(Boolean)

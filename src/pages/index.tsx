@@ -11,11 +11,9 @@ import {
   RocketLaunchIcon,
 } from '@heroicons/react/24/outline';
 import { GithubIcon } from '../components/common/icons';
-import {
-  StyledIconLg,
-  StyledIconMd,
-} from '../components/common/icons/containers';
+import { StyledIcon } from '../components/common/icons/containers';
 import { A } from '../components/common/links';
+import List from '../components/common/list';
 import { TagList } from '../components/common/tags';
 import {
   SectionHeading,
@@ -55,20 +53,31 @@ const IndexPage = () => (
       </MainContent>
       <SideContent header={true}>
         <div>
-          <StyledIconMd icon={MapPinIcon} /> {BIO.LOCATION}
+          <StyledIcon
+            icon={MapPinIcon}
+            size="medium"
+          />{' '}
+          {BIO.LOCATION}
         </div>
         <div>
-          <StyledIconMd icon={EnvelopeIcon} />{' '}
+          <StyledIcon
+            icon={EnvelopeIcon}
+            size="medium"
+          />{' '}
           <A href={`mailto:${BIO.EMAIL}`}>{BIO.EMAIL}</A>
         </div>
         <div>
-          <StyledIconMd icon={GlobeAltIcon} />{' '}
+          <StyledIcon
+            icon={GlobeAltIcon}
+            size="medium"
+          />{' '}
           <A href={`https://${BIO.WEBSITE}`}>{BIO.WEBSITE}</A>
         </div>
         <div>
-          <StyledIconMd
+          <StyledIcon
             icon={GithubIcon}
             className="text-github dark:text-inherit"
+            size="medium"
           />{' '}
           <A
             href={`https://github.com/${BIO.GITHUB_USERNAME}`}
@@ -84,7 +93,11 @@ const IndexPage = () => (
       {/* Skills */}
       <SideContent>
         <SectionHeading>
-          <StyledIconLg icon={CpuChipIcon} /> Skills
+          <StyledIcon
+            icon={CpuChipIcon}
+            size="large"
+          />{' '}
+          Skills
         </SectionHeading>
       </SideContent>
       <MainContent>
@@ -98,7 +111,11 @@ const IndexPage = () => (
       {/* Languages */}
       <SideContent>
         <SectionHeading>
-          <StyledIconLg icon={LanguageIcon} /> Languages
+          <StyledIcon
+            icon={LanguageIcon}
+            size="large"
+          />{' '}
+          Languages
         </SectionHeading>
       </SideContent>
       <MainContent>
@@ -115,7 +132,11 @@ const IndexPage = () => (
       {/* Projects */}
       <SideContent>
         <SectionHeading>
-          <StyledIconLg icon={RocketLaunchIcon} /> Projects
+          <StyledIcon
+            icon={RocketLaunchIcon}
+            size="large"
+          />{' '}
+          Projects
         </SectionHeading>
       </SideContent>
       <MainContent>
@@ -123,18 +144,22 @@ const IndexPage = () => (
           I have made significant contributions to the following projects:
         </div>
 
-        {(MY_PROJECTS || []).map((item, idx) => (
-          <Project
-            {...item}
-            key={`project-${idx}`}
-          />
-        ))}
+        <List
+          items={MY_PROJECTS}
+          component={Project}
+          max={6}
+          suffix={'projects'}
+        />
       </MainContent>
 
       {/* Bug Bounties */}
       <SideContent>
         <SectionHeading>
-          <StyledIconLg icon={BugAntIcon} /> Bug Bounties
+          <StyledIcon
+            icon={BugAntIcon}
+            size="large"
+          />{' '}
+          Bug Bounties
         </SectionHeading>
       </SideContent>
       <MainContent>
@@ -143,42 +168,45 @@ const IndexPage = () => (
           the following projects through their respective bug bounty programs:
         </div>
 
-        {(MY_BOUNTIES || []).map((item, idx) => (
-          <Bounty
-            {...item}
-            key={`bounty-${idx}`}
-          />
-        ))}
+        <List
+          items={MY_BOUNTIES}
+          component={Bounty}
+          suffix={'bounties'}
+        />
       </MainContent>
 
       {/* Work Experience */}
       <SideContent>
         <SectionHeading>
-          <StyledIconLg icon={BriefcaseIcon} /> Work Experience
+          <StyledIcon
+            icon={BriefcaseIcon}
+            size="large"
+          />{' '}
+          Work Experience
         </SectionHeading>
       </SideContent>
       <MainContent>
-        {(MY_EXPERIENCE || []).map((item, idx) => (
-          <Experience
-            {...item}
-            key={`experience-${idx}`}
-          />
-        ))}
+        <List
+          items={MY_EXPERIENCE}
+          component={Experience}
+        />
       </MainContent>
 
       {/* Education */}
       <SideContent>
         <h2 className="text-2xl font-medium">
-          <StyledIconLg icon={AcademicCapIcon} /> Education
+          <StyledIcon
+            icon={AcademicCapIcon}
+            size="large"
+          />{' '}
+          Education
         </h2>
       </SideContent>
       <MainContent>
-        {(MY_EDUCATION || []).map((item, idx) => (
-          <Education
-            {...item}
-            key={`education-${idx}`}
-          />
-        ))}
+        <List
+          items={MY_EDUCATION}
+          component={Education}
+        />
       </MainContent>
     </Container>
   </Layout>

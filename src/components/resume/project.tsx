@@ -20,7 +20,7 @@ import {
   isNonEmptyArray,
 } from '../../helpers/utils';
 import { AwardIcon } from '../common/icons';
-import { StyledIconMd } from '../common/icons/containers';
+import { StyledIcon } from '../common/icons/containers';
 import { A } from '../common/links';
 import { LabeledTagList } from '../common/tags';
 import { ItemHeading, ItemSubTitle } from '../common/typography';
@@ -49,7 +49,11 @@ const Project = ({
       <ItemHeading>{website ? <A href={website}>{name}</A> : name}</ItemHeading>
       {role ? (
         <ItemSubTitle>
-          <StyledIconMd icon={WrenchScrewdriverIcon} /> {role}
+          <StyledIcon
+            icon={WrenchScrewdriverIcon}
+            size="medium"
+          />{' '}
+          {role}
         </ItemSubTitle>
       ) : null}
       {platforms ? (
@@ -62,7 +66,10 @@ const Project = ({
                 className="inline-block mr-2"
                 key={`project-link-${idx}`}
               >
-                <StyledIconMd icon={getAppTypeIcon(type)} />{' '}
+                <StyledIcon
+                  icon={getAppTypeIcon(type)}
+                  size="medium"
+                />{' '}
                 {url ? <A href={url}>{platformName || url}</A> : platformName}
               </span>
             );
@@ -83,7 +90,10 @@ const Project = ({
         const { name, url } = cleanAwardObject(item);
         return (
           <div key={`award-link-${idx}`}>
-            <StyledIconMd icon={AwardIcon} />{' '}
+            <StyledIcon
+              icon={AwardIcon}
+              size="medium"
+            />{' '}
             {url ? <A href={url}>{name}</A> : name}
           </div>
         );
@@ -92,7 +102,10 @@ const Project = ({
         const { name, url } = cleanPartnerObject(item);
         return (
           <div key={`partner-link-${idx}`}>
-            <StyledIconMd icon={LifebuoyIcon} />{' '}
+            <StyledIcon
+              icon={LifebuoyIcon}
+              size="medium"
+            />{' '}
             {url ? <A href={url}>{name}</A> : name}
           </div>
         );
