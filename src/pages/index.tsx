@@ -189,6 +189,7 @@ const IndexPage = () => (
         <List
           items={MY_EXPERIENCE}
           component={Experience}
+          max={3}
         />
       </MainContent>
 
