@@ -578,7 +578,7 @@ export const MY_BOUNTIES: Array<BountyInput> = [
     name: 'Hyperlane',
     website: 'https://www.hyperlane.xyz/',
     location: 'New York, USA',
-    date: '19/Jan/2023',
+    date: 'Jan/2023',
     severity: SEVERITY.MEDIUM,
     details: (
       <>
