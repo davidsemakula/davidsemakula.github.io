@@ -155,6 +155,8 @@ export const MY_LANGUAGES: Array<LANGUAGES> = [
 ];
 
 const web3Color = TAG_COLORS.VIOLET;
+
+// Only highlights, can't include everything
 export const MY_SKILLS: Array<GeneralTagInput> = [
   // Languages
   SKILLS.PYTHON,
@@ -166,22 +168,14 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
     name: SKILLS.RUST,
     color: web3Color,
   },
-  SKILLS.JAVA,
   SKILLS.GO,
   SKILLS.SWIFT,
   SKILLS.KOTLIN,
-  SKILLS.DART,
-  SKILLS.JAVASCRIPT,
   SKILLS.TYPESCRIPT,
   {
     name: SKILLS.WEB_ASSEMBLY,
     color: web3Color,
   },
-  {
-    name: SKILLS.ASSEMBLYSCRIPT,
-    color: web3Color,
-  },
-  SKILLS.NODE_JS,
   // Libraries & Frameworks
   SKILLS.REACT_JS,
   {
@@ -196,35 +190,21 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
     name: SKILLS.POLKADOT_JS,
     color: web3Color,
   },
-  SKILLS.DJANGO,
   SKILLS.FLUTTER,
   SKILLS.ELECTRON,
   // Storage
-  SKILLS.MYSQL,
-  SKILLS.POSTGRESQL,
   SKILLS.MONGODB,
   SKILLS.REDIS,
-  SKILLS.RETHINKDB,
   {
     name: SKILLS.IPFS,
     color: web3Color,
   },
   // Paradigms
   SKILLS.GRAPHQL,
-  SKILLS.REST,
-  SKILLS.RPC,
   // Tools
   SKILLS.ANSIBLE,
   SKILLS.DOCKER,
   SKILLS.KUBERNETES,
-  {
-    name: SKILLS.FOUNDRY,
-    color: web3Color,
-  },
-  {
-    name: SKILLS.HARDHAT,
-    color: web3Color,
-  },
 ];
 
 export const MY_PROJECTS: Array<ProjectInput> = [
@@ -391,6 +371,61 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
+    name: `${COMPANIES.HUBSPOT.name} Inspire`,
+    website: 'https://designers.hubspot.com/inspire',
+    icon: COMPANIES.HUBSPOT.icon,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    company: COMPANIES.HUBSPOT,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://designers.hubspot.com/inspire',
+      },
+    ],
+    details:
+      'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
+    stack: [
+      SKILLS.NODE_JS,
+      SKILLS.EXPRESS_JS,
+      SKILLS.REDIS,
+      PRODUCTS.ALGOLIA,
+      PRODUCTS.HUBSPOT_CMS,
+    ],
+    integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
+  },
+  {
+    name: COMPANIES.TUNGA.name,
+    website: COMPANIES.TUNGA.website,
+    icon: COMPANIES.TUNGA.icon,
+    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: COMPANIES.TUNGA.website,
+      },
+    ],
+    details:
+      'Tunga is an online staff augmentation platform that connects companies worldwide to experienced African software engineers.',
+    stack: [
+      SKILLS.PYTHON,
+      SKILLS.DJANGO,
+      SKILLS.REACT_JS,
+      SKILLS.MYSQL,
+      SKILLS.REDIS,
+      PRODUCTS.ALGOLIA,
+      SKILLS.ANSIBLE,
+    ],
+    integrations: [
+      PRODUCTS.GITHUB,
+      PRODUCTS.SLACK,
+      PRODUCTS.EXACT,
+      PRODUCTS.HUBSPOT_CRM,
+      PRODUCTS.PAYONEER,
+      PRODUCTS.MANDRILL,
+      PRODUCTS.METABASE,
+    ],
+  },
+  {
     name: COMPANIES.KEYY.name,
     website: 'https://learn.keyy.org/explore',
     icon: COMPANIES.KEYY.icon,
@@ -449,61 +484,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       PRODUCTS.SENDGRID,
       PRODUCTS.AMPLITUDE,
     ],
-  },
-  {
-    name: COMPANIES.TUNGA.name,
-    website: COMPANIES.TUNGA.website,
-    icon: COMPANIES.TUNGA.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: COMPANIES.TUNGA.website,
-      },
-    ],
-    details:
-      'Tunga is an online staff augmentation platform that connects companies worldwide to experienced African software engineers.',
-    stack: [
-      SKILLS.PYTHON,
-      SKILLS.DJANGO,
-      SKILLS.REACT_JS,
-      SKILLS.MYSQL,
-      SKILLS.REDIS,
-      PRODUCTS.ALGOLIA,
-      SKILLS.ANSIBLE,
-    ],
-    integrations: [
-      PRODUCTS.GITHUB,
-      PRODUCTS.SLACK,
-      PRODUCTS.EXACT,
-      PRODUCTS.HUBSPOT_CRM,
-      PRODUCTS.PAYONEER,
-      PRODUCTS.MANDRILL,
-      PRODUCTS.METABASE,
-    ],
-  },
-  {
-    name: `${COMPANIES.HUBSPOT.name} Inspire`,
-    website: 'https://designers.hubspot.com/inspire',
-    icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
-    company: COMPANIES.HUBSPOT,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://designers.hubspot.com/inspire',
-      },
-    ],
-    details:
-      'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
-    stack: [
-      SKILLS.NODE_JS,
-      SKILLS.EXPRESS_JS,
-      SKILLS.REDIS,
-      PRODUCTS.ALGOLIA,
-      PRODUCTS.HUBSPOT_CMS,
-    ],
-    integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
   },
   {
     name: `${COMPANIES.HUBSPOT.name} Code Gallery`,

@@ -147,8 +147,7 @@ const IndexPage = () => (
         <List
           items={MY_PROJECTS}
           component={Project}
-          max={6}
-          suffix={'projects'}
+          max={4}
         />
       </MainContent>
 
@@ -171,7 +170,6 @@ const IndexPage = () => (
         <List
           items={MY_BOUNTIES}
           component={Bounty}
-          suffix={'bounties'}
         />
       </MainContent>
 
