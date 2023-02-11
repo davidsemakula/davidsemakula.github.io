@@ -229,8 +229,8 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           >
             Safe App
           </A>{' '}
-          for managing assets and interacting with dapps on multiple chains from
-          one{' '}
+          for managing assets and interacting with smart contracts and dapps on
+          multiple chains from one{' '}
           <A
             href="https://app.safe.global/"
             target="_blank"
