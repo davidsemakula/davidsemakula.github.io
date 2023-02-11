@@ -304,7 +304,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     awards: [
       {
         name: '2nd Place: DAO global hackathon 2021 | Finance & Operations',
-        url: 'https://hackforfreedom.org',
+        url: 'https://hackforfreedom.org/past-hackathons#winners',
         // https://github.com/grindery-io/grindery-dao-hackathon
         // https://blog.aragon.org/dao-global-hackathon-thank-you/
         // https://gitcoin.co/hackathon/dao-global/projects/11739/grindery-meta
