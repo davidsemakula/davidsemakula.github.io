@@ -615,7 +615,7 @@ export const MY_BOUNTIES: Array<BountyInput> = [
 export const MY_EXPERIENCE: Array<ExperienceInput> = [
   {
     company: {
-      name: 'Freelance',
+      name: 'Independent',
       location: LOCATION.KAMPALA,
     },
     role: [
