@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ReactElement } from 'react';
 import {
   LifebuoyIcon,
+  MegaphoneIcon,
   WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline';
 import { TAG_COLORS } from '../../helpers/constants';
@@ -9,6 +10,7 @@ import {
   GeneralAwardInput,
   GeneralPartnerInput,
   GeneralPlatformInput,
+  PressInput,
   ProjectInput,
 } from '../../helpers/types';
 import {
@@ -37,6 +39,7 @@ const Project = ({
   partners,
   stack,
   integrations,
+  press,
   ...rest
 }: ProjectInput): ReactElement => {
   const { name: companyName, website: companyWebsite } =
@@ -104,6 +107,17 @@ const Project = ({
           <div key={`partner-link-${idx}`}>
             <StyledIcon
               icon={LifebuoyIcon}
+              size="medium"
+            />{' '}
+            {url ? <A href={url}>{name}</A> : name}
+          </div>
+        );
+      })}
+      {(press || []).map(({ name, url }: PressInput, idx: number) => {
+        return (
+          <div key={`press-link-${idx}`}>
+            <StyledIcon
+              icon={MegaphoneIcon}
               size="medium"
             />{' '}
             {url ? <A href={url}>{name}</A> : name}

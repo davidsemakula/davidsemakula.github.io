@@ -68,6 +68,11 @@ export type DetailedPlatformInput = {
 };
 export type GeneralPlatformInput = SimplePlatformInput | DetailedPlatformInput;
 
+export type PressInput = {
+  name: string;
+  url?: string;
+};
+
 export type SimpleTagInput = SKILLS | PRODUCTS | LANGUAGES;
 export type DetailedTagInput = {
   name: SimpleTagInput;
@@ -87,6 +92,7 @@ export type ProjectInput = {
   partners?: Array<GeneralPartnerInput>;
   stack?: Array<GeneralTagInput>;
   integrations?: Array<GeneralTagInput>;
+  press?: Array<PressInput>;
 };
 
 export type BountyInput = {

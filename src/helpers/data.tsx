@@ -239,7 +239,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           </A>{' '}
           account using{' '}
           <A
-            href="https://docs.hyperlane.xyz/hyperlane-docs/developers/send"
+            href="https://docs.hyperlane.xyz/docs/apis/accounts"
             target="_blank"
           >
             Hyperlane Interchain Accounts
@@ -257,7 +257,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
         // https://safe.mukutu.tech
         // https://gitcoin.co/hackathon/illuminate/projects/17478/hyperlane-safe-app
         // Vidyard: https://share.vidyard.com/watch/RfCsNrC8r24hKGm7HTBBZY?
-        // Gitcoin blogpost: https://go.gitcoin.co/blog/celebrating-the-best-in-cross-chain-from-moonbeams-illuminate-hack/22
+      },
+    ],
+    press: [
+      {
+        name: 'Gitcoin Blog Feature',
+        url: 'https://go.gitcoin.co/blog/celebrating-the-best-in-cross-chain-from-moonbeams-illuminate-hack/22',
       },
     ],
   },
