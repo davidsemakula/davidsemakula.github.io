@@ -28,6 +28,7 @@ export enum APP_TYPE {
 
   // App specific
   GNOSIS_SAFE_APP = 'Gnosis Safe App',
+  MOONBEAM_SAFE_APP = 'Moonbeam Safe App',
 }
 
 export enum LANGUAGES {

@@ -15,6 +15,7 @@ import {
   GnosisSafeIcon,
   HarmonyIcon,
   LinuxIcon,
+  MoonbeamIcon,
   NearIcon,
   WindowsIcon,
 } from '../components/common/icons';
@@ -133,6 +134,9 @@ export const getAppTypeIcon = (type: APP_TYPE): SimpleIconInput => {
     case APP_TYPE.IOS:
     case APP_TYPE.MACOS: {
       return AppleIcon;
+    }
+    case APP_TYPE.MOONBEAM_SAFE_APP: {
+      return MoonbeamIcon;
     }
     case APP_TYPE.NEAR: {
       return NearIcon;

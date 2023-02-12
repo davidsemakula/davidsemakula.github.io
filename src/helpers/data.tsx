@@ -215,8 +215,13 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     platforms: [
       {
         type: APP_TYPE.GNOSIS_SAFE_APP,
-        url: 'https://github.com/mukutu-tech/mukutu-safe',
+        url: 'https://app.safe.global/share/safe-app?appUrl=https://safe.mukutu.tech&chain=eth',
         name: '(Gnosis) Safe App',
+      },
+      {
+        type: APP_TYPE.MOONBEAM_SAFE_APP,
+        url: 'https://multisig.moonbeam.network/share/safe-app?appUrl=https://safe.mukutu.tech&chain=mbeam',
+        name: 'Moonbeam Safe App',
       },
     ],
     details: (
