@@ -108,6 +108,7 @@ export enum SKILLS {
   GRAPHQL = 'GraphQL',
   HARDHAT = 'Hardhat',
   HTML = 'HTML', // HyperText Markup Language
+  INK = 'ink!',
   IPFS = 'IPFS', // InterPlanetary File System
   JAVA = 'Java',
   JAVASCRIPT = 'JavaScript',

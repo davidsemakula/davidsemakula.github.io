@@ -159,23 +159,27 @@ const web3Color = TAG_COLORS.VIOLET;
 // Only highlights, can't include everything
 export const MY_SKILLS: Array<GeneralTagInput> = [
   // Languages
+  {
+    name: SKILLS.RUST,
+    color: web3Color,
+  },
+  {
+    name: SKILLS.WEB_ASSEMBLY,
+    color: web3Color,
+  },
   SKILLS.PYTHON,
+  SKILLS.TYPESCRIPT,
   {
     name: SKILLS.SOLIDITY,
     color: web3Color,
   },
   {
-    name: SKILLS.RUST,
+    name: SKILLS.INK,
     color: web3Color,
   },
   SKILLS.GO,
   SKILLS.SWIFT,
   SKILLS.KOTLIN,
-  SKILLS.TYPESCRIPT,
-  {
-    name: SKILLS.WEB_ASSEMBLY,
-    color: web3Color,
-  },
   // Libraries & Frameworks
   SKILLS.REACT_JS,
   {
@@ -209,7 +213,7 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
-    name: 'Mukutu Router (formerly Safe Hyperlane Router)',
+    name: 'Mukutu Router',
     website: 'https://github.com/mukutu-tech/mukutu-safe',
     role: ROLES.CREATOR,
     platforms: [
@@ -227,12 +231,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     details: (
       <>
         <p>
-          A{' '}
+          Mukutu Router (formerly Safe Hyperlane Router) is a{' '}
           <A
             href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
             target="_blank"
           >
-            Safe App
+            Safe app
           </A>{' '}
           for managing assets and interacting with smart contracts and dapps on
           multiple chains from one{' '}
@@ -242,14 +246,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           >
             Safe
           </A>{' '}
-          account using{' '}
-          <A
-            href="https://docs.hyperlane.xyz/docs/apis/accounts"
-            target="_blank"
-          >
-            Hyperlane Interchain Accounts
-          </A>
-          .
+          account.
         </p>
       </>
     ),
