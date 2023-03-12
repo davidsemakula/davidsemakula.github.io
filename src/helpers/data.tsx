@@ -214,7 +214,7 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
     name: 'Mukutu Router',
-    website: 'https://github.com/mukutu-tech/mukutu-safe',
+    website: 'https://safe.mukutu.tech/',
     role: ROLES.CREATOR,
     platforms: [
       {
