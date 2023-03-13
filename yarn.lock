@@ -5001,6 +5001,15 @@ fs-extra@^10.1.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
+fs-extra@^4.0.0:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
+  integrity sha512-q6rbdDd1o2mAnQreO7YADIxf/Whx4AHBiRf6d+/cVT8h44ss+lHgxf1FemcqDnQt9X3ct4McHr+JMGlYSsK7Cg==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-extra@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
@@ -5191,6 +5200,13 @@ gatsby-plugin-client-side-redirect@^1.1.0:
   integrity sha512-ox3QpfQynNmH4SgBedMxi9WdEFVI/fQep0cpAu5mPSIQElIJmy+TF5fDZc56Ra+cvr/dz45sw+tUzE41aMlLfw==
   dependencies:
     fs-extra "^7.0.0"
+
+gatsby-plugin-copy-files@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-copy-files/-/gatsby-plugin-copy-files-1.1.0.tgz#ec6870ae656326945b8ce0afe881cae8073c8492"
+  integrity sha512-yjrlw3r+7skfZYSH9fdcdeKVIFTrah3zdoVblGLN0npEWQc/TZGsWVVMj8bOD+6MhBzDu0/UmBdosemVN2izqg==
+  dependencies:
+    fs-extra "^4.0.0"
 
 gatsby-plugin-image@^2.23.0:
   version "2.25.0"

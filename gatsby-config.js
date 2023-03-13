@@ -14,6 +14,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'static',
+        path: `${__dirname}/src/static`,
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -37,11 +44,18 @@ module.exports = {
         output: '/sitemap',
         serialize: ({ path, modifiedGmt }) => ({
           url: path,
-          lastmod: modifiedGmt ? modifiedGmt : '2023-02-23',
+          lastmod: modifiedGmt ? modifiedGmt : '2023-03-13',
         }),
       },
     },
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-client-side-redirect',
+    {
+      resolve: 'gatsby-plugin-copy-files',
+      options: {
+        source: `${__dirname}/src/static`,
+        destination: '/static'
+      }
+    }
   ],
 };
