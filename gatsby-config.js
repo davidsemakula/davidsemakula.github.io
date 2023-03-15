@@ -44,7 +44,7 @@ module.exports = {
         output: '/sitemap',
         serialize: ({ path, modifiedGmt }) => ({
           url: path,
-          lastmod: modifiedGmt ? modifiedGmt : '2023-03-13',
+          lastmod: modifiedGmt ? modifiedGmt : '2023-03-16',
         }),
       },
     },
@@ -54,8 +54,8 @@ module.exports = {
       resolve: 'gatsby-plugin-copy-files',
       options: {
         source: `${__dirname}/src/static`,
-        destination: '/static'
-      }
-    }
+        destination: '/static',
+      },
+    },
   ],
 };

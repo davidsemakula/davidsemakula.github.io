@@ -1,6 +1,7 @@
 export enum APP_TYPE {
   API = 'API',
   ANDROID = 'Android',
+  BINARY = 'Binary',
   CHROME = 'Chrome Extension',
   EXTENSION = 'Extension',
   INTEGRATION = 'Integration',
