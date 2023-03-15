@@ -61,6 +61,7 @@ export enum PRODUCTS {
   SENDGRID = 'SendGrid',
   SLACK = 'Slack',
   STRIPE = 'Stripe',
+  VS_CODE = 'Visual Studio Code',
   ZOOM = 'Zoom',
 
   // Blockchain

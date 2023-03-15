@@ -213,6 +213,71 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
+    name: 'ink! Analyzer',
+    website: 'https://github.com/ink-analyzer',
+    role: ROLES.CREATOR,
+    platforms: [
+      {
+        type: APP_TYPE.LIBRARY,
+        url: 'https://github.com/ink-analyzer',
+        name: 'Rust Crate',
+      },
+      {
+        type: APP_TYPE.EXTENSION,
+        url: 'https://github.com/ink-analyzer',
+        name: 'Visual Studio Code Extension',
+      },
+    ],
+    details: (
+      <>
+        <p>
+          A collection of modular and reusable libraries and tools for semantic
+          analysis of{' '}
+          <A
+            href="https://use.ink/"
+            target="_blank"
+          >
+            ink!
+          </A>{' '}
+          smart contract code.
+        </p>
+        <p>
+          ink! analyzer aims to improve{' '}
+          <A
+            href="https://en.wikipedia.org/wiki/Integrated_development_environment"
+            target="_blank"
+          >
+            integrated development environment (IDE)
+          </A>{' '}
+          and{' '}
+          <A
+            href="https://en.wikipedia.org/wiki/Source-code_editor"
+            target="_blank"
+          >
+            source code editor
+          </A>{' '}
+          language support for the{' '}
+          <A
+            href="https://use.ink/"
+            target="_blank"
+          >
+            ink! programming language
+          </A>{' '}
+          for writing smart contracts for blockchains built on{' '}
+          <A
+            href="https://substrate.io/"
+            target="_blank"
+          >
+            Substrate
+          </A>
+          .
+        </p>
+      </>
+    ),
+    stack: [SKILLS.RUST, SKILLS.TYPESCRIPT],
+    integrations: [PRODUCTS.VS_CODE],
+  },
+  {
     name: 'Mukutu Router',
     website: 'https://safe.mukutu.tech/',
     role: ROLES.CREATOR,
