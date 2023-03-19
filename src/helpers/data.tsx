@@ -213,70 +213,14 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
-    name: 'Mukutu Router',
-    website: 'https://safe.mukutu.tech/',
-    role: ROLES.CREATOR,
-    platforms: [
-      {
-        type: APP_TYPE.GNOSIS_SAFE_APP,
-        url: 'https://app.safe.global/share/safe-app?appUrl=https://safe.mukutu.tech&chain=eth',
-        name: '(Gnosis) Safe App',
-      },
-      {
-        type: APP_TYPE.MOONBEAM_SAFE_APP,
-        url: 'https://multisig.moonbeam.network/share/safe-app?appUrl=https://safe.mukutu.tech&chain=mbeam',
-        name: 'Moonbeam Safe App',
-      },
-    ],
-    details: (
-      <>
-        <p>
-          Mukutu Router (formerly Safe Hyperlane Router) is a{' '}
-          <A
-            href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
-            target="_blank"
-          >
-            Safe app
-          </A>{' '}
-          for managing assets and interacting with smart contracts and dapps on
-          multiple chains from one{' '}
-          <A
-            href="https://app.safe.global/"
-            target="_blank"
-          >
-            Safe
-          </A>{' '}
-          account.
-        </p>
-      </>
-    ),
-    stack: [SKILLS.TYPESCRIPT, SKILLS.ETHERS_JS, SKILLS.REACT_JS],
-    integrations: [PRODUCTS.GNOSIS_SAFE, PRODUCTS.HYPERLANE],
-    awards: [
-      {
-        name: 'Top Prize: Moonbeam Illuminate/22 Hackathon | Best use of Hyperlane',
-        url: 'https://twitter.com/MoonbeamNetwork/status/1610738659656962048',
-        // https://safe.mukutu.tech
-        // https://gitcoin.co/hackathon/illuminate/projects/17478/hyperlane-safe-app
-        // Vidyard: https://share.vidyard.com/watch/RfCsNrC8r24hKGm7HTBBZY?
-      },
-    ],
-    press: [
-      {
-        name: 'Gitcoin Blog Feature',
-        url: 'https://go.gitcoin.co/blog/celebrating-the-best-in-cross-chain-from-moonbeams-illuminate-hack/22',
-      },
-    ],
-  },
-  {
     name: 'ink! Analyzer',
     website: 'https://github.com/ink-analyzer',
     role: ROLES.CREATOR,
     platforms: [
       {
         type: APP_TYPE.LIBRARY,
-        url: 'https://github.com/ink-analyzer/ink-analyzer',
-        name: 'Rust Crate',
+        url: 'https://crates.io/crates/ink-analyzer',
+        name: 'Rust Library',
       },
       /*
       {
@@ -349,6 +293,62 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ),
     stack: [SKILLS.RUST /*, SKILLS.TYPESCRIPT*/],
     //integrations: [PRODUCTS.VS_CODE],
+  },
+  {
+    name: 'Mukutu Router',
+    website: 'https://safe.mukutu.tech/',
+    role: ROLES.CREATOR,
+    platforms: [
+      {
+        type: APP_TYPE.GNOSIS_SAFE_APP,
+        url: 'https://app.safe.global/share/safe-app?appUrl=https://safe.mukutu.tech&chain=eth',
+        name: '(Gnosis) Safe App',
+      },
+      {
+        type: APP_TYPE.MOONBEAM_SAFE_APP,
+        url: 'https://multisig.moonbeam.network/share/safe-app?appUrl=https://safe.mukutu.tech&chain=mbeam',
+        name: 'Moonbeam Safe App',
+      },
+    ],
+    details: (
+      <>
+        <p>
+          Mukutu Router (formerly Safe Hyperlane Router) is a{' '}
+          <A
+            href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
+            target="_blank"
+          >
+            Safe app
+          </A>{' '}
+          for managing assets and interacting with smart contracts and dapps on
+          multiple chains from one{' '}
+          <A
+            href="https://app.safe.global/"
+            target="_blank"
+          >
+            Safe
+          </A>{' '}
+          account.
+        </p>
+      </>
+    ),
+    stack: [SKILLS.TYPESCRIPT, SKILLS.ETHERS_JS, SKILLS.REACT_JS],
+    integrations: [PRODUCTS.GNOSIS_SAFE, PRODUCTS.HYPERLANE],
+    awards: [
+      {
+        name: 'Top Prize: Moonbeam Illuminate/22 Hackathon | Best use of Hyperlane',
+        url: 'https://twitter.com/MoonbeamNetwork/status/1610738659656962048',
+        // https://safe.mukutu.tech
+        // https://gitcoin.co/hackathon/illuminate/projects/17478/hyperlane-safe-app
+        // Vidyard: https://share.vidyard.com/watch/RfCsNrC8r24hKGm7HTBBZY?
+      },
+    ],
+    press: [
+      {
+        name: 'Gitcoin Blog Feature',
+        url: 'https://go.gitcoin.co/blog/celebrating-the-best-in-cross-chain-from-moonbeams-illuminate-hack/22',
+      },
+    ],
   },
   {
     name: 'Grindery Pay',
