@@ -3,7 +3,8 @@ import {
   AcademicCapIcon,
   BriefcaseIcon,
   BugAntIcon,
-  CpuChipIcon, //EnvelopeIcon,
+  CpuChipIcon,
+  EnvelopeIcon,
   GlobeAltIcon,
   LanguageIcon,
   MapPinIcon,
@@ -58,7 +59,6 @@ const IndexPage = () => (
           />{' '}
           {BIO.LOCATION}
         </div>
-        {/*
         <div>
           <StyledIcon
             icon={EnvelopeIcon}
@@ -66,7 +66,6 @@ const IndexPage = () => (
           />{' '}
           <A href={`mailto:${BIO.EMAIL}`}>{BIO.EMAIL}</A>
         </div>
-        */}
         <div>
           <StyledIcon
             icon={GlobeAltIcon}
