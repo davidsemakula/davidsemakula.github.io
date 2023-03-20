@@ -111,8 +111,32 @@ export const BIO = {
   BYLINE: (
     <>
       <p className="mb-1">
-        I enjoy solving complex problems with technology and I'm always up for a
-        challenge.
+        I enjoy solving complex problems with technology.
+      </p>
+      <p className="mb-1">
+        I'm the creator and maintainer of 2 web3 ecosystem projects (
+        <A
+          href="https://github.com/wamu-tech"
+          target="_blank"
+        >
+          Wamu
+        </A> and <A
+          href="https://github.com/ink-analyzer"
+          target="_blank"
+        >
+          ink! Analyzer
+        </A> that are currently funded by the{' '}
+        <A
+          href="https://esp.ethereum.foundation/"
+          target="_blank"
+        >
+          Ethereum Foundation
+        </A> and <A
+          href="https://web3.foundation/"
+          target="_blank"
+        >
+          Web3 Foundation
+        </A> respectively.
       </p>
       <p>
         I’ve worked as a technical lead on projects for{' '}
