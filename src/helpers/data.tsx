@@ -352,8 +352,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
   },
   {
     name: 'Grindery Pay',
-    website:
-      'https://chrome.google.com/webstore/detail/grindery-pay/ofnbfgahidjckegapdpkhigjljepcdme',
+    website: 'https://gpay.grindery.io/',
     icon: COMPANIES.GRINDERY.icon,
     role: `former ${ROLES.LEAD_DEVELOPER}`,
     platforms: [

@@ -44,7 +44,7 @@ module.exports = {
         output: '/sitemap',
         serialize: ({ path, modifiedGmt }) => ({
           url: path,
-          lastmod: modifiedGmt ? modifiedGmt : '2023-03-20',
+          lastmod: modifiedGmt ? modifiedGmt : '2023-03-21',
         }),
       },
     },
