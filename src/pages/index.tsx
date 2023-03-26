@@ -10,7 +10,7 @@ import {
   MapPinIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/outline';
-import { GithubIcon } from '../components/common/icons';
+import { GithubIcon, TwitterIcon } from '../components/common/icons';
 import { StyledIcon } from '../components/common/icons/containers';
 import { A } from '../components/common/links';
 import List from '../components/common/list';
@@ -84,6 +84,19 @@ const IndexPage = () => (
             rel="me noreferrer nofollow"
           >
             {BIO.GITHUB_USERNAME}
+          </A>
+        </div>
+        <div>
+          <StyledIcon
+            icon={TwitterIcon}
+            className="text-twitter dark:text-inherit"
+            size="medium"
+          />{' '}
+          <A
+            href={`https://twitter.com/${BIO.TWITTER_USERNAME}`}
+            rel="me noreferrer nofollow"
+          >
+            @{BIO.TWITTER_USERNAME}
           </A>
         </div>
       </SideContent>
