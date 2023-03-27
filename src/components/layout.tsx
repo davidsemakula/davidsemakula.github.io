@@ -1,23 +1,42 @@
 import * as React from 'react';
-import { HTMLAttributes, ReactElement, useState } from 'react';
-import AppContext, { AppContextType } from '../context/app';
+import { HTMLAttributes, ReactElement, useEffect, useState } from 'react';
+import AppContext from '../context/app';
 import { THEME } from '../helpers/constants';
 import Header from './header';
 
 const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
-  const isDarkColorScheme =
-    typeof window !== 'undefined' &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const cachedTheme =
-    typeof localStorage !== 'undefined' &&
-    'theme' in localStorage &&
-    localStorage.theme;
-  const currentTheme =
-    cachedTheme || (isDarkColorScheme ? THEME.DARK : THEME.LIGHT);
-  const [theme, setTheme] = useState<THEME>(currentTheme);
+  // Default to undefined, prevents pollution of session cache
+  const [theme, setTheme] = useState<THEME | undefined>();
+  const toggleTheme = () => {
+    setTheme(currentTheme =>
+      currentTheme === THEME.DARK ? THEME.LIGHT : THEME.DARK
+    );
+  };
+
+  useEffect(() => {
+    // set theme based on session cache or system settings from client side
+    const isDarkSystemTheme =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const sessionTheme =
+      typeof sessionStorage !== 'undefined' &&
+      'theme' in sessionStorage &&
+      sessionStorage.theme;
+    const currentTheme =
+      sessionTheme || (isDarkSystemTheme ? THEME.DARK : THEME.LIGHT);
+    setTheme(currentTheme);
+  }, []);
+
+  useEffect(() => {
+    if (theme) {
+      // Remember theme change for this session
+      sessionStorage.theme = theme;
+    }
+  }, [theme]);
+
   const themeContext = {
-    theme,
-    setTheme,
+    theme: theme || THEME.LIGHT, // Default to light theme for consumers
+    toggleTheme,
   };
 
   const thisYear = new Date().getFullYear();
@@ -25,7 +44,7 @@ const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
     thisYear > 2022 ? [2022, '-', thisYear].join(' ') : thisYear;
 
   return (
-    <AppContext.Provider value={themeContext as AppContextType}>
+    <AppContext.Provider value={themeContext}>
       {/* Theme container */}
       <div className={theme === THEME.DARK ? 'dark' : ''}>
         {/* Background */}
