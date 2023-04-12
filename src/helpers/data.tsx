@@ -245,6 +245,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       </>
     ),
     stack: [SKILLS.RUST],
+    partners: [
+      {
+        name: 'Funded by: the Ethereum Foundation',
+        url: 'https://esp.ethereum.foundation/',
+      },
+    ],
   },
   {
     name: 'ink! Analyzer',
