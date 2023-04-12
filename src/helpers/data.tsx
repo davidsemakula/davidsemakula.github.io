@@ -110,10 +110,7 @@ export const BIO = {
   OCCUPATION: `${ROLES.SOFTWARE_ENGINEER} & ${ROLES.SYSTEM_ARCHITECT}`,
   BYLINE: (
     <>
-      <p className="mb-1">
-        I enjoy solving complex problems with technology and I'm always up for a
-        challenge.
-      </p>
+      <p className="mb-1">I enjoy solving complex problems with technology.</p>
       <p>
         I’ve worked as a technical lead on projects for{' '}
         {HIGHLIGHTED_COMPANIES.map(
