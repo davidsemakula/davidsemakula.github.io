@@ -213,6 +213,40 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
+    name: 'Wamu',
+    website: 'https://github.com/wamu-tech',
+    role: ROLES.CREATOR,
+    platforms: [
+      {
+        type: APP_TYPE.LIBRARY,
+        url: 'https://github.com/wamu-tech',
+        name: 'Rust Library',
+      },
+    ],
+    details: (
+      <>
+        <p>
+          A protocol and library for building{' '}
+          <A
+            href="https://academy.binance.com/en/articles/threshold-signatures-explained"
+            target="_blank"
+          >
+            threshold signature
+          </A>{' '}
+          wallets controlled by multiple{' '}
+          <A
+            href="https://ethereum.org/en/decentralized-identity/"
+            target="_blank"
+          >
+            decentralized identities
+          </A>
+          .
+        </p>
+      </>
+    ),
+    stack: [SKILLS.RUST],
+  },
+  {
     name: 'ink! Analyzer',
     website: 'https://github.com/ink-analyzer',
     role: ROLES.CREATOR,
@@ -291,8 +325,8 @@ export const MY_PROJECTS: Array<ProjectInput> = [
         </p>
       </>
     ),
-    stack: [SKILLS.RUST /*, SKILLS.TYPESCRIPT*/],
-    //integrations: [PRODUCTS.VS_CODE],
+    stack: [SKILLS.RUST, SKILLS.TYPESCRIPT],
+    integrations: [PRODUCTS.VS_CODE],
   },
   {
     name: 'Mukutu Router',
