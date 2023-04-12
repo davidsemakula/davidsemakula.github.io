@@ -327,6 +327,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ),
     stack: [SKILLS.RUST, SKILLS.TYPESCRIPT],
     integrations: [PRODUCTS.VS_CODE],
+    partners: [
+      {
+        name: 'Funded by: the Web3 Foundation',
+        url: 'https://web3.foundation/',
+      },
+    ],
   },
   {
     name: 'Mukutu Router',
