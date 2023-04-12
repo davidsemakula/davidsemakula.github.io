@@ -214,12 +214,12 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
     name: 'Wamu',
-    website: 'https://github.com/wamu-tech',
+    website: 'https://github.com/wamutech',
     role: ROLES.CREATOR,
     platforms: [
       {
         type: APP_TYPE.LIBRARY,
-        url: 'https://github.com/wamu-tech',
+        url: 'https://github.com/wamutech',
         name: 'Rust Library',
       },
     ],
