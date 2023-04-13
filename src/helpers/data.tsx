@@ -388,10 +388,61 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
+    name: 'Grindery Nexus',
+    website: 'https://www.grindery.io',
+    icon: COMPANIES.GRINDERY.icon,
+    role: `former ${ROLES.TECHNICAL_LEAD}, former ${ROLES.STRATEGIC_ADVISOR}`,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://nexus.grindery.org',
+      },
+      APP_TYPE.ETHEREUM,
+      APP_TYPE.ALGORAND,
+      APP_TYPE.NEAR,
+      APP_TYPE.BINANCE,
+      APP_TYPE.FLOW,
+    ],
+    details: (
+      <>
+        <p>
+          A framework that allows developers to create reusable services to
+          connect smart contracts with other protocols, including web2 apps.
+        </p>
+        <p>
+          A low/no-code interface that allows end-users to declare workflows
+          with simple logic, making automation available to anyone without
+          programming skills.
+        </p>
+        <p>
+          A marketplace with incentives for decentralized nodes to execute the
+          user-defined workflows as well as for developers to create more
+          services.
+        </p>
+      </>
+    ),
+    stack: [
+      SKILLS.SOLIDITY,
+      SKILLS.RUST,
+      SKILLS.WEB_ASSEMBLY,
+      SKILLS.TYPESCRIPT,
+      SKILLS.REACT_JS,
+      SKILLS.IPFS,
+    ],
+    integrations: [],
+    awards: [
+      {
+        name: 'Binance Labs Incubation Program S4 | Infrastructure',
+        url: 'https://www.binance.com/en/blog/ecosystem/%E2%80%8Bbinance-labs-launches-season-4-of-its-incubation-program-with-14-earlystage-startups-421499824684903808',
+        // https://www.binance.com/en/blog/ecosystem/season-4-of-binance-labs-incubation-program-how-to-build-invest-and-grow-startups-421499824684904005
+      },
+    ],
+  },
+  {
     name: 'Grindery Pay',
     website: 'https://gpay.grindery.io/',
     icon: COMPANIES.GRINDERY.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}`,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
     platforms: [
       {
         type: APP_TYPE.CHROME,
@@ -445,61 +496,10 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     // Youtube: https://www.youtube.com/watch?v=2N2TPrqMLic
   },
   {
-    name: 'Grindery Nexus',
-    website: 'https://www.grindery.io',
-    icon: COMPANIES.GRINDERY.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}, former ${ROLES.STRATEGIC_ADVISOR}`,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://nexus.grindery.org',
-      },
-      APP_TYPE.ETHEREUM,
-      APP_TYPE.ALGORAND,
-      APP_TYPE.NEAR,
-      APP_TYPE.BINANCE,
-      APP_TYPE.FLOW,
-    ],
-    details: (
-      <>
-        <p>
-          A framework that allows developers to create reusable services to
-          connect smart contracts with other protocols, including web2 apps.
-        </p>
-        <p>
-          A low/no-code interface that allows end-users to declare workflows
-          with simple logic, making automation available to anyone without
-          programming skills.
-        </p>
-        <p>
-          A marketplace with incentives for decentralized nodes to execute the
-          user-defined workflows as well as for developers to create more
-          services.
-        </p>
-      </>
-    ),
-    stack: [
-      SKILLS.SOLIDITY,
-      SKILLS.RUST,
-      SKILLS.WEB_ASSEMBLY,
-      SKILLS.TYPESCRIPT,
-      SKILLS.REACT_JS,
-      SKILLS.IPFS,
-    ],
-    integrations: [],
-    awards: [
-      {
-        name: 'Binance Labs Incubation Program S4 | Infrastructure',
-        url: 'https://www.binance.com/en/blog/ecosystem/%E2%80%8Bbinance-labs-launches-season-4-of-its-incubation-program-with-14-earlystage-startups-421499824684903808',
-        // https://www.binance.com/en/blog/ecosystem/season-4-of-binance-labs-incubation-program-how-to-build-invest-and-grow-startups-421499824684904005
-      },
-    ],
-  },
-  {
     name: `${COMPANIES.HUBSPOT.name} Inspire`,
     website: 'https://designers.hubspot.com/inspire',
     icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
     company: COMPANIES.HUBSPOT,
     platforms: [
       {
@@ -522,7 +522,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: COMPANIES.TUNGA.name,
     website: COMPANIES.TUNGA.website,
     icon: COMPANIES.TUNGA.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
     platforms: [
       {
         type: APP_TYPE.WEB,
@@ -554,7 +554,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: COMPANIES.KEYY.name,
     website: 'https://learn.keyy.org/explore',
     icon: COMPANIES.KEYY.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
     company: COMPANIES.KEYY,
     platforms: [
       {
@@ -614,7 +614,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
     website: 'https://designers.hubspot.com/code-gallery',
     icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
     company: COMPANIES.HUBSPOT,
     platforms: [
       {
@@ -644,7 +644,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       COMPANIES.INBOUNDLABS.icon,
       'text-booya dark:text-inherit'
     ),
-    role: `former ${ROLES.LEAD_DEVELOPER}, ${ROLES.CONSULTANT}`,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
     company: COMPANIES.INBOUNDLABS,
     platforms: [
       {
