@@ -179,20 +179,7 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
   SKILLS.KOTLIN,
   // Libraries & Frameworks
   SKILLS.REACT_JS,
-  {
-    name: SKILLS.WEB3_JS,
-    color: web3Color,
-  },
-  {
-    name: SKILLS.ETHERS_JS,
-    color: web3Color,
-  },
-  {
-    name: SKILLS.POLKADOT_JS,
-    color: web3Color,
-  },
   SKILLS.FLUTTER,
-  SKILLS.ELECTRON,
   // Storage
   SKILLS.MONGODB,
   SKILLS.REDIS,
@@ -202,8 +189,7 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
   },
   // Paradigms
   SKILLS.GRAPHQL,
-  // Tools
-  SKILLS.ANSIBLE,
+  // Infra
   SKILLS.DOCKER,
   SKILLS.KUBERNETES,
 ];
