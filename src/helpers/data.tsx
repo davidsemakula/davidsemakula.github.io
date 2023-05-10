@@ -243,7 +243,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       {
         type: APP_TYPE.LIBRARY,
         url: 'https://crates.io/crates/ink-analyzer',
-        name: 'Rust Library',
+        name: 'Analyzer',
+      },
+      {
+        type: APP_TYPE.LIBRARY,
+        url: 'https://crates.io/crates/ink-analyzer-ir',
+        name: 'IR',
       },
       /*
       {
