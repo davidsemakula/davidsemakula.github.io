@@ -1,11 +1,19 @@
 import * as React from 'react';
 import {
+  BookOpenIcon,
+  KeyIcon,
+  LifebuoyIcon,
+  RocketLaunchIcon,
+  WrenchScrewdriverIcon,
+} from '@heroicons/react/24/outline';
+import {
   GrinderyIcon,
   HubspotIcon,
   InboundLabsIcon,
   KeyyIcon,
   TungaIcon,
 } from '../components/common/icons';
+import { StyledIcon } from '../components/common/icons/containers';
 import { A } from '../components/common/links';
 import {
   APP_TYPE,
@@ -108,38 +116,104 @@ export const HIGHLIGHTED_COMPANIES: Array<GeneralCompanyInput> = [
 export const BIO = {
   NAME: 'David Semakula',
   OCCUPATION: `${ROLES.SOFTWARE_ENGINEER} & ${ROLES.SYSTEM_ARCHITECT}`,
-  BYLINE: (
+  BYLINE: <p>I enjoy solving complex problems with technology.</p>,
+  DETAILS: (
     <>
-      <p className="mb-1">
-        I enjoy solving complex problems with technology.
+      <p className="mb-1">I'm currently working on:</p>
+      <p className="mb-2">
+        <h3>
+          <StyledIcon
+            icon={KeyIcon}
+            size="medium"
+          />{' '}
+          Cryptographic protocols and libraries
+        </h3>
+        <ul className="list-disc list-inside space-y-1 pl-5">
+          <li>
+            <StyledIcon
+              icon={RocketLaunchIcon}
+              size="medium"
+            />{' '}
+            <A
+              href="https://github.com/wamutech"
+              target="_blank"
+            >
+              Wamu
+            </A>
+            <ul className="list-disc list-inside pl-6">
+              <li>
+                <StyledIcon
+                  icon={BookOpenIcon}
+                  size="medium"
+                />{' '}
+                A protocol and library for building threshold signature wallets
+                controlled by multiple decentralized identities.
+              </li>
+              <li>
+                <StyledIcon
+                  icon={LifebuoyIcon}
+                  size="medium"
+                />{' '}
+                Funded by: the{' '}
+                <A
+                  href="https://esp.ethereum.foundation/"
+                  target="_blank"
+                >
+                  Ethereum Foundation
+                </A>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </p>
-      <p className="mb-1">
-        I'm the creator and maintainer of 2 web3 ecosystem projects (
-        <A
-          href="https://github.com/wamu-tech"
-          target="_blank"
-        >
-          Wamu
-        </A> and <A
-          href="https://github.com/ink-analyzer"
-          target="_blank"
-        >
-          ink! Analyzer
-        </A> that are currently funded by the{' '}
-        <A
-          href="https://esp.ethereum.foundation/"
-          target="_blank"
-        >
-          Ethereum Foundation
-        </A> and <A
-          href="https://web3.foundation/"
-          target="_blank"
-        >
-          Web3 Foundation
-        </A> respectively.
+      <p className="mb-2">
+        <h3>
+          <StyledIcon
+            icon={WrenchScrewdriverIcon}
+            size="medium"
+          />{' '}
+          Tools for programming languages
+        </h3>
+        <ul className="list-disc list-inside space-y-1 pl-5">
+          <li>
+            <StyledIcon
+              icon={RocketLaunchIcon}
+              size="medium"
+            />{' '}
+            <A
+              href="https://github.com/ink-analyzer"
+              target="_blank"
+            >
+              ink! Analyzer
+            </A>
+            <ul className="list-disc list-inside pl-6">
+              <li>
+                <StyledIcon
+                  icon={BookOpenIcon}
+                  size="medium"
+                />{' '}
+                A collection of modular and reusable libraries and tools for
+                semantic analysis of ink! smart contract code.
+              </li>
+              <li>
+                <StyledIcon
+                  icon={LifebuoyIcon}
+                  size="medium"
+                />{' '}
+                Funded by: the{' '}
+                <A
+                  href="https://web3.foundation/"
+                  target="_blank"
+                >
+                  Web3 Foundation
+                </A>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </p>
       <p>
-        I’ve worked as a technical lead on projects for{' '}
+        I’ve previously worked as a technical lead on projects for{' '}
         {HIGHLIGHTED_COMPANIES.map(
           (company: GeneralCompanyInput, idx: number) => {
             const { name, website } = cleanCompanyObject(company);

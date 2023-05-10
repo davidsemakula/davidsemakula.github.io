@@ -10,7 +10,11 @@ import {
   MapPinIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/outline';
-import { GithubIcon, TwitterIcon } from '../components/common/icons';
+import {
+  GithubIcon,
+  TelescopeIcon,
+  TwitterIcon,
+} from '../components/common/icons';
 import { StyledIcon } from '../components/common/icons/containers';
 import { A } from '../components/common/links';
 import List from '../components/common/list';
@@ -100,6 +104,20 @@ const IndexPage = () => (
           </A>
         </div>
       </SideContent>
+    </Container>
+
+    {/* Bio Details */}
+    <Container>
+      <SideContent>
+        <SectionHeading>
+          <StyledIcon
+            icon={TelescopeIcon}
+            size="large"
+          />{' '}
+          About Me
+        </SectionHeading>
+      </SideContent>
+      <MainContent>{BIO.DETAILS}</MainContent>
     </Container>
 
     <Container>
