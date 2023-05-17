@@ -1,19 +1,11 @@
 import * as React from 'react';
 import {
-  BookOpenIcon,
-  KeyIcon,
-  LifebuoyIcon,
-  RocketLaunchIcon,
-  WrenchScrewdriverIcon,
-} from '@heroicons/react/24/outline';
-import {
   GrinderyIcon,
   HubspotIcon,
   InboundLabsIcon,
   KeyyIcon,
   TungaIcon,
 } from '../components/common/icons';
-import { StyledIcon } from '../components/common/icons/containers';
 import { A } from '../components/common/links';
 import {
   APP_TYPE,
@@ -34,7 +26,6 @@ import {
   ProjectInput,
   asCompanyRecord,
 } from './types';
-import { cleanCompanyObject, overrideIconClassName } from './utils';
 
 export const COMPANIES = asCompanyRecord({
   ALCHEMER: {
@@ -116,130 +107,6 @@ export const HIGHLIGHTED_COMPANIES: Array<GeneralCompanyInput> = [
 export const BIO = {
   NAME: 'David Semakula',
   OCCUPATION: `${ROLES.SOFTWARE_ENGINEER} & ${ROLES.SYSTEM_ARCHITECT}`,
-  BYLINE: <p>I enjoy solving complex problems with technology.</p>,
-  DETAILS: (
-    <>
-      <p className="mb-1">I'm currently working on:</p>
-      <p className="mb-2">
-        <h3>
-          <StyledIcon
-            icon={KeyIcon}
-            size="medium"
-          />{' '}
-          Cryptographic protocols and libraries
-        </h3>
-        <ul className="list-disc list-inside space-y-1 pl-5">
-          <li>
-            <StyledIcon
-              icon={RocketLaunchIcon}
-              size="medium"
-            />{' '}
-            <A
-              href="https://github.com/wamutech"
-              target="_blank"
-            >
-              Wamu
-            </A>
-            <ul className="list-disc list-inside pl-6">
-              <li>
-                <StyledIcon
-                  icon={BookOpenIcon}
-                  size="medium"
-                />{' '}
-                A protocol and library for building threshold signature wallets
-                controlled by multiple decentralized identities.
-              </li>
-              <li>
-                <StyledIcon
-                  icon={LifebuoyIcon}
-                  size="medium"
-                />{' '}
-                Funded by: the{' '}
-                <A
-                  href="https://esp.ethereum.foundation/"
-                  target="_blank"
-                >
-                  Ethereum Foundation
-                </A>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </p>
-      <p className="mb-2">
-        <h3>
-          <StyledIcon
-            icon={WrenchScrewdriverIcon}
-            size="medium"
-          />{' '}
-          Tools for programming languages
-        </h3>
-        <ul className="list-disc list-inside space-y-1 pl-5">
-          <li>
-            <StyledIcon
-              icon={RocketLaunchIcon}
-              size="medium"
-            />{' '}
-            <A
-              href="https://github.com/ink-analyzer"
-              target="_blank"
-            >
-              ink! Analyzer
-            </A>
-            <ul className="list-disc list-inside pl-6">
-              <li>
-                <StyledIcon
-                  icon={BookOpenIcon}
-                  size="medium"
-                />{' '}
-                A collection of modular and reusable libraries and tools for
-                semantic analysis of ink! smart contract code.
-              </li>
-              <li>
-                <StyledIcon
-                  icon={LifebuoyIcon}
-                  size="medium"
-                />{' '}
-                Funded by: the{' '}
-                <A
-                  href="https://web3.foundation/"
-                  target="_blank"
-                >
-                  Web3 Foundation
-                </A>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </p>
-      <p>
-        I’ve previously worked as a technical lead on projects for{' '}
-        {HIGHLIGHTED_COMPANIES.map(
-          (company: GeneralCompanyInput, idx: number) => {
-            const { name, website } = cleanCompanyObject(company);
-            return (
-              <>
-                {website ? (
-                  <A
-                    href={website}
-                    target="_blank"
-                  >
-                    {name}
-                  </A>
-                ) : (
-                  name
-                )}
-                {idx < HIGHLIGHTED_COMPANIES.length - 1 ? (
-                  <span>, </span>
-                ) : null}
-              </>
-            );
-          }
-        )}{' '}
-        and many more companies.
-      </p>
-    </>
-  ),
   LOCATION: LOCATION.KAMPALA,
   EMAIL: 'hello@davidsemakula.com',
   WEBSITE: 'davidsemakula.com',
@@ -649,66 +516,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
-    name: COMPANIES.KEYY.name,
-    website: 'https://learn.keyy.org/explore',
-    icon: COMPANIES.KEYY.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}`,
-    company: COMPANIES.KEYY,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://learn.keyy.org/explore',
-      },
-      {
-        type: APP_TYPE.IOS,
-        url: 'https://apps.apple.com/us/app/keyy/id1553782589?platform=iphone',
-      },
-      {
-        type: APP_TYPE.ANDROID,
-        url: 'https://play.google.com/store/apps/details?id=org.keyy.learn',
-      },
-      {
-        type: APP_TYPE.MACOS,
-        url: 'https://apps.apple.com/us/app/keyy/id1553782589?platform=mac',
-      },
-    ],
-    details: (
-      <>
-        <p>
-          Keyy brings learning and community into one place to help you
-          collaborate, learn, and grow better together.
-        </p>
-        <p>
-          Keyy helps students master new skills and unlock more greatness
-          through community, content, collaboration, and support.
-        </p>
-        <p>
-          Keyy helps creators organize their content, courses, and memberships
-          into a centralized community app and grow a scalable education
-          subscription business.
-        </p>
-      </>
-    ),
-    stack: [
-      SKILLS.REACT_JS,
-      SKILLS.NODE_JS,
-      SKILLS.GRAPHQL,
-      SKILLS.REDIS,
-      SKILLS.RETHINKDB,
-      PRODUCTS.ALGOLIA,
-      SKILLS.APACHE_CORDOVA,
-      SKILLS.ELECTRON,
-      SKILLS.DOCKER,
-      SKILLS.AWS,
-    ],
-    integrations: [
-      PRODUCTS.SLACK,
-      PRODUCTS.ZOOM,
-      PRODUCTS.SENDGRID,
-      PRODUCTS.AMPLITUDE,
-    ],
-  },
-  {
     name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
     website: 'https://designers.hubspot.com/code-gallery',
     icon: COMPANIES.HUBSPOT.icon,
@@ -734,45 +541,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     // INBOUND 2019: InboundLabs Presentation
     // https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
     // https://www.youtube.com/watch?v=VpArzDy5ny4&t=2590s
-  },
-  {
-    name: 'Booya',
-    website: 'https://booya.io',
-    icon: overrideIconClassName(
-      COMPANIES.INBOUNDLABS.icon,
-      'text-booya dark:text-inherit'
-    ),
-    role: `former ${ROLES.TECHNICAL_LEAD}`,
-    company: COMPANIES.INBOUNDLABS,
-    platforms: [
-      {
-        type: APP_TYPE.ADMIN_CONSOLE,
-        url: 'https://go.booya.io',
-      },
-      {
-        type: APP_TYPE.LIBRARY,
-        url: 'https://www.npmjs.com/package/@inboundlabs/booya-ui',
-        name: 'JavaScript UI Library',
-      },
-      {
-        type: APP_TYPE.INTEGRATION,
-        url: 'https://ecosystem.hubspot.com/marketplace/apps/marketing/cms/booya-225187',
-        name: 'HubSpot App',
-      },
-      // https://www.npmjs.com/package/@inboundlabs/booya-api-client
-      // https://inboundlabsi.github.io/booya-docs/
-    ],
-    details:
-      'Booya is the fastest and simplest way to add user authentication to HubSpot and transform it into a full-fledged user management system.',
-    stack: [
-      SKILLS.NODE_JS,
-      SKILLS.EXPRESS_JS,
-      SKILLS.MONGODB,
-      SKILLS.REDIS,
-      SKILLS.REACT_JS,
-      SKILLS.GRAPHQL,
-    ],
-    integrations: [PRODUCTS.HUBSPOT, PRODUCTS.MAILGUN, PRODUCTS.STRIPE],
   },
 ];
 

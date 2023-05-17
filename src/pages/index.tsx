@@ -1,14 +1,18 @@
 import * as React from 'react';
 import {
   AcademicCapIcon,
+  BookOpenIcon,
   BriefcaseIcon,
   BugAntIcon,
   CpuChipIcon,
   EnvelopeIcon,
   GlobeAltIcon,
+  KeyIcon,
   LanguageIcon,
+  LifebuoyIcon,
   MapPinIcon,
   RocketLaunchIcon,
+  WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline';
 import {
   GithubIcon,
@@ -38,6 +42,7 @@ import Seo from '../components/seo';
 import { TAG_COLORS } from '../helpers/constants';
 import {
   BIO,
+  HIGHLIGHTED_COMPANIES,
   MY_BOUNTIES,
   MY_EDUCATION,
   MY_EXPERIENCE,
@@ -45,23 +50,22 @@ import {
   MY_PROJECTS,
   MY_SKILLS,
 } from '../helpers/data';
+import { GeneralCompanyInput } from '../helpers/types';
+import { cleanCompanyObject } from '../helpers/utils';
 
 const IndexPage = () => (
   <Layout>
-    <Container header={true}>
+    <Container className="mb-4">
       {/* Bio */}
-      <MainContent header={true}>
+      <SideContent>
         <Title>{BIO.NAME}</Title>
         <SubTitle>{BIO.OCCUPATION}</SubTitle>
-        <div>{BIO.BYLINE}</div>
-      </MainContent>
-      <SideContent header={true}>
         <div>
           <StyledIcon
             icon={MapPinIcon}
             size="medium"
           />{' '}
-          {BIO.LOCATION}
+          {BIO.LOCATION} (Remote)
         </div>
         <div>
           <StyledIcon
@@ -104,20 +108,133 @@ const IndexPage = () => (
           </A>
         </div>
       </SideContent>
-    </Container>
-
-    {/* Bio Details */}
-    <Container>
-      <SideContent>
-        <SectionHeading>
+      <MainContent>
+        <p className="my-2">
           <StyledIcon
             icon={TelescopeIcon}
             size="large"
           />{' '}
-          About Me
-        </SectionHeading>
-      </SideContent>
-      <MainContent>{BIO.DETAILS}</MainContent>
+          I'm currently working on:
+        </p>
+        <p className="mb-2">
+          <h3>
+            <StyledIcon
+              icon={KeyIcon}
+              size="medium"
+            />{' '}
+            Cryptographic protocols and libraries
+          </h3>
+          <ul className="list-disc list-inside space-y-1 pl-5">
+            <li>
+              <StyledIcon
+                icon={RocketLaunchIcon}
+                size="medium"
+              />{' '}
+              <A
+                href="https://github.com/wamutech"
+                target="_blank"
+              >
+                Wamu
+              </A>
+              <ul className="list-disc list-inside pl-6">
+                <li>
+                  <StyledIcon
+                    icon={BookOpenIcon}
+                    size="medium"
+                  />{' '}
+                  A protocol and library for building threshold signature
+                  wallets controlled by multiple decentralized identities.
+                </li>
+                <li>
+                  <StyledIcon
+                    icon={LifebuoyIcon}
+                    size="medium"
+                  />{' '}
+                  Funded by: the{' '}
+                  <A
+                    href="https://esp.ethereum.foundation/"
+                    target="_blank"
+                  >
+                    Ethereum Foundation
+                  </A>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+        <p className="mb-2">
+          <h3>
+            <StyledIcon
+              icon={WrenchScrewdriverIcon}
+              size="medium"
+            />{' '}
+            Tools for programming languages
+          </h3>
+          <ul className="list-disc list-inside space-y-1 pl-5">
+            <li>
+              <StyledIcon
+                icon={RocketLaunchIcon}
+                size="medium"
+              />{' '}
+              <A
+                href="https://github.com/ink-analyzer"
+                target="_blank"
+              >
+                ink! Analyzer
+              </A>
+              <ul className="list-disc list-inside pl-6">
+                <li>
+                  <StyledIcon
+                    icon={BookOpenIcon}
+                    size="medium"
+                  />{' '}
+                  A collection of modular and reusable libraries and tools for
+                  semantic analysis of ink! smart contract code.
+                </li>
+                <li>
+                  <StyledIcon
+                    icon={LifebuoyIcon}
+                    size="medium"
+                  />{' '}
+                  Funded by: the{' '}
+                  <A
+                    href="https://web3.foundation/"
+                    target="_blank"
+                  >
+                    Web3 Foundation
+                  </A>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+        <p>
+          I’ve previously worked as a technical lead on projects for{' '}
+          {HIGHLIGHTED_COMPANIES.map(
+            (company: GeneralCompanyInput, idx: number) => {
+              const { name, website } = cleanCompanyObject(company);
+              return (
+                <>
+                  {website ? (
+                    <A
+                      href={website}
+                      target="_blank"
+                    >
+                      {name}
+                    </A>
+                  ) : (
+                    name
+                  )}
+                  {idx < HIGHLIGHTED_COMPANIES.length - 1 ? (
+                    <span>, </span>
+                  ) : null}
+                </>
+              );
+            }
+          )}{' '}
+          and many more companies.
+        </p>
+      </MainContent>
     </Container>
 
     <Container>
