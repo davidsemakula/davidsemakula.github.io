@@ -46,21 +46,23 @@ const Layout = ({ children }: HTMLAttributes<{}>): ReactElement => {
   return (
     <AppContext.Provider value={themeContext}>
       {/* Theme container */}
-      <div className={theme === THEME.DARK ? 'dark' : ''}>
-        {/* Background */}
-        <div className="min-h-screen bg-zinc-100 dark:bg-black">
-          {/* Container */}
-          <div className="container max-w-6xl mx-auto p-4 text-base text-zinc-600 dark:text-zinc-400">
-            <Header />
-            <main className="my-4 p-8 bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 rounded-lg">
-              {children}
-            </main>
-            <footer className="text-center">
-              © {copyrightYear} David Semakula. All rights reserved.
-            </footer>
+      {theme ? (
+        <div className={theme === THEME.DARK ? 'dark' : ''}>
+          {/* Background */}
+          <div className="min-h-screen bg-zinc-100 dark:bg-black">
+            {/* Container */}
+            <div className="container max-w-6xl mx-auto p-4 text-base text-zinc-600 dark:text-zinc-400">
+              <Header />
+              <main className="my-4 p-8 bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 rounded-lg">
+                {children}
+              </main>
+              <footer className="text-center">
+                © {copyrightYear} David Semakula. All rights reserved.
+              </footer>
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </AppContext.Provider>
   );
 };
