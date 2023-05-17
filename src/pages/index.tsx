@@ -131,7 +131,7 @@ const IndexPage = () => (
                 size="medium"
               />{' '}
               <A
-                href="https://github.com/wamutech"
+                href="https://wamu.tech"
                 target="_blank"
               >
                 Wamu
