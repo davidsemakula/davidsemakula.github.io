@@ -165,9 +165,14 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
 export const MY_PROJECTS: Array<ProjectInput> = [
   {
     name: 'Wamu',
-    website: 'https://github.com/wamutech',
+    website: 'https://wamu.tech',
     role: ROLES.CREATOR,
     platforms: [
+      {
+        type: APP_TYPE.API,
+        url: 'https://wamu.tech/specification',
+        name: 'Technical Specification',
+      },
       {
         type: APP_TYPE.LIBRARY,
         url: 'https://github.com/wamutech',
