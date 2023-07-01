@@ -14,11 +14,7 @@ import {
   RocketLaunchIcon,
   WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline';
-import {
-  GithubIcon,
-  TelescopeIcon,
-  TwitterIcon,
-} from '../components/common/icons';
+import { GithubIcon, TelescopeIcon } from '../components/common/icons';
 import { StyledIcon } from '../components/common/icons/containers';
 import { A } from '../components/common/links';
 import List from '../components/common/list';
@@ -94,6 +90,7 @@ const IndexPage = () => (
             {BIO.GITHUB_USERNAME}
           </A>
         </div>
+        {/*
         <div>
           <StyledIcon
             icon={TwitterIcon}
@@ -107,6 +104,7 @@ const IndexPage = () => (
             @{BIO.TWITTER_USERNAME}
           </A>
         </div>
+        */}
       </SideContent>
       <MainContent>
         <p className="my-2">
