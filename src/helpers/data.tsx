@@ -169,7 +169,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     role: ROLES.CREATOR,
     platforms: [
       {
-        type: APP_TYPE.API,
+        type: APP_TYPE.WEBSITE,
+        url: 'https://wamu.tech/whitepaper',
+        name: 'Whitepaper',
+      },
+      {
+        type: APP_TYPE.WEBSITE,
         url: 'https://wamu.tech/specification',
         name: 'Technical Specification',
       },
@@ -205,6 +210,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       {
         name: 'Funded by: the Ethereum Foundation',
         url: 'https://esp.ethereum.foundation/',
+        // https://blog.ethereum.org/2023/06/15/allocation-update-q1-23
       },
     ],
   },
@@ -216,25 +222,25 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       {
         type: APP_TYPE.LIBRARY,
         url: 'https://crates.io/crates/ink-analyzer',
-        name: 'Analyzer',
+        name: 'Semantic Analyzer',
       },
-      {
-        type: APP_TYPE.LIBRARY,
-        url: 'https://crates.io/crates/ink-analyzer-ir',
-        name: 'IR',
-      },
-      /*
       {
         type: APP_TYPE.BINARY,
-        url: 'https://github.com/ink-analyzer/ink-lsp-server',
+        url: 'https://crates.io/crates/ink-lsp-server',
         name: 'Language Server',
       },
+      /*
       {
         type: APP_TYPE.EXTENSION,
         url: 'https://github.com/ink-analyzer/ink-vscode',
         name: 'Visual Studio Code Extension',
       },
       */
+      {
+        type: APP_TYPE.LIBRARY,
+        url: 'https://crates.io/crates/ink-analyzer-ir',
+        name: 'IR (Intermediate Representation)',
+      },
     ],
     details: (
       <>
@@ -353,7 +359,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     press: [
       {
         name: 'Gitcoin Blog Feature',
-        url: 'https://go.gitcoin.co/blog/celebrating-the-best-in-cross-chain-from-moonbeams-illuminate-hack/22',
+        url: 'https://www.gitcoin.co/blog/celebrating-the-best-in-cross-chain-from-moonbeams-illuminate-hack22',
       },
     ],
   },

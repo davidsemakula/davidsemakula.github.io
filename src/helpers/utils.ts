@@ -104,14 +104,14 @@ export const getAppTypeIcon = (type: APP_TYPE): SimpleIconInput => {
     case APP_TYPE.ALGORAND: {
       return AlgorandIcon;
     }
-    case APP_TYPE.ADMIN_CONSOLE: {
-      return CommandLineIcon;
-    }
     case APP_TYPE.ANDROID: {
       return AndroidIcon;
     }
     case APP_TYPE.BINANCE: {
       return BinanceIcon;
+    }
+    case APP_TYPE.BINARY: {
+      return CommandLineIcon;
     }
     case APP_TYPE.BITCOIN: {
       return BitcoinIcon;

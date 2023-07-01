@@ -24,9 +24,6 @@ export enum APP_TYPE {
   HARMONY = 'Harmony',
   NEAR = 'Near',
 
-  // By Purpose
-  ADMIN_CONSOLE = 'Admin Console',
-
   // App specific
   GNOSIS_SAFE_APP = 'Gnosis Safe App',
   MOONBEAM_SAFE_APP = 'Moonbeam Safe App',
