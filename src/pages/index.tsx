@@ -148,13 +148,21 @@ const IndexPage = () => (
                     icon={LifebuoyIcon}
                     size="medium"
                   />{' '}
-                  Funded by: the{' '}
+                  Funded by:{' '}
                   <A
                     href="https://esp.ethereum.foundation/"
                     target="_blank"
                   >
                     Ethereum Foundation
+                  </A>{' '}
+                  (
+                  <A
+                    href="https://blog.ethereum.org/2023/06/15/allocation-update-q1-23"
+                    target="_blank"
+                  >
+                    announcement
                   </A>
+                  )
                 </li>
               </ul>
             </li>
@@ -200,7 +208,15 @@ const IndexPage = () => (
                     target="_blank"
                   >
                     Web3 Foundation
+                  </A>{' '}
+                  (
+                  <A
+                    href="https://medium.com/web3foundation/web3-foundation-grants-wave-17-recipients-aa33c5630e9c"
+                    target="_blank"
+                  >
+                    announcement
                   </A>
+                  )
                 </li>
               </ul>
             </li>

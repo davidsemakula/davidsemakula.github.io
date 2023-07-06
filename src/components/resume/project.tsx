@@ -10,6 +10,7 @@ import {
   GeneralAwardInput,
   GeneralPartnerInput,
   GeneralPlatformInput,
+  PartnerType,
   PressInput,
   ProjectInput,
 } from '../../helpers/types';
@@ -102,14 +103,23 @@ const Project = ({
         );
       })}
       {(partners || []).map((item: GeneralPartnerInput, idx: number) => {
-        const { name, url } = cleanPartnerObject(item);
+        const { type, name, url, announcement } = cleanPartnerObject(item);
         return (
           <div key={`partner-link-${idx}`}>
             <StyledIcon
               icon={LifebuoyIcon}
               size="medium"
             />{' '}
+            {type === PartnerType.FUNDING ? 'Funded by: ' : ''}
             {url ? <A href={url}>{name}</A> : name}
+            {announcement ? (
+              <span>
+                {' '}
+                (<A href={announcement}>announcement</A>)
+              </span>
+            ) : (
+              ''
+            )}
           </div>
         );
       })}

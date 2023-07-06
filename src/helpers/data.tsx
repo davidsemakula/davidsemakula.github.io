@@ -23,6 +23,7 @@ import {
   ExperienceInput,
   GeneralCompanyInput,
   GeneralTagInput,
+  PartnerType,
   ProjectInput,
   asCompanyRecord,
 } from './types';
@@ -208,9 +209,11 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     stack: [SKILLS.RUST],
     partners: [
       {
-        name: 'Funded by: the Ethereum Foundation',
+        type: PartnerType.FUNDING,
+        name: 'Ethereum Foundation',
         url: 'https://esp.ethereum.foundation/',
-        // https://blog.ethereum.org/2023/06/15/allocation-update-q1-23
+        announcement:
+          'https://blog.ethereum.org/2023/06/15/allocation-update-q1-23',
       },
     ],
   },
@@ -302,8 +305,11 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     integrations: [PRODUCTS.VS_CODE],
     partners: [
       {
-        name: 'Funded by: the Web3 Foundation',
+        type: PartnerType.FUNDING,
+        name: 'Web3 Foundation',
         url: 'https://web3.foundation/',
+        announcement:
+          'https://medium.com/web3foundation/web3-foundation-grants-wave-17-recipients-aa33c5630e9c',
       },
     ],
   },

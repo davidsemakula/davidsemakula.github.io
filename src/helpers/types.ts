@@ -54,9 +54,14 @@ export type ExperienceInput = {
 };
 
 export type SimplePartnerInput = string;
+export enum PartnerType {
+  FUNDING = 'funding',
+}
 export type DetailedPartnerInput = {
+  type: PartnerType;
   name: SimplePartnerInput;
   url?: string;
+  announcement?: string;
 };
 export type GeneralPartnerInput = SimplePartnerInput | DetailedPartnerInput;
 
