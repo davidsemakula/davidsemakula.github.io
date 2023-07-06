@@ -202,7 +202,7 @@ const IndexPage = () => (
                     icon={LifebuoyIcon}
                     size="medium"
                   />{' '}
-                  Funded by: the{' '}
+                  Funded by:{' '}
                   <A
                     href="https://web3.foundation/"
                     target="_blank"
