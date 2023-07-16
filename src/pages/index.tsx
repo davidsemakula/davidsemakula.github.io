@@ -61,7 +61,7 @@ const IndexPage = () => (
             icon={MapPinIcon}
             size="medium"
           />{' '}
-          {BIO.LOCATION} (Remote)
+          {BIO.LOCATION}
         </div>
         <div>
           <StyledIcon
