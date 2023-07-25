@@ -181,7 +181,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       },
       {
         type: APP_TYPE.LIBRARY,
-        url: 'https://github.com/wamutech',
+        url: 'https://github.com/wamutech/wamu-rs',
         name: 'Rust Library',
       },
     ],
