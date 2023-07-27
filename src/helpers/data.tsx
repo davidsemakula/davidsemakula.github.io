@@ -232,13 +232,11 @@ export const MY_PROJECTS: Array<ProjectInput> = [
         url: 'https://crates.io/crates/ink-lsp-server',
         name: 'Language Server',
       },
-      /*
       {
         type: APP_TYPE.EXTENSION,
         url: 'https://github.com/ink-analyzer/ink-vscode',
         name: 'Visual Studio Code Extension',
       },
-      */
       {
         type: APP_TYPE.LIBRARY,
         url: 'https://crates.io/crates/ink-analyzer-ir',
