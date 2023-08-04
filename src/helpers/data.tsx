@@ -219,7 +219,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
   },
   {
     name: 'ink! Analyzer',
-    website: 'https://github.com/ink-analyzer',
+    website: 'https://analyze.ink',
     role: ROLES.CREATOR,
     platforms: [
       {

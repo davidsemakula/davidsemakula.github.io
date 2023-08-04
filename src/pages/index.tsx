@@ -183,7 +183,7 @@ const IndexPage = () => (
                 size="medium"
               />{' '}
               <A
-                href="https://github.com/ink-analyzer"
+                href="https://analyze.ink"
                 target="_blank"
               >
                 ink! Analyzer
