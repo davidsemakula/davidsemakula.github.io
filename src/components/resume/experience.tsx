@@ -34,13 +34,15 @@ const Experience = ({
         {period}
       </div>
       <ItemHeading>{name}</ItemHeading>
-      <ItemSubTitle>
-        <StyledIcon
-          icon={WrenchScrewdriverIcon}
-          size="medium"
-        />{' '}
-        {role}
-      </ItemSubTitle>
+      {role ? (
+        <ItemSubTitle>
+          <StyledIcon
+            icon={WrenchScrewdriverIcon}
+            size="medium"
+          />{' '}
+          {role}
+        </ItemSubTitle>
+      ) : null}
       {location || remote ? (
         <div>
           <StyledIcon

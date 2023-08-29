@@ -45,7 +45,7 @@ export type EducationInput = {
 
 export type ExperienceInput = {
   company: GeneralCompanyInput;
-  role: string;
+  role?: string;
   location?: string;
   period: string;
   website?: string;

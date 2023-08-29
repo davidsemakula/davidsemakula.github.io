@@ -107,7 +107,7 @@ export const HIGHLIGHTED_COMPANIES: Array<GeneralCompanyInput> = [
 
 export const BIO = {
   NAME: 'David Semakula',
-  OCCUPATION: `${ROLES.SOFTWARE_ENGINEER} & ${ROLES.SYSTEM_ARCHITECT}`,
+  OCCUPATION: 'I write software and design computational protocols.',
   LOCATION: LOCATION.KAMPALA,
   EMAIL: 'hello@davidsemakula.com',
   WEBSITE: 'davidsemakula.com',
@@ -116,8 +116,8 @@ export const BIO = {
 };
 
 export const MY_LANGUAGES: Array<LANGUAGES> = [
-  LANGUAGES.ENGLISH,
   LANGUAGES.LUGANDA,
+  LANGUAGES.ENGLISH,
 ];
 
 const web3Color = TAG_COLORS.VIOLET;
@@ -312,6 +312,112 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
+    name: COMPANIES.TUNGA.name,
+    website: COMPANIES.TUNGA.website,
+    icon: COMPANIES.TUNGA.icon,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: COMPANIES.TUNGA.website,
+      },
+    ],
+    details:
+      'Tunga is an online staff augmentation platform that connects companies worldwide to experienced African software engineers.',
+    stack: [
+      SKILLS.PYTHON,
+      SKILLS.DJANGO,
+      SKILLS.REACT_JS,
+      SKILLS.MYSQL,
+      SKILLS.REDIS,
+      PRODUCTS.ALGOLIA,
+      SKILLS.ANSIBLE,
+    ],
+    integrations: [
+      PRODUCTS.GITHUB,
+      PRODUCTS.SLACK,
+      PRODUCTS.EXACT,
+      PRODUCTS.HUBSPOT_CRM,
+      PRODUCTS.PAYONEER,
+      PRODUCTS.MANDRILL,
+      PRODUCTS.METABASE,
+    ],
+  },
+  {
+    name: 'Grindery Nexus',
+    website: 'https://www.grindery.io',
+    icon: COMPANIES.GRINDERY.icon,
+    role: `former ${ROLES.TECHNICAL_LEAD}, former ${ROLES.STRATEGIC_ADVISOR}`,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://nexus.grindery.org',
+      },
+      APP_TYPE.ETHEREUM,
+      APP_TYPE.ALGORAND,
+      APP_TYPE.NEAR,
+      APP_TYPE.BINANCE,
+      APP_TYPE.FLOW,
+    ],
+    details: (
+      <>
+        <p>
+          A framework that allows developers to create reusable services to
+          connect smart contracts with other protocols, including web2 apps.
+        </p>
+        <p>
+          A low/no-code interface that allows end-users to declare workflows
+          with simple logic, making automation available to anyone without
+          programming skills.
+        </p>
+        <p>
+          A marketplace with incentives for decentralized nodes to execute the
+          user-defined workflows as well as for developers to create more
+          services.
+        </p>
+      </>
+    ),
+    stack: [
+      SKILLS.SOLIDITY,
+      SKILLS.RUST,
+      SKILLS.WEB_ASSEMBLY,
+      SKILLS.TYPESCRIPT,
+      SKILLS.REACT_JS,
+      SKILLS.IPFS,
+    ],
+    integrations: [],
+    awards: [
+      {
+        name: 'Binance Labs Incubation Program S4 | Infrastructure',
+        url: 'https://www.binance.com/en/blog/ecosystem/%E2%80%8Bbinance-labs-launches-season-4-of-its-incubation-program-with-14-earlystage-startups-421499824684903808',
+        // https://www.binance.com/en/blog/ecosystem/season-4-of-binance-labs-incubation-program-how-to-build-invest-and-grow-startups-421499824684904005
+      },
+    ],
+  },
+  {
+    name: `${COMPANIES.HUBSPOT.name} Inspire`,
+    website: 'https://designers.hubspot.com/inspire',
+    icon: COMPANIES.HUBSPOT.icon,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
+    company: COMPANIES.HUBSPOT,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://designers.hubspot.com/inspire',
+      },
+    ],
+    details:
+      'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
+    stack: [
+      SKILLS.NODE_JS,
+      SKILLS.EXPRESS_JS,
+      SKILLS.REDIS,
+      PRODUCTS.ALGOLIA,
+      PRODUCTS.HUBSPOT_CMS,
+    ],
+    integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
+  },
+  {
     name: 'Mukutu Router',
     website: 'https://safe.mukutu.tech/',
     role: ROLES.CREATOR,
@@ -368,55 +474,31 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
-    name: 'Grindery Nexus',
-    website: 'https://www.grindery.io',
-    icon: COMPANIES.GRINDERY.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}, former ${ROLES.STRATEGIC_ADVISOR}`,
+    name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
+    website: 'https://designers.hubspot.com/code-gallery',
+    icon: COMPANIES.HUBSPOT.icon,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
+    company: COMPANIES.HUBSPOT,
     platforms: [
       {
         type: APP_TYPE.WEB,
-        url: 'https://nexus.grindery.org',
+        url: 'https://designers.hubspot.com/code-gallery',
       },
-      APP_TYPE.ETHEREUM,
-      APP_TYPE.ALGORAND,
-      APP_TYPE.NEAR,
-      APP_TYPE.BINANCE,
-      APP_TYPE.FLOW,
     ],
-    details: (
-      <>
-        <p>
-          A framework that allows developers to create reusable services to
-          connect smart contracts with other protocols, including web2 apps.
-        </p>
-        <p>
-          A low/no-code interface that allows end-users to declare workflows
-          with simple logic, making automation available to anyone without
-          programming skills.
-        </p>
-        <p>
-          A marketplace with incentives for decentralized nodes to execute the
-          user-defined workflows as well as for developers to create more
-          services.
-        </p>
-      </>
-    ),
+    details:
+      'A showcase of the open-source assets and projects the HubSpot developer community is working on.',
     stack: [
-      SKILLS.SOLIDITY,
-      SKILLS.RUST,
-      SKILLS.WEB_ASSEMBLY,
-      SKILLS.TYPESCRIPT,
-      SKILLS.REACT_JS,
-      SKILLS.IPFS,
+      SKILLS.NODE_JS,
+      SKILLS.EXPRESS_JS,
+      SKILLS.MONGODB,
+      SKILLS.REDIS,
+      PRODUCTS.HUBSPOT_CMS,
     ],
-    integrations: [],
-    awards: [
-      {
-        name: 'Binance Labs Incubation Program S4 | Infrastructure',
-        url: 'https://www.binance.com/en/blog/ecosystem/%E2%80%8Bbinance-labs-launches-season-4-of-its-incubation-program-with-14-earlystage-startups-421499824684903808',
-        // https://www.binance.com/en/blog/ecosystem/season-4-of-binance-labs-incubation-program-how-to-build-invest-and-grow-startups-421499824684904005
-      },
-    ],
+    integrations: [PRODUCTS.GITHUB, PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
+    // More Links
+    // INBOUND 2019: InboundLabs Presentation
+    // https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
+    // https://www.youtube.com/watch?v=VpArzDy5ny4&t=2590s
   },
   {
     name: 'Grindery Pay',
@@ -474,88 +556,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
     // More Links
     // Youtube: https://www.youtube.com/watch?v=2N2TPrqMLic
-  },
-  {
-    name: `${COMPANIES.HUBSPOT.name} Inspire`,
-    website: 'https://designers.hubspot.com/inspire',
-    icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}`,
-    company: COMPANIES.HUBSPOT,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://designers.hubspot.com/inspire',
-      },
-    ],
-    details:
-      'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
-    stack: [
-      SKILLS.NODE_JS,
-      SKILLS.EXPRESS_JS,
-      SKILLS.REDIS,
-      PRODUCTS.ALGOLIA,
-      PRODUCTS.HUBSPOT_CMS,
-    ],
-    integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
-  },
-  {
-    name: COMPANIES.TUNGA.name,
-    website: COMPANIES.TUNGA.website,
-    icon: COMPANIES.TUNGA.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}`,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: COMPANIES.TUNGA.website,
-      },
-    ],
-    details:
-      'Tunga is an online staff augmentation platform that connects companies worldwide to experienced African software engineers.',
-    stack: [
-      SKILLS.PYTHON,
-      SKILLS.DJANGO,
-      SKILLS.REACT_JS,
-      SKILLS.MYSQL,
-      SKILLS.REDIS,
-      PRODUCTS.ALGOLIA,
-      SKILLS.ANSIBLE,
-    ],
-    integrations: [
-      PRODUCTS.GITHUB,
-      PRODUCTS.SLACK,
-      PRODUCTS.EXACT,
-      PRODUCTS.HUBSPOT_CRM,
-      PRODUCTS.PAYONEER,
-      PRODUCTS.MANDRILL,
-      PRODUCTS.METABASE,
-    ],
-  },
-  {
-    name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
-    website: 'https://designers.hubspot.com/code-gallery',
-    icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}`,
-    company: COMPANIES.HUBSPOT,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://designers.hubspot.com/code-gallery',
-      },
-    ],
-    details:
-      'A showcase of the open-source assets and projects the HubSpot developer community is working on.',
-    stack: [
-      SKILLS.NODE_JS,
-      SKILLS.EXPRESS_JS,
-      SKILLS.MONGODB,
-      SKILLS.REDIS,
-      PRODUCTS.HUBSPOT_CMS,
-    ],
-    integrations: [PRODUCTS.GITHUB, PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
-    // More Links
-    // INBOUND 2019: InboundLabs Presentation
-    // https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
-    // https://www.youtube.com/watch?v=VpArzDy5ny4&t=2590s
   },
 ];
 
@@ -624,24 +624,16 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
       name: 'Independent',
       location: LOCATION.KAMPALA,
     },
-    role: [
-      ROLES.SOFTWARE_ENGINEER,
-      ROLES.SYSTEM_ARCHITECT,
-      ROLES.CONSULTANT,
-      ROLES.STRATEGIC_ADVISOR,
-    ].join('/ '),
     period: 'April/2022 - Present',
     remote: true,
-    details:
-      'Consulting, strategic advice and full-stack software development.',
+    details: 'Writing software and designing computational protocols.',
   },
   {
     company: COMPANIES.GRINDERY,
     role: `${ROLES.CO_FOUNDER} & ${ROLES.CTO}`,
     period: '2019 - April/2022',
     remote: true,
-    details:
-      'Grindery builds low/no-code middleware for Web3, as well as tools to put DAOs to work. ',
+    details: 'Grindery builds low/no-code middleware for Web3. ',
   },
   {
     company: COMPANIES.TUNGA,

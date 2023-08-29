@@ -90,21 +90,6 @@ const IndexPage = () => (
             {BIO.GITHUB_USERNAME}
           </A>
         </div>
-        {/*
-        <div>
-          <StyledIcon
-            icon={TwitterIcon}
-            className="text-twitter dark:text-inherit"
-            size="medium"
-          />{' '}
-          <A
-            href={`https://twitter.com/${BIO.TWITTER_USERNAME}`}
-            rel="me noreferrer nofollow"
-          >
-            @{BIO.TWITTER_USERNAME}
-          </A>
-        </div>
-        */}
       </SideContent>
       <MainContent>
         <p className="my-2">
@@ -263,7 +248,7 @@ const IndexPage = () => (
         </SectionHeading>
       </SideContent>
       <MainContent>
-        <div className="mb-2">I build full stack software with:</div>
+        <div className="mb-2">I build software with:</div>
 
         <div>
           <TagList tags={MY_SKILLS} />
