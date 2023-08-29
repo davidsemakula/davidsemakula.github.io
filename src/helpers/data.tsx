@@ -655,7 +655,7 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
         </p>
         <p>
           Software solutions include payment gateways to leading banks in the
-          region, collection platforms to large utility service providers and
+          region, collection platforms to large utility service providers, and
           both individual and corporate mobile and online wallets.
         </p>
       </>
