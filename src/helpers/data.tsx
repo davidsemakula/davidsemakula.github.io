@@ -288,7 +288,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           >
             ink! programming language
           </A>{' '}
-          for writing smart contracts for blockchains built on{' '}
+          for writing smart contracts for blockchains built with{' '}
           <A
             href="https://substrate.io/"
             target="_blank"
