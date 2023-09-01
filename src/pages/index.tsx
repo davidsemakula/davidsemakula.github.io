@@ -294,7 +294,7 @@ const IndexPage = () => (
         <List
           items={MY_PROJECTS}
           component={Project}
-          max={4}
+          max={5}
         />
       </MainContent>
 
