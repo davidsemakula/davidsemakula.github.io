@@ -188,14 +188,14 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     details: (
       <>
         <p>
-          A protocol and library for building{' '}
+          A protocol and library for computation of{' '}
           <A
             href="https://academy.binance.com/en/articles/threshold-signatures-explained"
             target="_blank"
           >
-            threshold signature
+            threshold signatures
           </A>{' '}
-          wallets controlled by multiple{' '}
+          by multiple{' '}
           <A
             href="https://ethereum.org/en/decentralized-identity/"
             target="_blank"

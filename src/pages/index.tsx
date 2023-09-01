@@ -125,8 +125,8 @@ const IndexPage = () => (
                     icon={BookOpenIcon}
                     size="medium"
                   />{' '}
-                  A protocol and library for building threshold signature
-                  wallets controlled by multiple decentralized identities.
+                  A protocol and library for computation of threshold signatures
+                  by multiple decentralized identities.
                 </li>
                 <li>
                   <StyledIcon
