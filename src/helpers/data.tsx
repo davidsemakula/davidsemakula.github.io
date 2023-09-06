@@ -256,47 +256,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           </A>{' '}
           smart contract code.
         </p>
-        <p>
-          ink! analyzer aims to improve{' '}
-          <A
-            href="https://use.ink/"
-            target="_blank"
-          >
-            ink! language
-          </A>{' '}
-          support in{' '}
-          <A
-            href="https://en.wikipedia.org/wiki/Integrated_development_environment"
-            target="_blank"
-          >
-            integrated development environments (IDEs)
-          </A>
-          ,{' '}
-          <A
-            href="https://en.wikipedia.org/wiki/Source-code_editor"
-            target="_blank"
-          >
-            source code editors
-          </A>{' '}
-          and other development tools by providing modular and reusable building
-          blocks for implementing features like diagnostic errors, code
-          completion suggestions, code/intent actions and hover content for the
-          language support for the{' '}
-          <A
-            href="https://use.ink/"
-            target="_blank"
-          >
-            ink! programming language
-          </A>{' '}
-          for writing smart contracts for blockchains built with{' '}
-          <A
-            href="https://substrate.io/"
-            target="_blank"
-          >
-            Substrate
-          </A>
-          .
-        </p>
       </>
     ),
     stack: [SKILLS.RUST, SKILLS.TYPESCRIPT],
@@ -362,18 +321,9 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     details: (
       <>
         <p>
-          A framework that allows developers to create reusable services to
-          connect smart contracts with other protocols, including web2 apps.
-        </p>
-        <p>
-          A low/no-code interface that allows end-users to declare workflows
-          with simple logic, making automation available to anyone without
-          programming skills.
-        </p>
-        <p>
-          A marketplace with incentives for decentralized nodes to execute the
-          user-defined workflows as well as for developers to create more
-          services.
+          A framework for creating reusable services for connecting smart
+          contracts with other protocols, an interface for declaring automation
+          workflows and a marketplace for executing the user-defined workflows.
         </p>
       </>
     ),
@@ -522,12 +472,10 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
     details: (
       <>
-        <p>Create, manage and import decentralized payouts.</p>
         <p>
-          Easily batch multiple payouts into a single transaction that can
-          either be paid directly from a wallet or submitted as withdrawal
-          requests to Aragon or Gnosis Safe to let members vote and
-          automatically execute the transactions.
+          Create, manage and import decentralized payouts and either pay them
+          directly from a wallet or submit them as withdrawal requests to
+          (Gnosis) Safe or Aragon.
         </p>
       </>
     ),
@@ -570,12 +518,7 @@ export const MY_BOUNTIES: Array<BountyInput> = [
       <>
         <p className="mb-1.5">
           <A href="https://www.hyperlane.xyz/">Hyperlane</A> is a modular
-          cross-chain communication protocol deployed on{' '}
-          <A href="https://docs.hyperlane.xyz/docs/developers-faq-and-troubleshooting/domains">
-            Ethereum, Arbitrum, Avalanche, BSC, Celo, Optimism, Polygon and
-            Moonbeam
-          </A>
-          .
+          cross-chain communication protocol.
         </p>
         <p className="mb-1.5">
           I discovered and reported a flaw in Hyperlane's{' '}
