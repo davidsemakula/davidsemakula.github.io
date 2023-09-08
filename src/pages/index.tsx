@@ -1,25 +1,22 @@
 import * as React from 'react';
 import {
   AcademicCapIcon,
-  BookOpenIcon,
   BriefcaseIcon,
   BugAntIcon,
   CpuChipIcon,
   EnvelopeIcon,
   GlobeAltIcon,
-  KeyIcon,
   LanguageIcon,
-  LifebuoyIcon,
   MapPinIcon,
   RocketLaunchIcon,
-  WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline';
-import { GithubIcon, TelescopeIcon } from '../components/common/icons';
+import { GithubIcon } from '../components/common/icons';
 import { StyledIcon } from '../components/common/icons/containers';
 import { A } from '../components/common/links';
 import List from '../components/common/list';
 import { TagList } from '../components/common/tags';
 import {
+  ItemHeading,
   SectionHeading,
   SubTitle,
   Title,
@@ -92,48 +89,25 @@ const IndexPage = () => (
         </div>
       </SideContent>
       <MainContent>
-        <p className="my-2">
-          <StyledIcon
-            icon={TelescopeIcon}
-            size="large"
-          />{' '}
-          I'm currently working on:
-        </p>
+        <ItemHeading className="mt-2">Hello | Oli otya 👋</ItemHeading>
+        <p className="my-2">🔭 I'm currently working on:</p>
         <p className="mb-2">
-          <h3>
-            <StyledIcon
-              icon={KeyIcon}
-              size="medium"
-            />{' '}
-            Cryptographic protocols and libraries
-          </h3>
+          <h3>🔑 Cryptographic protocols and libraries</h3>
           <ul className="list-disc list-inside space-y-1 pl-5">
             <li>
-              <StyledIcon
-                icon={RocketLaunchIcon}
-                size="medium"
-              />{' '}
               <A
                 href="https://wamu.tech"
                 target="_blank"
               >
-                Wamu
+                🚀 Wamu
               </A>
               <ul className="list-disc list-inside pl-6">
                 <li>
-                  <StyledIcon
-                    icon={BookOpenIcon}
-                    size="medium"
-                  />{' '}
-                  A protocol and library for computation of threshold signatures
-                  by multiple decentralized identities.
+                  📖 A protocol and library for computation of threshold
+                  signatures by multiple decentralized identities.
                 </li>
                 <li>
-                  <StyledIcon
-                    icon={LifebuoyIcon}
-                    size="medium"
-                  />{' '}
-                  Funded by:{' '}
+                  🌱 Funded by:{' '}
                   <A
                     href="https://esp.ethereum.foundation/"
                     target="_blank"
@@ -154,40 +128,22 @@ const IndexPage = () => (
           </ul>
         </p>
         <p className="mb-2">
-          <h3>
-            <StyledIcon
-              icon={WrenchScrewdriverIcon}
-              size="medium"
-            />{' '}
-            Tools for programming languages
-          </h3>
+          <h3>⚒️ Tools for programming languages</h3>
           <ul className="list-disc list-inside space-y-1 pl-5">
             <li>
-              <StyledIcon
-                icon={RocketLaunchIcon}
-                size="medium"
-              />{' '}
               <A
                 href="https://analyze.ink"
                 target="_blank"
               >
-                ink! Analyzer
+                🚀 ink! Analyzer
               </A>
               <ul className="list-disc list-inside pl-6">
                 <li>
-                  <StyledIcon
-                    icon={BookOpenIcon}
-                    size="medium"
-                  />{' '}
-                  A collection of modular and reusable libraries and tools for
-                  semantic analysis of ink! smart contract code.
+                  📖 A collection of modular and reusable libraries and tools
+                  for semantic analysis of ink! smart contract code.
                 </li>
                 <li>
-                  <StyledIcon
-                    icon={LifebuoyIcon}
-                    size="medium"
-                  />{' '}
-                  Funded by:{' '}
+                  🌱 Funded by:{' '}
                   <A
                     href="https://web3.foundation/"
                     target="_blank"
@@ -207,7 +163,7 @@ const IndexPage = () => (
             </li>
           </ul>
         </p>
-        <p>
+        <p className="mb-2">
           I’ve previously worked as a technical lead on projects for{' '}
           {HIGHLIGHTED_COMPANIES.map(
             (company: GeneralCompanyInput, idx: number) => {
@@ -232,6 +188,16 @@ const IndexPage = () => (
             }
           )}{' '}
           and many more companies.
+        </p>
+        <p>
+          ⚡ I hold a{' '}
+          <A
+            href="https://cis.mak.ac.ug/"
+            target="_blank"
+          >
+            BSc in Computer Science
+          </A>
+          .
         </p>
       </MainContent>
     </Container>
@@ -288,7 +254,7 @@ const IndexPage = () => (
       </SideContent>
       <MainContent>
         <div className="mb-2">
-          I have made significant contributions to the following projects:
+          I've made significant contributions to the following projects:
         </div>
 
         <List

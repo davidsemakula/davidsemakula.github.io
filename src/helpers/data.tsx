@@ -40,6 +40,7 @@ export const COMPANIES = asCompanyRecord({
   GRINDERY: {
     name: 'Grindery',
     website: 'https://www.grindery.io',
+    location: LOCATION.SINGAPORE,
     icon: {
       icon: GrinderyIcon,
       className: 'text-grindery dark:text-inherit',
@@ -282,7 +283,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       },
     ],
     details:
-      'Tunga is an online staff augmentation platform that connects companies worldwide to experienced African software engineers.',
+      'An online staff augmentation platform that connects companies worldwide to experienced African software engineers.',
     stack: [
       SKILLS.PYTHON,
       SKILLS.DJANGO,
@@ -318,15 +319,8 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       APP_TYPE.BINANCE,
       APP_TYPE.FLOW,
     ],
-    details: (
-      <>
-        <p>
-          A framework for creating reusable services for connecting smart
-          contracts with other protocols, an interface for declaring automation
-          workflows and a marketplace for executing the user-defined workflows.
-        </p>
-      </>
-    ),
+    details:
+      'A framework, an interface and a marketplace for defining, composing and executing automated workflows that connect smart contracts with other protocols (including web2 services).',
     stack: [
       SKILLS.SOLIDITY,
       SKILLS.RUST,
@@ -386,7 +380,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     details: (
       <>
         <p>
-          Mukutu Router (formerly Safe Hyperlane Router) is a{' '}
+          A{' '}
           <A
             href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
             target="_blank"
@@ -411,9 +405,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       {
         name: 'Top Prize: Moonbeam Illuminate/22 Hackathon | Best use of Hyperlane',
         url: 'https://twitter.com/MoonbeamNetwork/status/1610738659656962048',
-        // https://safe.mukutu.tech
-        // https://gitcoin.co/hackathon/illuminate/projects/17478/hyperlane-safe-app
-        // Vidyard: https://share.vidyard.com/watch/RfCsNrC8r24hKGm7HTBBZY?
       },
     ],
     press: [
@@ -445,10 +436,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       PRODUCTS.HUBSPOT_CMS,
     ],
     integrations: [PRODUCTS.GITHUB, PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
-    // More Links
-    // INBOUND 2019: InboundLabs Presentation
-    // https://docs.google.com/presentation/d/1PsBHgVyVyuA8PMCiDy6j8HbYPOOax-zq_3RAFipkc4k/edit?usp=sharing
-    // https://www.youtube.com/watch?v=VpArzDy5ny4&t=2590s
   },
   {
     name: 'Grindery Pay',
@@ -491,19 +478,8 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       {
         name: '2nd Place: DAO global hackathon 2021 | Finance & Operations',
         url: 'https://hackforfreedom.org/past-hackathons#winners',
-        // https://github.com/grindery-io/grindery-dao-hackathon
-        // https://blog.aragon.org/dao-global-hackathon-thank-you/
-        // https://gitcoin.co/hackathon/dao-global/projects/11739/grindery-meta
-        // Vimeo: https://vimeo.com/655205768
       },
-      // 2nd Place: Harmony - Bridging TradFi to DeFi Projects 2021 | Terra
-      // https://github.com/grindery-io/grindery-connect
-      // https://twitter.com/harmonyprotocol/status/1447654702204678146
-      // https://gitcoin.co/hackathon/harmony-defi/projects/11108/grindery-connect
-      // https://docs.google.com/presentation/d/1ZGrbKSaAdtzvMzVh0EVFBfUvA4SqiAeYVXGhJN7Orbs/edit#slide=id.gf208bfeaf3_0_30
     ],
-    // More Links
-    // Youtube: https://www.youtube.com/watch?v=2N2TPrqMLic
   },
 ];
 

@@ -42,6 +42,7 @@ export enum LOCATION {
   AMSTERDAM = 'Amsterdam, The Netherlands',
   LAGOS = 'Lagos, Nigeria',
   NAIROBI = 'Nairobi, Kenya',
+  SINGAPORE = 'Singapore',
 }
 
 export enum PRODUCTS {
