@@ -147,6 +147,7 @@ export const MY_SKILLS: Array<GeneralTagInput> = [
   SKILLS.GO,
   SKILLS.SWIFT,
   SKILLS.KOTLIN,
+  SKILLS.JAVA,
   // Libraries & Frameworks
   SKILLS.REACT_JS,
   SKILLS.FLUTTER,
