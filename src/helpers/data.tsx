@@ -192,14 +192,14 @@ export const MY_PROJECTS: Array<ProjectInput> = [
         <p>
           A protocol and library for computation of{' '}
           <A
-            href="https://academy.binance.com/en/articles/threshold-signatures-explained"
+            href="https://en.wikipedia.org/wiki/Threshold_cryptosystem#Methodology"
             target="_blank"
           >
             threshold signatures
           </A>{' '}
           by multiple{' '}
           <A
-            href="https://ethereum.org/en/decentralized-identity/"
+            href="https://ethereum.org/en/decentralized-identity/#what-are-decentralized-identifiers"
             target="_blank"
           >
             decentralized identities
