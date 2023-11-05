@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'David Semakula',
-    description: 'Software Engineer & Systems Architect',
+    description: 'I write software and design computational protocols.',
     author: '@davidsemakula',
     siteUrl: 'https://davidsemakula.com',
   },
@@ -44,7 +44,7 @@ module.exports = {
         output: '/sitemap',
         serialize: ({ path, modifiedGmt }) => ({
           url: path,
-          lastmod: modifiedGmt ? modifiedGmt : '2023-05-17',
+          lastmod: modifiedGmt ? modifiedGmt : '2023-11-05',
         }),
       },
     },
