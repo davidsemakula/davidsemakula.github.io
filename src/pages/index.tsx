@@ -128,7 +128,10 @@ const IndexPage = () => (
           </ul>
         </p>
         <p className="mb-2">
-          <h3>⚒️ Tools for programming languages</h3>
+          <h3>
+            ⚒️ Tools and libraries for analysis of programming languages and
+            computational systems
+          </h3>
           <ul className="list-disc list-inside space-y-1 pl-5">
             <li>
               <A

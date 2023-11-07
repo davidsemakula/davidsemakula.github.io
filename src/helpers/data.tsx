@@ -108,7 +108,7 @@ export const HIGHLIGHTED_COMPANIES: Array<GeneralCompanyInput> = [
 
 export const BIO = {
   NAME: 'David Semakula',
-  OCCUPATION: 'I write software and design computational protocols.',
+  OCCUPATION: 'I write software, and design & analyze computational systems.',
   LOCATION: LOCATION.KAMPALA,
   EMAIL: 'hello@davidsemakula.com',
   WEBSITE: 'davidsemakula.com',
@@ -237,12 +237,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       {
         type: APP_TYPE.EXTENSION,
         url: 'https://github.com/ink-analyzer/ink-vscode',
-        name: 'Visual Studio Code Extension',
-      },
-      {
-        type: APP_TYPE.LIBRARY,
-        url: 'https://crates.io/crates/ink-analyzer-ir',
-        name: 'IR (Intermediate Representation)',
+        name: 'VS Code Extension',
       },
     ],
     details: (
@@ -305,41 +300,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
-    name: 'Grindery Nexus',
-    website: 'https://www.grindery.io',
-    icon: COMPANIES.GRINDERY.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}, former ${ROLES.STRATEGIC_ADVISOR}`,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://nexus.grindery.org',
-      },
-      APP_TYPE.ETHEREUM,
-      APP_TYPE.ALGORAND,
-      APP_TYPE.NEAR,
-      APP_TYPE.BINANCE,
-      APP_TYPE.FLOW,
-    ],
-    details:
-      'A framework, an interface and a marketplace for defining, composing and executing automated workflows that connect smart contracts with other protocols (including web2 services).',
-    stack: [
-      SKILLS.SOLIDITY,
-      SKILLS.RUST,
-      SKILLS.WEB_ASSEMBLY,
-      SKILLS.TYPESCRIPT,
-      SKILLS.REACT_JS,
-      SKILLS.IPFS,
-    ],
-    integrations: [],
-    awards: [
-      {
-        name: 'Binance Labs Incubation Program S4 | Infrastructure',
-        url: 'https://www.binance.com/en/blog/ecosystem/%E2%80%8Bbinance-labs-launches-season-4-of-its-incubation-program-with-14-earlystage-startups-421499824684903808',
-        // https://www.binance.com/en/blog/ecosystem/season-4-of-binance-labs-incubation-program-how-to-build-invest-and-grow-startups-421499824684904005
-      },
-    ],
-  },
-  {
     name: `${COMPANIES.HUBSPOT.name} Inspire`,
     website: 'https://designers.hubspot.com/inspire',
     icon: COMPANIES.HUBSPOT.icon,
@@ -361,126 +321,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       PRODUCTS.HUBSPOT_CMS,
     ],
     integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
-  },
-  {
-    name: 'Mukutu Router',
-    website: 'https://safe.mukutu.tech/',
-    role: ROLES.CREATOR,
-    platforms: [
-      {
-        type: APP_TYPE.GNOSIS_SAFE_APP,
-        url: 'https://app.safe.global/share/safe-app?appUrl=https://safe.mukutu.tech&chain=eth',
-        name: '(Gnosis) Safe App',
-      },
-      {
-        type: APP_TYPE.MOONBEAM_SAFE_APP,
-        url: 'https://multisig.moonbeam.network/share/safe-app?appUrl=https://safe.mukutu.tech&chain=mbeam',
-        name: 'Moonbeam Safe App',
-      },
-    ],
-    details: (
-      <>
-        <p>
-          A{' '}
-          <A
-            href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
-            target="_blank"
-          >
-            Safe app
-          </A>{' '}
-          for managing assets and interacting with smart contracts and dapps on
-          multiple chains from one{' '}
-          <A
-            href="https://app.safe.global/"
-            target="_blank"
-          >
-            Safe
-          </A>{' '}
-          account.
-        </p>
-      </>
-    ),
-    stack: [SKILLS.TYPESCRIPT, SKILLS.ETHERS_JS, SKILLS.REACT_JS],
-    integrations: [PRODUCTS.GNOSIS_SAFE, PRODUCTS.HYPERLANE],
-    awards: [
-      {
-        name: 'Top Prize: Moonbeam Illuminate/22 Hackathon | Best use of Hyperlane',
-        url: 'https://twitter.com/MoonbeamNetwork/status/1610738659656962048',
-      },
-    ],
-    press: [
-      {
-        name: 'Gitcoin Blog Feature',
-        url: 'https://www.gitcoin.co/blog/celebrating-the-best-in-cross-chain-from-moonbeams-illuminate-hack22',
-      },
-    ],
-  },
-  {
-    name: `${COMPANIES.HUBSPOT.name} Code Gallery`,
-    website: 'https://designers.hubspot.com/code-gallery',
-    icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}`,
-    company: COMPANIES.HUBSPOT,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://designers.hubspot.com/code-gallery',
-      },
-    ],
-    details:
-      'A showcase of the open-source assets and projects the HubSpot developer community is working on.',
-    stack: [
-      SKILLS.NODE_JS,
-      SKILLS.EXPRESS_JS,
-      SKILLS.MONGODB,
-      SKILLS.REDIS,
-      PRODUCTS.HUBSPOT_CMS,
-    ],
-    integrations: [PRODUCTS.GITHUB, PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
-  },
-  {
-    name: 'Grindery Pay',
-    website: 'https://gpay.grindery.io/',
-    icon: COMPANIES.GRINDERY.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}`,
-    platforms: [
-      {
-        type: APP_TYPE.CHROME,
-        url: 'https://chrome.google.com/webstore/detail/grindery-pay/ofnbfgahidjckegapdpkhigjljepcdme',
-      },
-      {
-        type: APP_TYPE.HARMONY,
-        url: 'https://explorer.harmony.one/address/0xa9046B015C040897f2Ac1762C81B57ba1b78Fa8F',
-      },
-      {
-        type: APP_TYPE.ETHEREUM,
-        url: 'https://rinkeby.etherscan.io/address/0xa9046B015C040897f2Ac1762C81B57ba1b78Fa8F',
-        name: 'Ethereum (Rinkeby)',
-      },
-    ],
-    details: (
-      <>
-        <p>
-          Create, manage and import decentralized payouts and either pay them
-          directly from a wallet or submit them as withdrawal requests to
-          (Gnosis) Safe or Aragon.
-        </p>
-      </>
-    ),
-    stack: [
-      SKILLS.SOLIDITY,
-      SKILLS.WEB3_JS,
-      SKILLS.REACT_JS,
-      SKILLS.HARDHAT,
-      SKILLS.IPFS,
-    ],
-    integrations: [PRODUCTS.ARAGON, PRODUCTS.GNOSIS_SAFE],
-    awards: [
-      {
-        name: '2nd Place: DAO global hackathon 2021 | Finance & Operations',
-        url: 'https://hackforfreedom.org/past-hackathons#winners',
-      },
-    ],
   },
 ];
 
@@ -546,14 +386,31 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
     },
     period: 'April/2022 - Present',
     remote: true,
-    details: 'Writing software and designing computational protocols.',
+    details: (
+      <>
+        <p>I write software, and design & analyze computational systems.</p>
+        <p>
+          Some of my independent projects are funded by leading organizations
+          like the{' '}
+          <A href="https://blog.ethereum.org/2023/06/15/allocation-update-q1-23">
+            Ethereum Foundation
+          </A>{' '}
+          and the{' '}
+          <A href="https://medium.com/web3foundation/web3-foundation-grants-wave-17-recipients-aa33c5630e9c">
+            Web3 Foundation
+          </A>
+          .
+        </p>
+      </>
+    ),
   },
   {
     company: COMPANIES.GRINDERY,
     role: `${ROLES.CO_FOUNDER} & ${ROLES.CTO}`,
     period: '2019 - April/2022',
     remote: true,
-    details: 'Grindery builds low/no-code middleware for Web3. ',
+    details:
+      'Grindery builds low/no-code middleware for the decentralized web.',
   },
   {
     company: COMPANIES.TUNGA,
@@ -571,12 +428,8 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
       <>
         <p>
           True African provides custom software solutions for financial services
-          that addresses specific business needs.
-        </p>
-        <p>
-          Software solutions include payment gateways to leading banks in the
-          region, collection platforms to large utility service providers, and
-          both individual and corporate mobile and online wallets.
+          that addresses specific business needs for leading banks and large
+          utility service providers.
         </p>
       </>
     ),
