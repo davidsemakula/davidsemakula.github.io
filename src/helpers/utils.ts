@@ -26,12 +26,14 @@ import {
   DetailedIconInput,
   DetailedPartnerInput,
   DetailedPlatformInput,
+  DetailedRoleInput,
   DetailedTagInput,
   GeneralAwardInput,
   GeneralCompanyInput,
   GeneralIconInput,
   GeneralPartnerInput,
   GeneralPlatformInput,
+  GeneralRoleInput,
   GeneralTagInput,
   SimpleIconInput,
 } from './types';
@@ -88,6 +90,15 @@ export const cleanPlatformObject = (
     };
   }
   return value as DetailedPlatformInput;
+};
+
+export const cleanRoleObject = (value: GeneralRoleInput): DetailedRoleInput => {
+  if (typeof value === 'string') {
+    return {
+      name: value,
+    };
+  }
+  return value;
 };
 
 export const cleanTagObject = (value: GeneralTagInput): DetailedTagInput => {

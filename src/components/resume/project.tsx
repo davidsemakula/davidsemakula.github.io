@@ -19,6 +19,7 @@ import {
   cleanCompanyObject,
   cleanPartnerObject,
   cleanPlatformObject,
+  cleanRoleObject,
   getAppTypeIcon,
   isNonEmptyArray,
 } from '../../helpers/utils';
@@ -45,19 +46,20 @@ const Project = ({
 }: ProjectInput): ReactElement => {
   const { name: companyName, website: companyWebsite } =
     cleanCompanyObject(company) || {};
+  const { name: roleName, ref: roleRef } = cleanRoleObject(role) || {};
   return (
     <div
       className="mb-6 last:mb-0"
       {...rest}
     >
       <ItemHeading>{website ? <A href={website}>{name}</A> : name}</ItemHeading>
-      {role ? (
+      {roleName ? (
         <ItemSubTitle>
           <StyledIcon
             icon={WrenchScrewdriverIcon}
             size="medium"
           />{' '}
-          {role}
+          {roleRef ? <A href={roleRef}>{roleName}</A> : roleName}
         </ItemSubTitle>
       ) : null}
       {platforms ? (

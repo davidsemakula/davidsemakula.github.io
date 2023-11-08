@@ -34,6 +34,13 @@ export type GeneralCompanyInput = SimpleCompanyInput | DetailedCompanyInput;
 
 export const asCompanyRecord = AssertRecordType<GeneralCompanyInput>();
 
+export type SimpleRoleInput = string;
+export type DetailedRoleInput = {
+  name: SimpleRoleInput;
+  ref?: string;
+};
+export type GeneralRoleInput = SimpleRoleInput | DetailedRoleInput;
+
 export type EducationInput = {
   name: string;
   award: string;
@@ -58,8 +65,8 @@ export enum PartnerType {
   FUNDING = 'funding',
 }
 export type DetailedPartnerInput = {
-  type: PartnerType;
   name: SimplePartnerInput;
+  type?: PartnerType;
   url?: string;
   announcement?: string;
 };
@@ -89,8 +96,8 @@ export type ProjectInput = {
   name: string;
   website?: string;
   icon?: GeneralIconInput;
-  company?: string | GeneralCompanyInput;
-  role?: string;
+  company?: GeneralCompanyInput;
+  role?: GeneralRoleInput;
   platforms?: Array<GeneralPlatformInput>;
   details?: string | ReactNode;
   awards?: Array<GeneralAwardInput>;

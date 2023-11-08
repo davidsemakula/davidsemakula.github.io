@@ -72,6 +72,7 @@ export enum PRODUCTS {
 export enum ROLES {
   CO_FOUNDER = 'Co-founder',
   CONSULTANT = 'Consultant',
+  CONTRIBUTOR = 'Contributor',
   CREATOR = 'Creator',
   CTO = 'Chief Technology Officer (C.T.O)',
   FOUNDER = 'Founder',

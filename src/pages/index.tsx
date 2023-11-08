@@ -257,7 +257,8 @@ const IndexPage = () => (
       </SideContent>
       <MainContent>
         <div className="mb-2">
-          I've made significant contributions to the following projects:
+          <p>I've made significant contributions to the following projects:</p>
+          <p>(NOTE: This is not an exhaustive list.)</p>
         </div>
 
         <List

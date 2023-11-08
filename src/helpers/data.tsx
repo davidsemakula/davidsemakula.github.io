@@ -268,6 +268,36 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
+    name: 'cggmp-threshold-ecdsa',
+    website: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/',
+    role: {
+      name: `Core ${ROLES.CONTRIBUTOR}`,
+      ref: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/commits?author=davidsemakula',
+    },
+    platforms: [
+      {
+        type: APP_TYPE.LIBRARY,
+        url: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/',
+        name: 'Rust Library',
+      },
+    ],
+    details: (
+      <>
+        <p>
+          A Rust implementation of{' '}
+          <A
+            href="https://eprint.iacr.org/2021/060.pdf"
+            target="_blank"
+          >
+            CGGMP20
+          </A>{' '}
+          threshold signature protocols.
+        </p>
+      </>
+    ),
+    stack: [SKILLS.RUST],
+  },
+  {
     name: COMPANIES.TUNGA.name,
     website: COMPANIES.TUNGA.website,
     icon: COMPANIES.TUNGA.icon,
