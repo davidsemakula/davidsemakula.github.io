@@ -298,6 +298,65 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     stack: [SKILLS.RUST],
   },
   {
+    name: 'Mukutu Router',
+    website: 'https://safe.mukutu.tech/',
+    role: ROLES.CREATOR,
+    platforms: [
+      {
+        type: APP_TYPE.GNOSIS_SAFE_APP,
+        url: 'https://app.safe.global/share/safe-app?appUrl=https://safe.mukutu.tech&chain=eth',
+        name: '(Gnosis) Safe App',
+      },
+    ],
+    details: (
+      <>
+        <p>
+          A{' '}
+          <A
+            href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
+            target="_blank"
+          >
+            Safe app
+          </A>{' '}
+          for managing assets and interacting with smart contracts and dapps on
+          multiple chains from one{' '}
+          <A
+            href="https://app.safe.global/"
+            target="_blank"
+          >
+            Safe
+          </A>{' '}
+          account.
+        </p>
+      </>
+    ),
+    stack: [SKILLS.TYPESCRIPT, SKILLS.ETHERS_JS, SKILLS.REACT_JS],
+    integrations: [PRODUCTS.GNOSIS_SAFE, PRODUCTS.HYPERLANE],
+  },
+  {
+    name: `${COMPANIES.HUBSPOT.name} Inspire`,
+    website: 'https://designers.hubspot.com/inspire',
+    icon: COMPANIES.HUBSPOT.icon,
+    role: `former ${ROLES.TECHNICAL_LEAD}`,
+    company: COMPANIES.HUBSPOT,
+    platforms: [
+      {
+        type: APP_TYPE.WEB,
+        url: 'https://designers.hubspot.com/inspire',
+      },
+    ],
+    details:
+      'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
+    stack: [
+      SKILLS.NODE_JS,
+      SKILLS.EXPRESS_JS,
+      SKILLS.REDIS,
+      PRODUCTS.ALGOLIA,
+      PRODUCTS.HUBSPOT_CMS,
+    ],
+    integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
+  },
+  {
     name: COMPANIES.TUNGA.name,
     website: COMPANIES.TUNGA.website,
     icon: COMPANIES.TUNGA.icon,
@@ -328,29 +387,6 @@ export const MY_PROJECTS: Array<ProjectInput> = [
       PRODUCTS.MANDRILL,
       PRODUCTS.METABASE,
     ],
-  },
-  {
-    name: `${COMPANIES.HUBSPOT.name} Inspire`,
-    website: 'https://designers.hubspot.com/inspire',
-    icon: COMPANIES.HUBSPOT.icon,
-    role: `former ${ROLES.TECHNICAL_LEAD}`,
-    company: COMPANIES.HUBSPOT,
-    platforms: [
-      {
-        type: APP_TYPE.WEB,
-        url: 'https://designers.hubspot.com/inspire',
-      },
-    ],
-    details:
-      'Browse and search a collection of websites built on HubSpot CMS Hub from all around the world.',
-    stack: [
-      SKILLS.NODE_JS,
-      SKILLS.EXPRESS_JS,
-      SKILLS.REDIS,
-      PRODUCTS.ALGOLIA,
-      PRODUCTS.HUBSPOT_CMS,
-    ],
-    integrations: [PRODUCTS.SLACK, PRODUCTS.HUBSPOT],
   },
 ];
 
@@ -420,8 +456,8 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
       <>
         <p>I write software, and design & analyze computational systems.</p>
         <p>
-          Some of my independent projects are funded by leading organizations
-          like the{' '}
+          Some of my independent projects are funded by industry-leading
+          organizations like the{' '}
           <A href="https://blog.ethereum.org/2023/06/15/allocation-update-q1-23">
             Ethereum Foundation
           </A>{' '}

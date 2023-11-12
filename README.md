@@ -1,6 +1,4 @@
-# David Semakula
-
-Personal Website for David Semakula
+# Personal Website
 
 ## 👷 Development
 
