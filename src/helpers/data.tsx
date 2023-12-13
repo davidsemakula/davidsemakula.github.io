@@ -243,8 +243,14 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     details: (
       <>
         <p>
-          A collection of modular and reusable libraries and tools for semantic
-          analysis of{' '}
+          A collection of modular and reusable libraries and tools for{' '}
+          <A
+            href="https://en.wikipedia.org/wiki/Compiler#Front_end"
+            target="_blank"
+          >
+            semantic analysis
+          </A>{' '}
+          of{' '}
           <A
             href="https://use.ink/"
             target="_blank"
@@ -284,7 +290,14 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     details: (
       <>
         <p>
-          A Rust implementation of{' '}
+          A{' '}
+          <A
+            href="https://www.rust-lang.org"
+            target="_blank"
+          >
+            Rust
+          </A>{' '}
+          implementation of{' '}
           <A
             href="https://eprint.iacr.org/2021/060.pdf"
             target="_blank"

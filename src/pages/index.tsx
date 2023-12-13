@@ -92,7 +92,16 @@ const IndexPage = () => (
         <ItemHeading className="mt-2">Hello | Oli otya 👋</ItemHeading>
         <p className="my-2">🔭 I'm currently working on:</p>
         <p className="mb-2">
-          <h3>🔑 Cryptographic protocols and libraries</h3>
+          <h3>
+            🔑{' '}
+            <A
+              href="https://en.wikipedia.org/wiki/Cryptography"
+              target="_blank"
+            >
+              Cryptographic
+            </A>{' '}
+            protocols and libraries
+          </h3>
           <ul className="list-disc list-inside space-y-1 pl-5">
             <li>
               <A
@@ -103,8 +112,21 @@ const IndexPage = () => (
               </A>
               <ul className="list-disc list-inside pl-6">
                 <li>
-                  📖 A protocol and library for computation of threshold
-                  signatures by multiple decentralized identities.
+                  📖 A protocol and library for computation of{' '}
+                  <A
+                    href="https://en.wikipedia.org/wiki/Threshold_cryptosystem#Methodology"
+                    target="_blank"
+                  >
+                    threshold signatures
+                  </A>{' '}
+                  by multiple{' '}
+                  <A
+                    href="https://ethereum.org/en/decentralized-identity/#what-are-decentralized-identifiers"
+                    target="_blank"
+                  >
+                    decentralized identities
+                  </A>
+                  .
                 </li>
                 <li>
                   🌱 Funded by:{' '}
@@ -129,8 +151,13 @@ const IndexPage = () => (
         </p>
         <p className="mb-2">
           <h3>
-            ⚒️ Tools and libraries for analysis of programming languages and
-            computational systems
+            ⚒️ Tools for programming languages and{' '}
+            <A
+              href="https://en.wikipedia.org/wiki/Program_analysis"
+              target="_blank"
+            >
+              program analysis
+            </A>
           </h3>
           <ul className="list-disc list-inside space-y-1 pl-5">
             <li>
@@ -143,7 +170,21 @@ const IndexPage = () => (
               <ul className="list-disc list-inside pl-6">
                 <li>
                   📖 A collection of modular and reusable libraries and tools
-                  for semantic analysis of ink! smart contract code.
+                  for{' '}
+                  <A
+                    href="https://en.wikipedia.org/wiki/Compiler#Front_end"
+                    target="_blank"
+                  >
+                    semantic analysis
+                  </A>{' '}
+                  of{' '}
+                  <A
+                    href="https://use.ink/"
+                    target="_blank"
+                  >
+                    ink!
+                  </A>{' '}
+                  smart contract code.
                 </li>
                 <li>
                   🌱 Funded by:{' '}
