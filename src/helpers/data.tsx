@@ -312,12 +312,12 @@ export const MY_PROJECTS: Array<ProjectInput> = [
   },
   {
     name: 'Mukutu Router',
-    website: 'https://safe.mukutu.tech/',
+    website: 'https://mukutu.davidsemakula.com/',
     role: ROLES.CREATOR,
     platforms: [
       {
         type: APP_TYPE.GNOSIS_SAFE_APP,
-        url: 'https://app.safe.global/share/safe-app?appUrl=https://safe.mukutu.tech&chain=eth',
+        url: 'https://app.safe.global/share/safe-app?appUrl=https://mukutu.davidsemakula.com&chain=eth',
         name: '(Gnosis) Safe App',
       },
     ],
