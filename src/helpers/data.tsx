@@ -278,7 +278,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     website: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/',
     role: {
       name: `Core ${ROLES.CONTRIBUTOR}`,
-      ref: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/commits?author=davidsemakula',
+      ref: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/pulls?q=is%3Apr+author%3Adavidsemakula',
     },
     platforms: [
       {
@@ -463,7 +463,7 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
       name: 'Independent',
       location: LOCATION.KAMPALA,
     },
-    period: 'April/2022 - Present',
+    period: '2022 - Present',
     remote: true,
     details: (
       <>
@@ -486,7 +486,7 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
   {
     company: COMPANIES.GRINDERY,
     role: `${ROLES.CO_FOUNDER} & ${ROLES.CTO}`,
-    period: '2019 - April/2022',
+    period: '2019 - 2022',
     remote: true,
     details:
       'Grindery builds low/no-code middleware for the decentralized web.',
@@ -529,7 +529,7 @@ export const MY_EDUCATION: Array<EducationInput> = [
     name: 'Makerere University',
     award: 'Bachelor of Science in Computer Science',
     location: LOCATION.KAMPALA,
-    period: '2009 - 2012',
+    period: 'Class of 2012',
     website: 'https://cis.mak.ac.ug',
     details: 'Graduated with first-class honors.',
   },
