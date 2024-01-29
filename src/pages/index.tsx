@@ -205,6 +205,23 @@ const IndexPage = () => (
                 </li>
               </ul>
             </li>
+            <li>
+              I independently make{' '}
+              <A
+                href="https://github.com/rust-lang/rust-analyzer/pulls?q=is%3Apr+author%3Adavidsemakula"
+                target="_blank"
+              >
+                contributions
+              </A>{' '}
+              to{' '}
+              <A
+                href="https://github.com/rust-lang/rust-analyzer"
+                target="_blank"
+              >
+                rust-analyzer
+              </A>{' '}
+              - A Rust compiler front-end for IDEs.
+            </li>
           </ul>
         </p>
         <p className="mb-2">

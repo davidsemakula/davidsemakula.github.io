@@ -486,7 +486,7 @@ export const MY_EXPERIENCE: Array<ExperienceInput> = [
   {
     company: COMPANIES.GRINDERY,
     role: `${ROLES.CO_FOUNDER} & ${ROLES.CTO}`,
-    period: '2019 - 2022',
+    period: '2019 - Apr/2022',
     remote: true,
     details:
       'Grindery builds low/no-code middleware for the decentralized web.',
