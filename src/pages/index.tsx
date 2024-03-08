@@ -184,7 +184,7 @@ const IndexPage = () => (
                   >
                     ink!
                   </A>{' '}
-                  smart contract code.
+                  smart contracts.
                 </li>
                 <li>
                   🌱 Funded by:{' '}

@@ -257,7 +257,7 @@ export const MY_PROJECTS: Array<ProjectInput> = [
           >
             ink!
           </A>{' '}
-          smart contract code.
+          smart contracts.
         </p>
       </>
     ),
