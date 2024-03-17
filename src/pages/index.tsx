@@ -207,7 +207,7 @@ const IndexPage = () => (
             </li>
             <li>
               <A
-                href="https://analyze.ink"
+                href="https://github.com/davidsemakula/pallet-verifier"
                 target="_blank"
               >
                 🚧 pallet-verifier
