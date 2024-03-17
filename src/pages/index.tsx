@@ -108,7 +108,7 @@ const IndexPage = () => (
                 href="https://wamu.tech"
                 target="_blank"
               >
-                🚀 Wamu
+                🚧 Wamu
               </A>
               <ul className="list-disc list-inside pl-6">
                 <li>
@@ -202,6 +202,69 @@ const IndexPage = () => (
                     announcement
                   </A>
                   )
+                </li>
+              </ul>
+            </li>
+            <li>
+              <A
+                href="https://analyze.ink"
+                target="_blank"
+              >
+                🚧 pallet-verifier
+              </A>
+              <ul className="list-disc list-inside pl-6">
+                <li>
+                  📖 A tool for detecting
+                  <A
+                    href="https://secure-contracts.com/not-so-smart-contracts/substrate"
+                    target="_blank"
+                  >
+                    {' '}
+                    common security vulnerabilities
+                  </A>{' '}
+                  and{' '}
+                  <A
+                    href="https://docs.substrate.io/build/troubleshoot-your-code/#unsafe-or-insecure-patterns"
+                    target="_blank"
+                  >
+                    insecure patterns
+                  </A>{' '}
+                  in{' '}
+                  <A
+                    href="https://docs.substrate.io/learn/runtime-development/#frame"
+                    target="_blank"
+                  >
+                    FRAME pallets
+                  </A>{' '}
+                  using{' '}
+                  <A
+                    href="https://en.wikipedia.org/wiki/Static_program_analysis"
+                    target="_blank"
+                  >
+                    static program analysis
+                  </A>{' '}
+                  techniques like{' '}
+                  <A
+                    href="https://en.wikipedia.org/wiki/Data-flow_analysis"
+                    target="_blank"
+                  >
+                    data-flow analysis
+                  </A>
+                  ,{' '}
+                  <A
+                    href="https://en.wikipedia.org/wiki/Abstract_interpretation"
+                    target="_blank"
+                  >
+                    abstract interpretation
+                  </A>{' '}
+                  and{' '}
+                  <A
+                    href="https://en.wikipedia.org/wiki/Symbolic_execution"
+                    target="_blank"
+                  >
+                    symbolic execution
+                  </A>
+                  .
                 </li>
               </ul>
             </li>
