@@ -26,7 +26,7 @@ const Experience = ({
       className="mb-6 last:mb-0"
       {...rest}
     >
-      <div className="text-zinc-500 dark:text-zinc-500">
+      <div className="text-zinc-500 dark:text-zinc-400">
         <StyledIcon
           icon={ClockIcon}
           size="medium"
