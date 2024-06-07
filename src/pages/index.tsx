@@ -162,51 +162,6 @@ const IndexPage = () => (
           <ul className="list-disc list-inside space-y-1 pl-5">
             <li>
               <A
-                href="https://analyze.ink"
-                target="_blank"
-              >
-                🚀 ink! Analyzer
-              </A>
-              <ul className="list-disc list-inside pl-6">
-                <li>
-                  📖 A collection of modular and reusable libraries and tools
-                  for{' '}
-                  <A
-                    href="https://en.wikipedia.org/wiki/Compiler#Front_end"
-                    target="_blank"
-                  >
-                    semantic analysis
-                  </A>{' '}
-                  of{' '}
-                  <A
-                    href="https://use.ink/"
-                    target="_blank"
-                  >
-                    ink!
-                  </A>{' '}
-                  smart contracts.
-                </li>
-                <li>
-                  🌱 Funded by:{' '}
-                  <A
-                    href="https://web3.foundation/"
-                    target="_blank"
-                  >
-                    Web3 Foundation
-                  </A>{' '}
-                  (
-                  <A
-                    href="https://medium.com/web3foundation/web3-foundation-grants-wave-17-recipients-aa33c5630e9c"
-                    target="_blank"
-                  >
-                    announcement
-                  </A>
-                  )
-                </li>
-              </ul>
-            </li>
-            <li>
-              <A
                 href="https://github.com/davidsemakula/pallet-verifier"
                 target="_blank"
               >
@@ -265,6 +220,51 @@ const IndexPage = () => (
                     symbolic execution
                   </A>
                   .
+                </li>
+              </ul>
+            </li>
+            <li>
+              <A
+                href="https://analyze.ink"
+                target="_blank"
+              >
+                🚀 ink! Analyzer
+              </A>
+              <ul className="list-disc list-inside pl-6">
+                <li>
+                  📖 A collection of modular and reusable libraries and tools
+                  for{' '}
+                  <A
+                    href="https://en.wikipedia.org/wiki/Compiler#Front_end"
+                    target="_blank"
+                  >
+                    semantic analysis
+                  </A>{' '}
+                  of{' '}
+                  <A
+                    href="https://use.ink/"
+                    target="_blank"
+                  >
+                    ink!
+                  </A>{' '}
+                  smart contracts.
+                </li>
+                <li>
+                  🌱 Funded by:{' '}
+                  <A
+                    href="https://web3.foundation/"
+                    target="_blank"
+                  >
+                    Web3 Foundation
+                  </A>{' '}
+                  (
+                  <A
+                    href="https://medium.com/web3foundation/web3-foundation-grants-wave-17-recipients-aa33c5630e9c"
+                    target="_blank"
+                  >
+                    announcement
+                  </A>
+                  )
                 </li>
               </ul>
             </li>
