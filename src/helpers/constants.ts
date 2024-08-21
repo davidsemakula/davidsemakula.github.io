@@ -48,6 +48,7 @@ export enum LOCATION {
 export enum PRODUCTS {
   ALGOLIA = 'Algolia',
   AMPLITUDE = 'Amplitude',
+  CARGO = 'cargo',
   GITHUB = 'Github',
   EXACT = 'Exact',
   HUBSPOT = 'HubSpot',
@@ -57,6 +58,7 @@ export enum PRODUCTS {
   MANDRILL = 'Mandrill',
   METABASE = 'Metabase',
   PAYONEER = 'Payoneer',
+  RUSTC = 'rustc',
   SENDGRID = 'SendGrid',
   SLACK = 'Slack',
   STRIPE = 'Stripe',

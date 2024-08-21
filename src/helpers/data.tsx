@@ -220,6 +220,82 @@ export const MY_PROJECTS: Array<ProjectInput> = [
     ],
   },
   {
+    name: 'pallet-verifier',
+    website: 'https://github.com/davidsemakula/pallet-verifier',
+    role: ROLES.CREATOR,
+    platforms: [
+      {
+        type: APP_TYPE.EXTENSION,
+        url: 'https://github.com/davidsemakula/pallet-verifier',
+        name: 'Rust Compiler Plugin',
+      },
+      {
+        type: APP_TYPE.BINARY,
+        url: 'https://github.com/davidsemakula/pallet-verifier',
+        name: 'Cargo Subcommand',
+      },
+    ],
+    details: (
+      <>
+        <p>
+          A tool for detecting
+          <A
+            href="https://secure-contracts.com/not-so-smart-contracts/substrate"
+            target="_blank"
+          >
+            {' '}
+            common security vulnerabilities
+          </A>{' '}
+          and{' '}
+          <A
+            href="https://docs.substrate.io/build/troubleshoot-your-code/#unsafe-or-insecure-patterns"
+            target="_blank"
+          >
+            insecure patterns
+          </A>{' '}
+          in{' '}
+          <A
+            href="https://docs.substrate.io/learn/runtime-development/#frame"
+            target="_blank"
+          >
+            FRAME pallets
+          </A>{' '}
+          using{' '}
+          <A
+            href="https://en.wikipedia.org/wiki/Static_program_analysis"
+            target="_blank"
+          >
+            static program analysis
+          </A>{' '}
+          techniques like{' '}
+          <A
+            href="https://en.wikipedia.org/wiki/Data-flow_analysis"
+            target="_blank"
+          >
+            data-flow analysis
+          </A>
+          ,{' '}
+          <A
+            href="https://en.wikipedia.org/wiki/Abstract_interpretation"
+            target="_blank"
+          >
+            abstract interpretation
+          </A>{' '}
+          and{' '}
+          <A
+            href="https://en.wikipedia.org/wiki/Symbolic_execution"
+            target="_blank"
+          >
+            symbolic execution
+          </A>
+          .
+        </p>
+      </>
+    ),
+    stack: [SKILLS.RUST],
+    integrations: [PRODUCTS.RUSTC, PRODUCTS.CARGO],
+  },
+  {
     name: 'ink! Analyzer',
     website: 'https://analyze.ink',
     role: ROLES.CREATOR,
