@@ -2,3 +2,21 @@ david:
   name: David Semakula
   url: https://davidsemakula.com/
   image_url: https://github.com/davidsemakula.png
+
+david-wamu:
+  name: David Semakula
+  title: Creator of Wamu
+  url: https://davidsemakula.com/
+  image_url: https://github.com/davidsemakula.png
+
+david-ink-analyzer:
+  name: David Semakula
+  title: Creator of ink! Analyzer
+  url: https://davidsemakula.com/
+  image_url: https://github.com/davidsemakula.png
+
+david-pallet-verifier:
+  name: David Semakula
+  title: Creator of pallet-verifier
+  url: https://davidsemakula.com/
+  image_url: https://github.com/davidsemakula.png

@@ -1,8 +1,10 @@
 ---
 slug: introducing-pallet-verifier
 title: Introducing Pallet Verifier
-authors: [david]
-tags: [Static Analysis, Abstract Interpretation, FRAME, MIRAI, Substrate, Rust, MIR]
+description: A tool for detecting common security vulnerabilities and insecure patterns in FRAME pallets using
+  static program analysis techniques like data-flow analysis, abstract interpretation and symbolic execution.
+authors: [david-pallet-verifier]
+tags: [pallet-verifier, static analysis, abstract interpretation, FRAME, MIRAI, Substrate, Rust, MIR]
 unlisted: true
 ---
 
@@ -52,8 +54,9 @@ application-specific [Substrate]-based blockchain [runtime] environments from a 
 ## Current Capabilities
 
 Currently, `pallet-verifier` focuses on detecting [panics] and [arithmetic overflow/underflow]
-(including [overflow checks for narrowing and/or lossy integer cast/`as` conversions that aren't checked by the default Rust compiler][overflow-rfc-updates] - see also [this][overflow-rfc-remove-as] and [this][as-conversions-lossy]) in [dispatchable functions/extrinsics][call] and
-public associated functions of [inherent implementations][inherent-impls] of [FRAME pallets][FRAME].
+(including [overflow checks for narrowing and/or lossy integer cast/`as` conversions that aren't checked by the default Rust compiler][overflow-rfc-updates] -
+see also [this][overflow-rfc-remove-as] and [this][as-conversions-lossy]) in [dispatchable functions/extrinsics][call]
+and public associated functions of [inherent implementations][inherent-impls] of [FRAME pallets][FRAME].
 However, other classes of security vulnerabilities (e.g. [insufficient or missing origin checks][origin-checks],
 [bad randomness][randomness], [insufficient unsigned transaction validation][validate-unsigned] e.t.c)
 will also be targeted in the future.
@@ -210,7 +213,7 @@ and module definitions in a way that leverages `rustc`'s excellent support for [
 [rustc-inc-comp]: https://rustc-dev-guide.rust-lang.org/queries/incremental-compilation.html
 [rustc-query]: https://rustc-dev-guide.rust-lang.org/query.html
 
-### Installation, Usage and Diving Deeper
+## Installation, Usage and Diving Deeper
 
 Check out `pallet-verifier`'s [GitHub repository][pallet-verifier] for [installation][README-install] and
 [usage][README-use] instructions, some [additional architectural details][ARCHITECTURE],
@@ -220,7 +223,7 @@ and inline source documentation e.t.c.
 [README-use]: https://github.com/davidsemakula/pallet-verifier/blob/master/README.md#usage
 [ARCHITECTURE]: https://github.com/davidsemakula/pallet-verifier/blob/master/ARCHITECTURE.md
 
-### Conclusion
+## Conclusion
 
 [`pallet-verifier`][pallet-verifier] is only at the very beginning of its development, so issues, bug reports, PRs and feature requests
 are welcome at the [GitHub repository][pallet-verifier] 🙂.
