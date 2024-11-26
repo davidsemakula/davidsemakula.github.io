@@ -181,12 +181,13 @@ Lastly, inorder to automatically add annotations to the target [FRAME] pallet's 
 [iterator invariant annotations][iterator-annotations-src]), `pallet-verifier` also typically needs to add
 the [mirai-annotations crate][annotations] as a dependency of the target crate that it's invoked on.
 So it [detects when the `mirai-annotations` crate dependency is missing][annotations-detect-src],
-[automatically compiles it][annotations-compile-src] and ["non-invasively" adds it as a dependency][annotations-add-src]
+[automatically compiles it][annotations-compile-src] ([see also][annotations-compile-trigger-src]) and ["non-invasively" adds it as a dependency][annotations-add-src]
 (i.e. without modifying the "actual" source code and/or `Cargo.toml` manifest of the target [FRAME] pallet).
 
-[annotations-detect-src]: https://github.com/davidsemakula/pallet-verifier/blob/b8b59354a49432b277c8a311a4a637fc724b08f9/src/driver.rs#L353-L362
-[annotations-compile-src]: https://github.com/davidsemakula/pallet-verifier/blob/b8b59354a49432b277c8a311a4a637fc724b08f9/src/driver.rs#L199-L251
-[annotations-add-src]: https://github.com/davidsemakula/pallet-verifier/blob/b8b59354a49432b277c8a311a4a637fc724b08f9/src/driver.rs#L50-L70
+[annotations-detect-src]: https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/cli_utils.rs#L128-L138
+[annotations-compile-src]: https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/driver.rs#L196-L254
+[annotations-compile-trigger-src]: https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/main.rs#L180-L223
+[annotations-add-src]: https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/main.rs#L259-L273
 
 ### Verification / Abstract Interpretation
 
@@ -195,7 +196,7 @@ after which `pallet-verifier` [determines which diagnostics to either "suppress"
 based on our domain-specific knowledge.
 
 [verifier-callback-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/callbacks/verifier.rs
-[diagnostics-filter-src]: https://github.com/davidsemakula/pallet-verifier/blob/b8b59354a49432b277c8a311a4a637fc724b08f9/src/callbacks/verifier.rs#L305-L502
+[diagnostics-filter-src]: https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/callbacks/verifier.rs#L321-L549
 
 `pallet-verifier` leverages a custom [FileLoader][rust-file-loader]
 to ["virtually" add "analysis-only" external crate declarations and module definitions][virtual-file-loader-src]

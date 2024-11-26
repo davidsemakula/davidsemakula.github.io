@@ -35,7 +35,7 @@ and organizations, and mainstream users that require noncustodial shared wallets
 
 <!-- truncate -->
 
-Check out the [WhitePaper] and [Technical Specification][tech-spec] for the full technical details.
+Check out the [Whitepaper] and [Technical Specification][tech-spec] for the full technical details.
 
-[WhitePaper]: https://wamu.tech/whitepaper
+[Whitepaper]: https://wamu.tech/whitepaper
 [tech-spec]: https://wamu.tech/specification
