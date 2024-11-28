@@ -117,6 +117,10 @@ const config: Config = {
               label: 'webb-tools/cggmp-threshold-ecdsa',
               href: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/pulls?q=is%3Apr+author%3Adavidsemakula',
             },
+            {
+              label: 'endorlabs/MIRAI',
+              href: 'https://github.com/endorlabs/MIRAI/pulls?q=is%3Apr+author%3Adavidsemakula'
+            }
           ],
         },
       ],

@@ -43,7 +43,7 @@ Additionally, for a seamless and familiar developer experience, `pallet-verifier
 
 ## Background
 
-[FRAME pallets][FRAME] are modules that are used to build/compose [Substrate]-based blockchains.
+[FRAME pallets][FRAME] are modules used to build/compose [Substrate]-based blockchains.
 They implement the business logic for specific use cases and features
 (e.g. [handling account balances][balances-pallet]), enabling developers to easily create
 application-specific [Substrate]-based blockchain [runtime] environments from a modular set of components.
