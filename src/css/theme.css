@@ -31,6 +31,12 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Hero links */
+.hero.hero--primary a {
+  color: var(--ifm-hero-text-color);
+  text-decoration: underline;
+}
+
 /* Footer license and copyright links */
 .footer-license-info a {
   text-decoration: underline;

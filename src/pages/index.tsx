@@ -1,20 +1,17 @@
 import React from 'react';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
 import Profile from '@site/src/pages/components/profile.mdx';
 
-import styles from './index.module.css';
-
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className="hero hero--primary text--center padding-top--lg padding-bottom--md">
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">
+        <h1 className="hero__subtitle">Hello | Oli otya 👋</h1>
+        <p>
           I write{' '}
           <a href="https://en.wikipedia.org/wiki/Software" target="_blank">
             software
@@ -37,7 +34,7 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
 
       <main>
-        <div className="hero">
+        <div className="padding--lg">
           <div className="container">
             <Profile />
           </div>
