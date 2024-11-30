@@ -1,12 +1,10 @@
 import React from 'react';
-import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
 import Profile from '@site/src/pages/components/profile.mdx';
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <header className="hero hero--primary text--center padding-top--lg padding-bottom--md">
       <div className="container">
