@@ -32,7 +32,7 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
 
       <main>
-        <div className="padding--lg">
+        <div className="profile padding--lg">
           <div className="container">
             <Profile />
           </div>
