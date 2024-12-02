@@ -43,7 +43,16 @@
 }
 
 /* Profile content */
-.profile ul h4 {
+.profile h3 + ul li {
   margin-top: var(--ifm-list-paragraph-margin);
   margin-bottom: var(--ifm-list-item-margin);
+}
+
+.profile h3 + ul li ul li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.profile p + ul {
+  margin-top: calc(-0.95 * var(--ifm-paragraph-margin-bottom));
 }
