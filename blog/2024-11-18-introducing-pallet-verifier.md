@@ -181,8 +181,9 @@ Lastly, inorder to automatically add annotations to the target [FRAME] pallet's 
 [iterator invariant annotations][iterator-annotations-src]), `pallet-verifier` also typically needs to add
 the [mirai-annotations crate][annotations] as a dependency of the target crate that it's invoked on.
 So it [detects when the `mirai-annotations` crate dependency is missing][annotations-detect-src],
-[automatically compiles it][annotations-compile-src] ([see also][annotations-compile-trigger-src]) and ["non-invasively" adds it as a dependency][annotations-add-src]
-(i.e. without modifying the "actual" source code and/or `Cargo.toml` manifest of the target [FRAME] pallet).
+[automatically compiles it][annotations-compile-src] ([see also][annotations-compile-trigger-src])
+and ["non-invasively" adds it as a dependency][annotations-add-src] (i.e. without modifying the "actual" source code
+and/or `Cargo.toml` manifest of the target [FRAME] pallet).
 
 [annotations-detect-src]: https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/cli_utils.rs#L128-L138
 [annotations-compile-src]: https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/driver.rs#L196-L254

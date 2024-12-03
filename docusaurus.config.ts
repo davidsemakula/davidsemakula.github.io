@@ -110,16 +110,16 @@ const config: Config = {
               href: 'https://github.com/rust-lang/rust-analyzer/pulls?q=is%3Apr+author%3Adavidsemakula',
             },
             {
+              label: 'endorlabs/MIRAI',
+              href: 'https://github.com/endorlabs/MIRAI/pulls?q=is%3Apr+author%3Adavidsemakula'
+            },
+            {
               label: 'use-ink/ink',
               href: 'https://github.com/use-ink/ink/pulls?q=is%3Apr+author%3Adavidsemakula',
             },
             {
               label: 'webb-tools/cggmp-threshold-ecdsa',
               href: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/pulls?q=is%3Apr+author%3Adavidsemakula',
-            },
-            {
-              label: 'endorlabs/MIRAI',
-              href: 'https://github.com/endorlabs/MIRAI/pulls?q=is%3Apr+author%3Adavidsemakula'
             }
           ],
         },
