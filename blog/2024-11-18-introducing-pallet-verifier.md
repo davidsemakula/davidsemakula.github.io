@@ -5,7 +5,6 @@ description: A tool for detecting common security vulnerabilities and insecure p
   static program analysis techniques like data-flow analysis, abstract interpretation and symbolic execution.
 authors: [david-pallet-verifier]
 tags: [pallet-verifier, static analysis, abstract interpretation, FRAME, MIRAI, Substrate, Rust, MIR]
-unlisted: true
 ---
 
 I am proud to announce the successful completion of the [Web3 Foundation][W3F] grant for developing
