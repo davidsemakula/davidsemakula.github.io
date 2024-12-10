@@ -71,6 +71,31 @@ will also be targeted in the future.
 [randomness]: https://secure-contracts.com/not-so-smart-contracts/substrate/randomness/
 [validate-unsigned]: https://secure-contracts.com/not-so-smart-contracts/substrate/validate_unsigned/
 
+Additionally, unlike [linting tools][lint] which simply detect problematic [syntactic][syntax] patterns
+(e.g. [clippy], [dylint] e.t.c), `pallet-verifier` (using [MIRAI]) goes beyond this by performing a
+[flow, path and context-sentitive][analysis-sensitivity] analysis (see also [this][MIRAI-use] and [this][MIRAI-abs-int])
+which evaluates the [reachability] of problematic code paths/program states before issuing warnings.
+As a concrete example, `pallet-verifier` will not issue a warning for the following code block,
+because the branch condition precludes an arithmetic overflow.
+
+```rust
+fn bounded_increment(x: u8, bound: u8) -> u8 {
+    if x < bound {
+        x + 1 // this cannot overflow because `bound <= u8::MAX`
+    } else {
+        bound
+    }
+}
+```
+
+[lint]: https://en.wikipedia.org/wiki/Lint_(software)
+[clippy]: https://github.com/rust-lang/rust-clippy
+[dylint]: https://github.com/trailofbits/dylint
+[syntax]: https://en.wikipedia.org/wiki/Syntax_(programming_languages)
+[analysis-sensitivity]: https://en.wikipedia.org/wiki/Data-flow_analysis#Sensitivities
+[MIRAI-use]: https://github.com/endorlabs/MIRAI/blob/main/README.md#who-should-use-mirai
+[reachability]: https://en.wikipedia.org/wiki/Reachability_analysis
+
 ## Architecture
 
 [FRAME] is a [Rust]-based [DSL (Domain Specific Language)][DSL], therefore, the source code representation that
@@ -108,14 +133,11 @@ The [custom rustc driver][rustc-driver-src] operates in two conceptual phases:
 
 ["MIRAI is an abstract interpreter for the Rust compiler's mid-level intermediate representation (MIR)"][MIRAI],
 and finding potential panics (abrupt terminations) is one of [MIRAI's primary use cases][MIRAI-use].
-It does this by performing a [path-sensitive] analysis, meaning that given an [entry point][MIRAI-entrypoint],
+It does this by performing a [path-sensitive][analysis-sensitivity] analysis, meaning that given an [entry point][MIRAI-entrypoint],
 MIRAI ["will analyze all possible code paths that start from that entry point and determine if any of them can reach
-a program point where an abrupt runtime termination will happen"][MIRAI-overview].
+a program point where an abrupt runtime termination will happen"][MIRAI-use].
 
-[MIRAI-use]: https://github.com/endorlabs/MIRAI/blob/main/README.md#who-should-use-mirai
-[path-sensitive]: https://en.wikipedia.org/wiki/Data-flow_analysis#Sensitivities
 [MIRAI-entrypoint]: https://github.com/endorlabs/MIRAI/blob/main/documentation/Overview.md#entry-points
-[MIRAI-overview]: https://github.com/endorlabs/MIRAI/blob/main/documentation/Overview.md
 
 However, ["[since] it is necessary for MIRAI to resolve and analyze all functions that can be reached from an entry point,
 it is not possible for a generic or higher order function to serve as an entry point"][MIRAI-entrypoint]
@@ -125,10 +147,11 @@ This presents a challenge because [FRAME] is inherently a [generic] framework,
 as it makes extensive use of [Rust generic types and traits][rust-generics].
 
 `pallet-verifier` solves this by [automatically generating "tractable" entry points][enrty-point-callback-src]
-as direct calls to [dispatchable functions/extrinsics][call] (and public associated functions of
+as singular direct calls to [dispatchable functions/extrinsics][call] (and public associated functions of
 [inherent implementations][inherent-impls]) using concrete types from unit tests as substitutions for generic types,
-while keeping the call arguments ["abstract"][MIRAI-abstract-value] (in contrast to calls from unit tests which use
-["concrete"][MIRAI-abstract-value] call arguments).
+while keeping the call arguments ["abstract"][MIRAI-abstract-value] (in contrast to unit tests, which use
+["concrete"][MIRAI-abstract-value] call arguments, and may also exercise a single target function multiple times,
+leading to under-approximation of program semantics and/or inefficient use of resources during abstract interpretation).
 
 [generic]: https://en.wikipedia.org/wiki/Generic_programming
 [rust-generics]: https://doc.rust-lang.org/book/ch10-00-generics.html
@@ -228,5 +251,7 @@ and inline source documentation e.t.c.
 
 [`pallet-verifier`][pallet-verifier] is only at the very beginning of its development, so issues, bug reports, PRs and feature requests
 are welcome at the [GitHub repository][pallet-verifier] 🙂.
+
+## Acknowledgements
 
 Special thanks to the [Web3 Foundation][W3F] for funding `pallet-verifier`'s development via a generous grant.
