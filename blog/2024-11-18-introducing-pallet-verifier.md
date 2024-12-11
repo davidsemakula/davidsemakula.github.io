@@ -96,6 +96,22 @@ fn bounded_increment(x: u8, bound: u8) -> u8 {
 [MIRAI-use]: https://github.com/endorlabs/MIRAI/blob/main/README.md#who-should-use-mirai
 [reachability]: https://en.wikipedia.org/wiki/Reachability_analysis
 
+Lastly, `pallet-verifier` assumes a 32 bit [target pointer width][rustc-target-pointer-width] by default
+(i.e. the same pointer width as the `wasm32` and `riscv32` targets), however, this can be overridden using
+the `--pointer-width` argument which accepts a value of either `32` or `64` (e.g. `cargo verify-pallet --pointer-width 64`).
+The target pointer width is especially relevant for [integer cast/`as` conversions][as-conversions] involving 
+pointer-sized integer types (i.e. `usize` and `isize`). As a concrete example, the integer cast operation below is 
+safe in 32 bit execution environments but can overflow in 64 bit execution environments
+
+```rust
+fn foo(val: usize) -> u32 {
+    val as u32
+}
+```
+
+[rustc-target-pointer-width]: https://doc.rust-lang.org/reference/conditional-compilation.html#target_pointer_width
+[as-conversions]: https://doc.rust-lang.org/reference/expressions/operator-expr.html#type-cast-expressions
+
 ## Architecture
 
 [FRAME] is a [Rust]-based [DSL (Domain Specific Language)][DSL], therefore, the source code representation that
@@ -129,7 +145,7 @@ The [custom rustc driver][rustc-driver-src] operates in two conceptual phases:
 [MIRAI-entrypoint]: https://github.com/endorlabs/MIRAI/blob/main/documentation/Overview.md#entry-points
 [annotations]: https://crates.io/crates/mirai-annotations
 
-### Entry point generation and invariant annotations
+### Entry point generation
 
 ["MIRAI is an abstract interpreter for the Rust compiler's mid-level intermediate representation (MIR)"][MIRAI],
 and finding potential panics (abrupt terminations) is one of [MIRAI's primary use cases][MIRAI-use].
@@ -160,6 +176,8 @@ leading to under-approximation of program semantics and/or inefficient use of re
 [enrty-point-callback-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/callbacks/entry_points.rs
 [MIRAI-abstract-value]: https://github.com/endorlabs/MIRAI/blob/main/documentation/Overview.md#abstract-values
 
+### Invariant annotations
+
 MIRAI can also detect potential [arithmetic overflow/underflow due to arithmetic operations][overflow-op-exp],
 if either the `rustc` ["overflow-checks"] (i.e. `-C overflow-checks=true|on|yes|y`) or
 ["debug-assertions"] (i.e. `-C debug-assertions=true|on|yes|y`) flag is enabled.
@@ -187,7 +205,6 @@ e.g. an `as` conversion from `u16` to `u8` or `u8` to `i8`).
 
 [overflow-rfc-updates]: https://rust-lang.github.io/rfcs/0560-integer-overflow.html#updates-since-being-accepted
 [overflow-rfc-remove-as]: https://github.com/rust-lang/rfcs/pull/1019#issuecomment-88277675
-[as-conversions]: https://doc.rust-lang.org/reference/expressions/operator-expr.html#type-cast-expressions
 [int-cast-overflow-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/providers/int_cast_overflow.rs
 [MIRAI-verify]: https://docs.rs/mirai-annotations/1.12.0/mirai_annotations/macro.verify.html
 [as-conversions-lossy]: https://doc.rust-lang.org/reference/expressions/operator-expr.html#semantics
