@@ -99,12 +99,12 @@ fn bounded_increment(x: u8, bound: u8) -> u8 {
 Lastly, `pallet-verifier` assumes a 32 bit [target pointer width][rustc-target-pointer-width] by default
 (i.e. the same pointer width as the `wasm32` and `riscv32` targets), however, this can be overridden using
 the `--pointer-width` argument which accepts a value of either `32` or `64` (e.g. `cargo verify-pallet --pointer-width 64`).
-The target pointer width is especially relevant for [integer cast/`as` conversions][as-conversions] involving 
-pointer-sized integer types (i.e. `usize` and `isize`). As a concrete example, the integer cast operation below is 
+The target pointer width is especially relevant for [integer cast/`as` conversions][as-conversions] involving
+pointer-sized integer types (i.e. `usize` and `isize`). As a concrete example, the integer cast operation below is
 safe in 32 bit execution environments but can overflow in 64 bit execution environments
 
 ```rust
-fn foo(val: usize) -> u32 {
+fn convert(val: usize) -> u32 {
     val as u32
 }
 ```

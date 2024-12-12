@@ -90,9 +90,6 @@ const config: Config = {
           title: 'Useful links & info',
           items: [
             {
-              html: '📍 Kampala, Uganda',
-            },
-            {
               label: '✉️ hello@davidsemakula.com',
               href: 'mailto:hello@davidsemakula.com',
             },
