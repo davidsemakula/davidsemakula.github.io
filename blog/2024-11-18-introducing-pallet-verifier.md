@@ -1,6 +1,6 @@
 ---
 slug: introducing-pallet-verifier
-title: Introducing Pallet Verifier
+title: Introducing pallet-verifier
 description: A tool for detecting common security vulnerabilities and insecure patterns in FRAME pallets using
   static program analysis techniques like data-flow analysis, abstract interpretation and symbolic execution.
 authors: [david-pallet-verifier]
@@ -52,9 +52,9 @@ application-specific [Substrate]-based blockchain [runtime] environments from a 
 
 ## Current Capabilities
 
-Currently, `pallet-verifier` focuses on detecting [panics] and [arithmetic overflow/underflow]
-(including [overflow checks for narrowing and/or lossy integer cast/`as` conversions that aren't checked by the default Rust compiler][overflow-rfc-updates] -
-see also [this][overflow-rfc-remove-as] and [this][as-conversions-lossy]) in [dispatchable functions/extrinsics][call]
+Currently, `pallet-verifier` focuses on detecting [panics] and [arithmetic overflow/underflow] (including
+[overflow checks for narrowing and/or lossy integer cast/`as` conversions that aren't checked by the default Rust compiler][overflow-rfc-updates] -
+[see also][as-conversions-lossy]) in [dispatchable functions/extrinsics][call]
 and public associated functions of [inherent implementations][inherent-impls] of [FRAME pallets][FRAME].
 However, other classes of security vulnerabilities (e.g. [insufficient or missing origin checks][origin-checks],
 [bad randomness][randomness], [insufficient unsigned transaction validation][validate-unsigned] e.t.c)
@@ -63,7 +63,6 @@ will also be targeted in the future.
 [panics]: https://secure-contracts.com/not-so-smart-contracts/substrate/dont_panic/
 [arithmetic overflow/underflow]: https://secure-contracts.com/not-so-smart-contracts/substrate/arithmetic_overflow/
 [overflow-rfc-updates]: https://rust-lang.github.io/rfcs/0560-integer-overflow.html#updates-since-being-accepted
-[overflow-rfc-remove-as]: https://github.com/rust-lang/rfcs/pull/1019#issuecomment-88277675
 [as-conversions-lossy]: https://doc.rust-lang.org/reference/expressions/operator-expr.html#semantics
 [call]: https://docs.rs/frame-support/latest/frame_support/pallet_macros/attr.call.html
 [inherent-impls]: https://doc.rust-lang.org/reference/items/implementations.html#inherent-implementations
@@ -203,7 +202,6 @@ So `pallet-verifier` [automatically adds annotations][int-cast-overflow-src] to 
 (i.e. integer `as` conversions where the range of the source type is not a subset of that of the destination type
 e.g. an `as` conversion from `u16` to `u8` or `u8` to `i8`).
 
-[overflow-rfc-updates]: https://rust-lang.github.io/rfcs/0560-integer-overflow.html#updates-since-being-accepted
 [overflow-rfc-remove-as]: https://github.com/rust-lang/rfcs/pull/1019#issuecomment-88277675
 [int-cast-overflow-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/providers/int_cast_overflow.rs
 [MIRAI-verify]: https://docs.rs/mirai-annotations/1.12.0/mirai_annotations/macro.verify.html
