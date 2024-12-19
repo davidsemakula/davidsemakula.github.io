@@ -54,8 +54,8 @@ application-specific [Substrate]-based blockchain [runtime] environments from a 
 
 Currently, `pallet-verifier` focuses on detecting [panics] and [arithmetic overflow/underflow] (including
 [overflow checks for narrowing and/or lossy integer cast/`as` conversions that aren't checked by the default Rust compiler][overflow-rfc-updates] -
-[see also][as-conversions-lossy]) in [dispatchable functions/extrinsics][call]
-and public associated functions of [inherent implementations][inherent-impls] of [FRAME pallets][FRAME].
+see also [this][overflow-rfc-remove-as] and [this][as-conversions-lossy]) in [dispatchable functions/extrinsics][call]
+(and public associated functions of [inherent][inherent-impls] and local trait implementations) of [FRAME pallets][FRAME].
 However, other classes of security vulnerabilities (e.g. [insufficient or missing origin checks][origin-checks],
 [bad randomness][randomness], [insufficient unsigned transaction validation][validate-unsigned] e.t.c)
 will also be targeted in the future.
@@ -63,6 +63,7 @@ will also be targeted in the future.
 [panics]: https://secure-contracts.com/not-so-smart-contracts/substrate/dont_panic/
 [arithmetic overflow/underflow]: https://secure-contracts.com/not-so-smart-contracts/substrate/arithmetic_overflow/
 [overflow-rfc-updates]: https://rust-lang.github.io/rfcs/0560-integer-overflow.html#updates-since-being-accepted
+[overflow-rfc-remove-as]: https://github.com/rust-lang/rfcs/pull/1019
 [as-conversions-lossy]: https://doc.rust-lang.org/reference/expressions/operator-expr.html#semantics
 [call]: https://docs.rs/frame-support/latest/frame_support/pallet_macros/attr.call.html
 [inherent-impls]: https://doc.rust-lang.org/reference/items/implementations.html#inherent-implementations
@@ -163,10 +164,11 @@ as it makes extensive use of [Rust generic types and traits][rust-generics].
 
 `pallet-verifier` solves this by [automatically generating "tractable" entry points][enrty-point-callback-src]
 as singular direct calls to [dispatchable functions/extrinsics][call] (and public associated functions of
-[inherent implementations][inherent-impls]) using concrete types from unit tests as substitutions for generic types,
-while keeping the call arguments ["abstract"][MIRAI-abstract-value] (in contrast to unit tests, which use
-["concrete"][MIRAI-abstract-value] call arguments, and may also exercise a single target function multiple times,
-leading to under-approximation of program semantics and/or inefficient use of resources during abstract interpretation).
+[inherent][inherent-impls] and local trait implementations) using concrete types from unit tests as substitutions
+for generic types, while keeping the call arguments ["abstract"][MIRAI-abstract-value]
+(in contrast to unit tests, which use ["concrete"][MIRAI-abstract-value] call arguments,
+and may also exercise a single target function multiple times, leading to under-approximation of program semantics
+and/or inefficient use of resources during abstract interpretation).
 
 [generic]: https://en.wikipedia.org/wiki/Generic_programming
 [rust-generics]: https://doc.rust-lang.org/book/ch10-00-generics.html
@@ -202,7 +204,6 @@ So `pallet-verifier` [automatically adds annotations][int-cast-overflow-src] to 
 (i.e. integer `as` conversions where the range of the source type is not a subset of that of the destination type
 e.g. an `as` conversion from `u16` to `u8` or `u8` to `i8`).
 
-[overflow-rfc-remove-as]: https://github.com/rust-lang/rfcs/pull/1019#issuecomment-88277675
 [int-cast-overflow-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/providers/int_cast_overflow.rs
 [MIRAI-verify]: https://docs.rs/mirai-annotations/1.12.0/mirai_annotations/macro.verify.html
 [as-conversions-lossy]: https://doc.rust-lang.org/reference/expressions/operator-expr.html#semantics
