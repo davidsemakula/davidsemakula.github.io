@@ -204,7 +204,7 @@ So `pallet-verifier` [automatically adds annotations][int-cast-overflow-src] to 
 (i.e. integer `as` conversions where the range of the source type is not a subset of that of the destination type
 e.g. an `as` conversion from `u16` to `u8` or `u8` to `i8`).
 
-[int-cast-overflow-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/providers/int_cast_overflow.rs
+[int-cast-overflow-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/providers/passes/int_cast_overflow.rs
 [MIRAI-verify]: https://docs.rs/mirai-annotations/1.12.0/mirai_annotations/macro.verify.html
 [as-conversions-lossy]: https://doc.rust-lang.org/reference/expressions/operator-expr.html#semantics
 
@@ -212,7 +212,7 @@ Additionally, `pallet-verifier` also adds [annotations for declaring invariants]
 from source code alone, to improve the accuracy of the verifier and reduce false positives
 (e.g. [iterator invariant annotations][iterator-annotations-src]).
 
-[iterator-annotations-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/providers/iterator_annotations.rs
+[iterator-annotations-src]: https://github.com/davidsemakula/pallet-verifier/blob/master/src/providers/passes/iterator_invariants.rs
 
 Lastly, inorder to automatically add annotations to the target [FRAME] pallet's [MIR]
 (e.g. [overflow checks for narrowing and/or lossy integer cast/`as` conversions][int-cast-overflow-src] and
