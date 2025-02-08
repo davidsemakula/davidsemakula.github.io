@@ -115,6 +115,10 @@ const config: Config = {
               href: 'https://github.com/use-ink/ink/pulls?q=is%3Apr+author%3Adavidsemakula',
             },
             {
+              label: 'use-ink/cargo-contract',
+              href: 'https://github.com/use-ink/cargo-contract/pulls?q=is%3Apr+author%3Adavidsemakula',
+            },
+            {
               label: 'webb-tools/cggmp-threshold-ecdsa',
               href: 'https://github.com/webb-tools/cggmp-threshold-ecdsa/pulls?q=is%3Apr+author%3Adavidsemakula',
             }
