@@ -238,12 +238,12 @@ based on our domain-specific knowledge.
 [diagnostics-filter-src]: https://github.com/davidsemakula/pallet-verifier/blob/844a49f85f434442202f724c2b5a8aecd0cf9d84/src/callbacks/verifier.rs#L321-L549
 
 `pallet-verifier` leverages a custom [FileLoader][rust-file-loader]
-to ["virtually" add "analysis-only" external crate declarations and module definitions][virtual-file-loader-src]
-(e.g. `extern crate` declarations for the [mirai-annotations crate][annotations], and module definitions for
-generated "tractable" entry points and [additional summaries/foreign contracts][contracts-src])
+to ["virtually" add "analysis-only" module definitions and external crate declarations][virtual-file-loader-src]
+(e.g. module definitions for generated "tractable" entry points, [additional summaries/foreign contracts][contracts-src],
+and `extern crate` declarations for the [mirai-annotations crate][annotations])
 to the target [FRAME] pallet without modifying its "actual" source code.
-The ["virtual" FileLoader][virtual-file-loader-src] strategically adds our "analysis-only" external crate declarations
-and module definitions in a way that leverages `rustc`'s excellent support for [incremental compilation/analysis][rustc-inc-comp-detail]
+The ["virtual" FileLoader][virtual-file-loader-src] strategically adds our "analysis-only" module definitions
+and external crate declarations in a way that leverages `rustc`'s excellent support for [incremental compilation/analysis][rustc-inc-comp-detail]
 (see also [this][rustc-inc-comp] and [this][rustc-query]), meaning unrelated code is never recompiled during the verification/abstract intepretation phase.
 
 [rust-file-loader]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_span/source_map/trait.FileLoader.html
