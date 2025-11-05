@@ -1,6 +1,6 @@
 ---
 slug: introducing-ink-analyzer
-title: Introducing ink! Analyzer
+title: Introducing ink! analyzer
 description: A collection of modular and reusable libraries and tools for semantic analysis of ink! smart contracts.
 authors: [david-ink-analyzer]
 tags: [ink! analyzer, ink!, semantic analysis, Language Server Protocol, LSP, VS Code, smart contracts]
