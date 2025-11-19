@@ -1,17 +1,17 @@
 ---
 slug: introducing-wamu
 title: Introducing Wamu
-description: A protocol for computation of threshold signatures by multiple decentralized identities
+description: A protocol for computation of threshold signatures by multiple cryptographic identities
 authors: [david-wamu]
 tags: [Wamu, threshold signatures, threshold cryptography, multi-party computation, MPC]
 ---
 
-I'm proud to announce [Wamu] - a protocol for computation of threshold signatures by multiple decentralized identities.
+I'm proud to announce [Wamu] - a protocol for computation of threshold signatures by multiple cryptographic identities.
 
 [Wamu]: https://wamu.tech
 
 Multisig wallets (e.g. [Safe]) are already [widely adopted][dune-eth] and have proven the importance of
-noncustodial shared wallets with threshold access structures controlled by multiple decentralized identities,
+noncustodial shared wallets with threshold access structures controlled by multiple cryptographic identities,
 for mainstream users and decentralized teams and organizations.
 
 [Safe]: https://safe.global/wallet
